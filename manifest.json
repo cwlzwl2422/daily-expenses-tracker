@@ -2,7 +2,7 @@
   "name": "Daily Expenses Tracker",
   "short_name": "Expenses",
   "description": "Personal expense and income tracker — RYU SAKE JOURNAL® Singapore",
-  "start_url": "./index.html",
+  "start_url": "./webapp.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",
