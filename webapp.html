@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="theme-color" content="#0d3320"/>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTkyIDE5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQzMzIwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE2NjUzNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYXJjIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyYzU1ZSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYjgyZjYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJhZGdlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYwYTVmYSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZDRlZDgiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gQmFja2dyb3VuZCByb3VuZGVkIHNxdWFyZSAtLT4KICA8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQyIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gR3JhZGllbnQgYXJjIC0tPgogIDxwYXRoIGQ9Ik0gMjIsOTYgQSA3NCw3NCAwIDEsMSAxNTYsMTM4IgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNhcmMpIiBzdHJva2Utd2lkdGg9IjExIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIE5vdGVib29rIGNvdmVyIChkYXJrKSAtLT4KICA8cmVjdCB4PSI1MiIgeT0iMzQiIHdpZHRoPSI4OCIgaGVpZ2h0PSIxMTQiIHJ4PSI5IiBmaWxsPSIjMGExZjBkIi8+CiAgPCEtLSBOb3RlYm9vayBwYWdlICh3aGl0ZSkgLS0+CiAgPHJlY3QgeD0iNjIiIHk9IjM3IiB3aWR0aD0iNzYiIGhlaWdodD0iMTEwIiByeD0iNyIgZmlsbD0id2hpdGUiLz4KICA8IS0tIFNwaXJhbCBjb2lscyAtLT4KICA8Y2lyY2xlIGN4PSI1MiIgY3k9IjU1IiAgcj0iNiIgZmlsbD0iIzIyYzU1ZSIvPgogIDxjaXJjbGUgY3g9IjUyIiBjeT0iNzUiICByPSI2IiBmaWxsPSIjMjJjNTVlIi8+CiAgPGNpcmNsZSBjeD0iNTIiIGN5PSI5NSIgIHI9IjYiIGZpbGw9IiMyMmM1NWUiLz4KICA8Y2lyY2xlIGN4PSI1MiIgY3k9IjExNSIgcj0iNiIgZmlsbD0iIzIyYzU1ZSIvPgogIDxjaXJjbGUgY3g9IjUyIiBjeT0iMTM1IiByPSI2IiBmaWxsPSIjMjJjNTVlIi8+CiAgPCEtLSBDb2lsIGhvbGVzIC0tPgogIDxjaXJjbGUgY3g9IjUyIiBjeT0iNTUiICByPSIzIiBmaWxsPSIjMGQzMzIwIi8+CiAgPGNpcmNsZSBjeD0iNTIiIGN5PSI3NSIgIHI9IjMiIGZpbGw9IiMwZDMzMjAiLz4KICA8Y2lyY2xlIGN4PSI1MiIgY3k9Ijk1IiAgcj0iMyIgZmlsbD0iIzBkMzMyMCIvPgogIDxjaXJjbGUgY3g9IjUyIiBjeT0iMTE1IiByPSIzIiBmaWxsPSIjMGQzMzIwIi8+CiAgPGNpcmNsZSBjeD0iNTIiIGN5PSIxMzUiIHI9IjMiIGZpbGw9IiMwZDMzMjAiLz4KICA8IS0tIFBhZ2UgbGluZXMgLS0+CiAgPHJlY3QgeD0iNzIiIHk9IjYwIiAgd2lkdGg9IjUyIiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiNlNWU3ZWIiLz4KICA8cmVjdCB4PSI3MiIgeT0iNzIiICB3aWR0aD0iNDAiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNmM2Y0ZjYiLz4KICA8cmVjdCB4PSI3MiIgeT0iODMiICB3aWR0aD0iNDgiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNmM2Y0ZjYiLz4KICA8cmVjdCB4PSI3MiIgeT0iOTQiICB3aWR0aD0iMzYiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNmM2Y0ZjYiLz4KICA8cmVjdCB4PSI3MiIgeT0iMTA1IiB3aWR0aD0iNDQiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNmM2Y0ZjYiLz4KICA8IS0tIERvbGxhciBiYWRnZSAtLT4KICA8Y2lyY2xlIGN4PSIxNDIiIGN5PSIxNDIiIHI9IjMyIiBmaWxsPSJ1cmwoI2JhZGdlKSIvPgogIDx0ZXh0IHg9IjE0MiIgeT0iMTU0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIgogICAgICAgIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjM0IgogICAgICAgIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IndoaXRlIj4kPC90ZXh0Pgo8L3N2Zz4="/>
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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"/>
+<link rel="manifest" id="pwa-manifest">
+<title>Daily Expenses Tracker</title>
+<style>
+/* ═══════════════════════════════════════════════
+   VARIABLES & RESET
+═══════════════════════════════════════════════ */
+:root{
+  --g1:#0d3320; --g2:#166534; --g3:#16a34a; --g4:#4ade80;
+  --red:#f43f5e; --red-bg:#fff1f2; --red-border:#fecdd3;
+  --amber:#f59e0b; --amber-bg:#fffbeb;
+  --blue:#3b82f6; --purple:#8b5cf6; --pink:#ec4899;
+  --teal:#0ea5e9; --indigo:#6366f1;
+  --posb:#D71920; --uob:#1A2B5C; --ocbc:#E2792F; --cash:#16A34A;
+  --bg:#f0f9f4; --surface:#fff;
+  --border:#d1fae5; --border2:#e2e8f0;
+  --txt:#052e16; --txt2:#374151; --muted:#6b7280; --light:#9ca3af;
+  --r:16px; --rs:10px; --rxl:24px;
+  --sh:0 4px 24px rgba(5,46,32,.08);
+  --sh2:0 2px 10px rgba(5,46,32,.06);
+  --safe-t:env(safe-area-inset-top,0px);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{height:100%;overflow:hidden;scroll-behavior:smooth}
+body{height:100%;height:100dvh;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',Helvetica,sans-serif;background:var(--bg);color:var(--txt);overflow:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none}
+
+/* ═══════════════════════════════════════════════
+   APP SHELL
+═══════════════════════════════════════════════ */
+#app{height:100%;display:flex;flex-direction:column;max-width:420px;margin:0 auto;position:relative;background:var(--bg);overflow:hidden}
+
+/* ═══════════════════════════════════════════════
+   ONBOARDING SCREEN
+═══════════════════════════════════════════════ */
+#onboard{
+  position:absolute;inset:0;z-index:200;overflow-y:auto;
+  background:linear-gradient(155deg,var(--g1) 0%,var(--g2) 50%,#14532d 100%);
+  display:flex;flex-direction:column;padding:0 24px calc(40px + var(--safe-b));
+  padding-top:calc(var(--safe-t) + 48px);
+}
+.ob-hero{text-align:center;margin-bottom:40px}
+.ob-icon{font-size:80px;filter:drop-shadow(0 8px 24px rgba(0,0,0,.4));animation:float 3s ease-in-out infinite;display:inline-block}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.ob-brand{color:#4ade80;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:16px;margin-bottom:8px}
+.ob-title{color:#fff;font-size:30px;font-weight:800;line-height:1.2}
+.ob-sub{color:#86efac;font-size:14px;margin-top:8px;line-height:1.6}
+.ob-card{
+  background:rgba(255,255,255,.97);border-radius:24px;padding:28px 24px;
+  box-shadow:0 24px 64px rgba(0,0,0,.25);
+}
+.ob-step{font-size:11px;font-weight:700;color:var(--g3);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.ob-card-title{font-size:20px;font-weight:800;color:var(--txt);margin-bottom:20px}
+.ob-field{margin-bottom:16px}
+.ob-field label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px}
+.ob-field input,.ob-field select{
+  width:100%;padding:14px 16px;
+  border:2px solid var(--border2);border-radius:12px;
+  font-size:16px;outline:none;color:var(--txt);background:#fff;
+  transition:all .2s;
+}
+.ob-field input:focus,.ob-field select:focus{border-color:var(--g3);box-shadow:0 0 0 3px rgba(22,163,74,.12)}
+.ob-btn{
+  width:100%;padding:16px;margin-top:6px;
+  background:linear-gradient(135deg,var(--g2),var(--g3));
+  color:#fff;border:none;border-radius:14px;
+  font-size:17px;font-weight:800;
+  box-shadow:0 8px 24px rgba(22,163,74,.4);
+  transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.ob-btn:hover{transform:translateY(-1px);box-shadow:0 12px 32px rgba(22,163,74,.5)}
+.ob-btn:active{transform:translateY(0)}
+
+/* ═══════════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════════ */
+.header{
+  background:linear-gradient(135deg,var(--g1) 0%,var(--g2) 100%);
+  padding-top:calc(var(--safe-t) + 16px);
+  padding-left:20px;padding-right:20px;padding-bottom:0;
+  position:relative;overflow:hidden;flex-shrink:0;
+}
+.header::before{
+  content:'';position:absolute;top:-40px;right:-40px;
+  width:180px;height:180px;border-radius:50%;
+  background:rgba(255,255,255,.04);
+}
+.header::after{
+  content:'';position:absolute;bottom:-60px;left:-20px;
+  width:200px;height:200px;border-radius:50%;
+  background:rgba(74,222,128,.06);
+}
+.hdr-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;position:relative;z-index:1}
+.hdr-greet{font-size:12px;color:#86efac;font-weight:600;margin-bottom:3px}
+.hdr-name{font-size:20px;font-weight:800;color:#fff}
+.hdr-avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(135deg,#4ade80,#16a34a);
+  border:2px solid rgba(255,255,255,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;font-weight:800;color:#052e16;
+  cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.2);
+  transition:transform .2s;
+}
+.hdr-avatar:hover{transform:scale(1.05)}
+.hdr-install-btn{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.15);
+  border:2px solid rgba(255,255,255,.3);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .2s;margin-right:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,.2);flex-shrink:0;
+}
+.hdr-install-btn:hover{background:rgba(255,255,255,.28);transform:scale(1.08)}
+.hdr-install-btn svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* Balance card inside header */
+.bal-card{
+  background:rgba(255,255,255,.1);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.15);border-radius:20px 20px 0 0;
+  padding:20px;margin:0 -4px;position:relative;z-index:1;
+}
+.bal-label{font-size:11px;color:#86efac;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.bal-amount{font-size:36px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.bal-amount .bal-sym{font-size:22px;font-weight:700;vertical-align:top;margin-top:5px;display:inline-block}
+.bal-sub{font-size:12px;color:rgba(255,255,255,.6);margin-top:4px}
+.bal-pills{display:flex;gap:10px;margin-top:14px}
+.bal-pill{
+  flex:1;background:rgba(255,255,255,.1);border-radius:12px;
+  padding:10px 12px;display:flex;align-items:center;gap:8px;
+}
+.bal-pill-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.bal-pill-info .bpi-label{font-size:10px;color:rgba(255,255,255,.6);font-weight:600;text-transform:uppercase}
+.bal-pill-info .bpi-val{font-size:14px;font-weight:800;color:#fff}
+
+/* Progress bar */
+.budget-bar-wrap{margin-top:14px}
+.bb-hdr{display:flex;justify-content:space-between;margin-bottom:6px}
+.bb-lbl{font-size:11px;color:rgba(255,255,255,.7);font-weight:600}
+.bb-pct{font-size:11px;font-weight:700}
+.bb-track{background:rgba(255,255,255,.15);border-radius:6px;height:6px;overflow:hidden}
+.bb-fill{height:6px;border-radius:6px;transition:width .6s cubic-bezier(.4,0,.2,1)}
+
+/* ═══════════════════════════════════════════════
+   TAB BAR
+═══════════════════════════════════════════════ */
+.tabbar{
+  display:flex;background:#fff;
+  border-top:1px solid var(--border2);
+  padding-bottom:var(--safe-b);flex-shrink:0;
+  box-shadow:0 -4px 20px rgba(5,46,32,.06);
+}
+.tb{
+  flex:1;border:none;background:none;
+  padding:10px 4px 8px;display:flex;flex-direction:column;
+  align-items:center;gap:4px;transition:all .2s;
+  color:var(--light);
+}
+.tb .tb-icon{
+  font-size:22px;transition:transform .2s;position:relative;
+}
+.tb .tb-lbl{font-size:10px;font-weight:700;transition:color .2s}
+.tb.active{color:var(--g2)}
+.tb.active .tb-icon{transform:translateY(-2px)}
+.tb-dot{width:5px;height:5px;border-radius:50%;background:var(--g3);margin-top:2px;opacity:0;transition:opacity .2s}
+.tb.active .tb-dot{opacity:1}
+
+/* ═══════════════════════════════════════════════
+   CONTENT AREA
+═══════════════════════════════════════════════ */
+.content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.content::-webkit-scrollbar{display:none}
+.pad{padding:16px}
+
+/* ═══════════════════════════════════════════════
+   CARDS
+═══════════════════════════════════════════════ */
+.card{background:var(--surface);border-radius:var(--r);padding:20px;margin-bottom:12px;box-shadow:var(--sh2)}
+.card-title{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;display:flex;align-items:center;gap:6px}
+.card-title-icon{width:22px;height:22px;border-radius:6px;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:12px}
+
+/* ═══════════════════════════════════════════════
+   ADD ENTRY FORM
+═══════════════════════════════════════════════ */
+.type-toggle{
+  display:flex;gap:6px;background:#f1f5f9;
+  border-radius:14px;padding:4px;margin-bottom:16px;
+}
+.tt{
+  flex:1;padding:11px;border:none;border-radius:10px;background:transparent;
+  font-size:14px;font-weight:700;color:var(--muted);transition:all .25s;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+}
+.tt.on{box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.tt.exp.on{background:var(--red-bg);color:var(--red)}
+.tt.inc.on{background:#f0fdf4;color:var(--g2)}
+
+.amount-area{
+  position:relative;background:linear-gradient(135deg,#f0fdf4,#dcfce7);
+  border:2px solid #bbf7d0;border-radius:16px;padding:20px 18px;margin-bottom:4px;
+  transition:all .3s;
+}
+.amount-area.exp-mode{background:linear-gradient(135deg,var(--red-bg),#ffe4e6);border-color:#fecdd3}
+.amount-prefix{
+  position:absolute;top:50%;left:18px;transform:translateY(-50%);
+  font-size:22px;font-weight:900;color:var(--g2);transition:color .3s;
+}
+.amount-area.exp-mode .amount-prefix{color:var(--red)}
+.amount-inp{
+  width:100%;font-size:38px;font-weight:900;border:none;background:transparent;
+  outline:none;color:var(--txt);text-align:right;padding-left:44px;
+  letter-spacing:-1px;
+}
+.amount-inp::placeholder{color:#94a3b8}
+
+/* Pill grids */
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pill{
+  padding:8px 13px;border-radius:30px;
+  border:1.5px solid var(--border2);background:#fff;
+  font-size:13px;font-weight:600;color:var(--muted);
+  transition:all .2s;display:flex;align-items:center;gap:5px;
+  white-space:nowrap;
+}
+.pill:hover{border-color:var(--g3);background:#f0fdf4}
+.pill.on{border-color:var(--g3);background:#dcfce7;color:var(--g2)}
+.pill.pay-on{color:#fff;border-color:transparent}
+
+/* Form fields */
+.fld{margin-bottom:13px}
+.fld label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px}
+.fld input,.fld textarea,.fld select{
+  width:100%;padding:13px 15px;
+  border:1.5px solid var(--border2);border-radius:12px;
+  font-size:15px;color:var(--txt);background:#fff;outline:none;
+  transition:all .2s;
+}
+.fld input:focus,.fld textarea:focus,.fld select:focus{border-color:var(--g3);box-shadow:0 0 0 3px rgba(22,163,74,.1)}
+.fld textarea{resize:none;min-height:58px}
+
+.submit-btn{
+  width:100%;padding:16px;border:none;border-radius:14px;
+  font-size:16px;font-weight:800;transition:all .2s;
+  display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;
+}
+.submit-btn.exp{background:linear-gradient(135deg,#f43f5e,#e11d48);color:#fff;box-shadow:0 6px 20px rgba(244,63,94,.35)}
+.submit-btn.inc{background:linear-gradient(135deg,var(--g2),var(--g3));color:#fff;box-shadow:0 6px 20px rgba(22,163,74,.35)}
+.submit-btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.submit-btn:active{transform:translateY(0);filter:brightness(.98)}
+
+.flash{
+  display:none;margin-bottom:10px;padding:12px 16px;
+  border-radius:12px;background:#f0fdf4;border:1px solid #bbf7d0;
+  color:var(--g2);font-weight:700;font-size:14px;text-align:center;
+  animation:popIn .3s ease;
+}
+@keyframes popIn{0%{transform:scale(.95);opacity:0}100%{transform:scale(1);opacity:1}}
+
+/* ═══════════════════════════════════════════════
+   HISTORY
+═══════════════════════════════════════════════ */
+.day-section{margin-bottom:20px}
+.day-hdr{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 2px;margin-bottom:8px;
+}
+.day-lbl{font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.day-total{font-size:13px;font-weight:800}
+.tx-card{
+  background:#fff;border-radius:14px;padding:14px 15px;margin-bottom:7px;
+  display:flex;align-items:center;gap:12px;
+  box-shadow:var(--sh2);transition:transform .15s;
+}
+.tx-card:active{transform:scale(.98)}
+.tx-emoji{
+  width:44px;height:44px;border-radius:13px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:21px;flex-shrink:0;
+}
+.tx-body{flex:1;min-width:0}
+.tx-desc{font-size:14px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tx-meta{display:flex;align-items:center;gap:6px;margin-top:3px}
+.pay-badge{
+  display:inline-flex;align-items:center;padding:2px 8px;
+  border-radius:20px;font-size:10px;font-weight:800;color:#fff;
+}
+.tx-note{font-size:11px;color:var(--light);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tx-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+.tx-amount{font-size:15px;font-weight:900}
+.del-btn{
+  width:26px;height:26px;border:none;border-radius:50%;
+  background:var(--red-bg);color:var(--red);font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;transition:all .2s;
+}
+.del-btn:hover{background:var(--red);color:#fff}
+
+/* ═══════════════════════════════════════════════
+   SUMMARY
+═══════════════════════════════════════════════ */
+.month-nav{
+  display:flex;align-items:center;justify-content:space-between;
+  background:#fff;border-radius:var(--r);padding:14px 16px;
+  margin-bottom:12px;box-shadow:var(--sh2);
+}
+.mnav-btn{
+  width:38px;height:38px;border:none;background:var(--bg);border-radius:50%;
+  font-size:18px;font-weight:800;color:var(--g2);
+  display:flex;align-items:center;justify-content:center;transition:all .2s;
+}
+.mnav-btn:hover{background:var(--border);transform:scale(1.05)}
+.mname{font-size:17px;font-weight:800;color:var(--txt)}
+
+.kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px}
+.kpi{
+  background:#fff;border-radius:var(--r);padding:16px;box-shadow:var(--sh2);
+  position:relative;overflow:hidden;
+}
+.kpi::before{
+  content:attr(data-icon);position:absolute;right:10px;top:10px;
+  font-size:32px;opacity:.12;
+}
+.kpi-lbl{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px}
+.kpi-val{font-size:22px;font-weight:900;letter-spacing:-.5px}
+.kpi-sub{font-size:11px;margin-top:3px;color:var(--muted)}
+
+/* Bar chart */
+.chart-wrap{background:#fff;border-radius:var(--r);padding:18px;margin-bottom:12px;box-shadow:var(--sh2)}
+.chart-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.chart-title{font-size:13px;font-weight:800;color:var(--txt)}
+.chart-legend{display:flex;gap:10px}
+.cl{display:flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--muted)}
+.cl-dot{width:8px;height:8px;border-radius:50%}
+canvas{width:100%!important}
+
+/* Category bars */
+.cat-section{background:#fff;border-radius:var(--r);padding:18px;margin-bottom:12px;box-shadow:var(--sh2)}
+.sec-title{font-size:13px;font-weight:800;color:var(--txt);margin-bottom:14px}
+.cat-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.cat-row:last-child{margin-bottom:0}
+.cat-rank{font-size:11px;font-weight:800;color:var(--light);width:16px;text-align:center;flex-shrink:0}
+.cat-ico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.cat-info{flex:1;min-width:0}
+.cat-name{font-size:13px;font-weight:700;color:var(--txt);margin-bottom:4px}
+.cat-bar{background:#f1f5f9;height:6px;border-radius:3px;overflow:hidden}
+.cat-bar-fill{height:6px;border-radius:3px;transition:width .6s cubic-bezier(.4,0,.2,1)}
+.cat-amt{font-size:13px;font-weight:800;flex-shrink:0}
+
+/* Payment method rows */
+.pay-section{background:#fff;border-radius:var(--r);padding:18px;margin-bottom:12px;box-shadow:var(--sh2)}
+.pay-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border2)}
+.pay-row:last-child{border-bottom:none}
+.pay-color-bar{width:4px;height:32px;border-radius:2px;flex-shrink:0}
+.pay-name{flex:1;font-size:14px;font-weight:700;color:var(--txt)}
+.pay-pct{font-size:12px;color:var(--muted);font-weight:600;margin-right:6px}
+.pay-amt{font-size:14px;font-weight:900}
+
+/* Export btn */
+.exp-btn{
+  width:100%;padding:14px;border:none;border-radius:14px;
+  font-size:14px;font-weight:700;transition:all .2s;margin-bottom:9px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.exp-csv{background:var(--bg);color:var(--g2);border:1.5px solid #bbf7d0}
+.exp-csv:hover{background:var(--border)}
+
+/* ═══════════════════════════════════════════════
+   INCOME TAB
+═══════════════════════════════════════════════ */
+.inc-hero{
+  background:linear-gradient(135deg,var(--g1),var(--g2));
+  border-radius:20px;padding:22px;margin-bottom:14px;
+  box-shadow:0 8px 32px rgba(5,46,32,.2);position:relative;overflow:hidden;
+}
+.inc-hero::after{
+  content:'💰';position:absolute;right:16px;top:50%;
+  transform:translateY(-50%);font-size:64px;opacity:.12;
+}
+.ih-lbl{font-size:11px;color:#86efac;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px}
+.ih-val{font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px}
+.ih-sub{font-size:12px;color:rgba(255,255,255,.6);margin-top:4px}
+.ih-pills{display:flex;gap:8px;margin-top:14px}
+.ih-pill{
+  padding:6px 12px;border-radius:20px;background:rgba(255,255,255,.15);
+  color:#fff;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.2);
+}
+
+.inc-hist-card{background:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--sh2)}
+.inc-tx{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border2)}
+.inc-tx:last-child{border-bottom:none}
+.inc-ico{width:40px;height:40px;border-radius:11px;background:#f0fdf4;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.inc-body{flex:1;min-width:0}
+.inc-desc{font-size:14px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.inc-meta{font-size:12px;color:var(--muted);margin-top:2px}
+.inc-amt{font-size:15px;font-weight:900;color:var(--g2)}
+
+/* ═══════════════════════════════════════════════
+   SETTINGS BOTTOM SHEET
+═══════════════════════════════════════════════ */
+.overlay{
+  position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.4);
+  backdrop-filter:blur(4px);opacity:0;pointer-events:none;
+  transition:opacity .3s;
+}
+.overlay.open{opacity:1;pointer-events:auto}
+.sheet{
+  position:absolute;bottom:0;left:0;right:0;
+  background:#fff;border-radius:24px 24px 0 0;
+  padding:0 20px calc(24px + var(--safe-b));
+  max-height:90dvh;overflow-y:auto;
+  transform:translateY(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);
+  box-shadow:0 -8px 48px rgba(0,0,0,.15);
+}
+.overlay.open .sheet{transform:translateY(0)}
+.sheet-drag{width:40px;height:4px;background:#e2e8f0;border-radius:2px;margin:12px auto 20px}
+.sheet-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.sheet-title{font-size:20px;font-weight:800;color:var(--txt)}
+.sheet-close{width:34px;height:34px;background:var(--bg);border:none;border-radius:50%;font-size:16px;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:all .2s}
+.sheet-close:hover{background:var(--border2)}
+.sett-section{margin-bottom:22px}
+.sett-section-lbl{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.danger-btn{
+  width:100%;padding:13px;border:1.5px solid var(--red-border);
+  border-radius:12px;background:var(--red-bg);color:var(--red);
+  font-size:14px;font-weight:700;transition:all .2s;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.danger-btn:hover{background:var(--red);color:#fff}
+
+/* ═══════════════════════════════════════════════
+   EMPTY STATE
+═══════════════════════════════════════════════ */
+.empty-state{text-align:center;padding:50px 20px}
+.empty-state .ei{font-size:60px;margin-bottom:14px;animation:float 3s ease-in-out infinite}
+.empty-state h3{font-size:18px;font-weight:800;color:var(--txt);margin-bottom:6px}
+.empty-state p{font-size:14px;color:var(--muted);line-height:1.6}
+
+/* ═══════════════════════════════════════════════
+   TOAST
+═══════════════════════════════════════════════ */
+.toast{
+  position:fixed;bottom:calc(80px + var(--safe-b) + 8px);
+  left:50%;transform:translateX(-50%) translateY(12px);
+  background:#052e16;color:#fff;padding:12px 22px;
+  border-radius:30px;font-size:14px;font-weight:700;
+  z-index:300;opacity:0;transition:all .3s cubic-bezier(.4,0,.2,1);
+  pointer-events:none;white-space:nowrap;
+  box-shadow:0 8px 32px rgba(5,46,32,.35);
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ═══════════════════════════════════════════════
+   UTILITIES
+═══════════════════════════════════════════════ */
+.hidden{display:none!important}
+.mt-8{margin-top:8px}
+.mt-12{margin-top:12px}
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fadeSlideUp .3s ease forwards}
+
+/* ═══════════════════════════════════════════════
+   SIDEBAR ELEMENTS — hidden on mobile
+═══════════════════════════════════════════════ */
+.sb-brand,.sb-nav-label,.sb-gap,.sb-settings-btn{display:none}
+
+/* ═══════════════════════════════════════════════
+   DESKTOP / LAPTOP LAYOUT  (≥ 768 px)
+═══════════════════════════════════════════════ */
+@media(min-width:768px){
+
+  /* ── App shell ── */
+  #app{max-width:100%;background:#eef2f0}
+
+  /* ── Main: 2-column CSS Grid ── */
+  #main{
+    display:grid!important;
+    grid-template-columns:240px 1fr;
+    grid-template-rows:auto 1fr;
+    grid-template-areas:"sidebar header" "sidebar content";
+    height:100dvh!important;
+    overflow:hidden;
+    max-width:1400px;
+    margin:0 auto;
+    box-shadow:0 0 80px rgba(0,0,0,.12);
+  }
+
+  /* ── TABBAR → vertical sidebar ── */
+  .tabbar{
+    grid-area:sidebar;
+    flex-direction:column;
+    width:240px;height:100%;
+    padding:0 12px 20px;
+    border-top:none;
+    border-right:1px solid #e9ecef;
+    background:#fff;
+    justify-content:flex-start;
+    gap:3px;
+    overflow-y:auto;
+    scrollbar-width:none;
+    box-shadow:none;
+  }
+  .tabbar::-webkit-scrollbar{display:none}
+
+  /* ── Sidebar brand block ──*/
+  .sb-brand{
+    display:flex;align-items:center;gap:11px;
+    padding:22px 8px 18px;
+    border-bottom:1px solid #f1f5f9;
+    margin-bottom:10px;flex-shrink:0;
+  }
+  .sb-logo{
+    width:42px;height:42px;border-radius:11px;
+    background:linear-gradient(135deg,var(--g1),var(--g2));
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;flex-shrink:0;
+    box-shadow:0 4px 10px rgba(5,46,32,.25);
+  }
+  .sb-app-name{font-size:14px;font-weight:800;color:var(--txt);line-height:1.25}
+  .sb-app-sub{font-size:9px;color:var(--muted);font-weight:600;letter-spacing:.7px;text-transform:uppercase;margin-top:3px}
+
+  /* Section label */
+  .sb-nav-label{
+    display:block;
+    font-size:10px;font-weight:700;
+    color:var(--light);letter-spacing:.9px;text-transform:uppercase;
+    padding:4px 8px 2px;
+  }
+
+  /* Spacer pushes settings to bottom */
+  .sb-gap{display:block;flex:1;min-height:16px}
+
+  /* Settings button at sidebar bottom */
+  .sb-settings-btn{
+    display:flex!important;
+    border-top:1px solid #f1f5f9;
+    padding-top:12px!important;
+    margin-top:4px;
+  }
+
+  /* Tab buttons → sidebar rows */
+  .tb{
+    flex-direction:row;justify-content:flex-start;
+    padding:12px 14px;border-radius:10px;
+    gap:10px;height:auto;text-align:left;width:100%;
+  }
+  .tb .tb-icon{font-size:18px;transform:none!important}
+  .tb .tb-lbl{font-size:14px;font-weight:700}
+  .tb .tb-dot{display:none}
+  .tb.active{background:var(--bg);color:var(--g2)}
+  .tb.active .tb-icon{transform:none!important}
+  .tb:hover:not(.active){background:#f8fafc}
+
+  /* ── HEADER → compact top bar ── */
+  .header{
+    grid-area:header;
+    display:flex;flex-direction:row;align-items:center;
+    padding:12px 28px!important;padding-top:12px!important;
+    gap:16px;border-radius:0;overflow:visible;flex-shrink:0;
+  }
+  .header::before,.header::after{display:none}
+  .hdr-top{flex-shrink:0;margin-bottom:0;display:flex;align-items:center;gap:12px}
+  .hdr-greet{font-size:11px;margin-bottom:1px}
+  .hdr-name{font-size:16px}
+  .bal-card{
+    flex:1;display:flex;flex-direction:row;align-items:center;
+    gap:14px;border-radius:14px;
+    margin:0;padding:10px 18px;
+    background:rgba(255,255,255,.1);
+  }
+  .bal-label,.bal-sub{display:none}
+  .bal-amount{font-size:22px;letter-spacing:-.5px;flex-shrink:0;line-height:1}
+  .bal-amount .bal-sym{font-size:15px;margin-top:2px}
+  .bal-pills{margin-top:0;flex:1;flex-wrap:nowrap;gap:8px}
+  .bal-pill{flex:1;padding:7px 11px}
+  .bal-pill-icon{width:24px;height:24px;font-size:12px}
+  .bpi-label{font-size:9px}
+  .bpi-val{font-size:12px}
+  #budget-bar-wrap{display:none!important}
+
+  /* ── CONTENT → scrollable right column ── */
+  .content{
+    grid-area:content;
+    background:var(--bg);
+    overflow-y:auto;-webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;scrollbar-color:var(--border2) transparent;
+  }
+  .pad{padding:24px 28px;max-width:860px}
+
+  /* Cards */
+  .card{padding:22px;margin-bottom:14px}
+  .chart-wrap,.cat-section,.pay-section,.inc-hist-card{padding:20px;margin-bottom:14px}
+
+  /* KPI: 4-column */
+  .kpi-row{grid-template-columns:repeat(4,1fr)}
+
+  /* Summary: side-by-side cat + payment on wide screens */
+  .month-nav{margin-bottom:14px}
+
+  /* Amount input slightly smaller */
+  .amount-inp{font-size:34px}
+
+  /* ── SETTINGS → centered modal ── */
+  .overlay{display:flex;align-items:center;justify-content:center}
+  .sheet{
+    position:relative;bottom:auto;left:auto;right:auto;
+    width:520px;max-width:90vw;max-height:85vh;
+    border-radius:20px;
+    transform:translateY(18px) scale(0.95);
+    transition:transform .3s cubic-bezier(.4,0,.2,1);
+    padding-bottom:24px;
+  }
+  .overlay.open .sheet{transform:translateY(0) scale(1)}
+
+  /* Toast */
+  .toast{bottom:28px}
+
+  /* ── ONBOARDING centered ── */
+  #onboard{
+    flex-direction:row;align-items:center;justify-content:center;
+    gap:48px;padding:40px;
+  }
+  #onboard .ob-hero{max-width:340px;margin-bottom:0;text-align:left}
+  #onboard .ob-icon{font-size:100px}
+  #onboard .ob-title{font-size:36px}
+  #onboard .ob-card{max-width:440px;width:100%;flex-shrink:0}
+}
+
+/* Wide desktop: extra breathing room */
+@media(min-width:1100px){
+  .pad{padding:28px 36px}
+  #main{grid-template-columns:260px 1fr}
+  .tabbar{width:260px}
+}
+</style>
+<script>
+/* ─── PWA SETUP ──────────────────────────────────────────────────────── */
+(function(){
+  // Build manifest as Blob URL so Chrome recognises it for PWA install
+  const iconHref = document.querySelector('link[rel="apple-touch-icon"]')?.href || '';
+  const manifest = JSON.stringify({
+    name: 'Daily Expenses Tracker',
+    short_name: 'Expenses',
+    description: 'Track daily expenses offline. No login, no server needed.',
+    start_url: './',
+    display: 'standalone',
+    orientation: 'portrait',
+    background_color: '#0d3320',
+    theme_color: '#0d3320',
+    categories: ['finance', 'productivity'],
+    icons: [
+      { src: iconHref, sizes: '180x180', type: 'image/png', purpose: 'any maskable' }
+    ]
+  });
+  const mBlob = new Blob([manifest], { type: 'application/manifest+json' });
+  document.getElementById('pwa-manifest').href = URL.createObjectURL(mBlob);
+
+  // Register service worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(()=>{});
+  }
+
+  // Capture install prompt
+  let _prompt;
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    _prompt = e;
+    const btn = document.getElementById('install-app-btn');
+    if (btn) { btn.style.display = ''; }
+    const hdrBtn = document.getElementById('hdr-install-btn');
+    if (hdrBtn) { hdrBtn.style.display = 'flex'; }
+  });
+  window.addEventListener('appinstalled', () => {
+    _prompt = null;
+    const btn = document.getElementById('install-app-btn');
+    if (btn) btn.style.display = 'none';
+    const hdrBtn = document.getElementById('hdr-install-btn');
+    if (hdrBtn) hdrBtn.style.display = 'none';
+  });
+  window._installPWA = function() {
+    if (_prompt) {
+      _prompt.prompt();
+      _prompt.userChoice.then(() => { _prompt = null; });
+    } else {
+      alert('Open this app in Chrome, then tap ⋮ → "Add to Home Screen" or "Install app".');
+    }
+  };
+})();
+</script>
+</head>
+<body>
+<div id="app">
+
+<!-- ══════════ ONBOARDING ══════════ -->
+<div id="onboard">
+  <div class="ob-hero">
+    <div class="ob-icon">💳</div>
+    <div class="ob-brand">PERSONAL FINANCE</div>
+    <div class="ob-title">Daily Expenses<br>Tracker</div>
+    <div class="ob-sub">Track every dollar.<br>Know where it goes. Grow what you keep.</div>
+  </div>
+  <div class="ob-card">
+    <div class="ob-step">Quick Setup</div>
+    <div class="ob-card-title">Tell us about you</div>
+    <div class="ob-field">
+      <label>Your Name</label>
+      <input id="ob-name" type="text" placeholder="e.g. Cheong" value="Cheong"/>
+    </div>
+    <div class="ob-field">
+      <label>Currency</label>
+      <select id="ob-cur">
+        <option value="SGD">🇸🇬 SGD — Singapore Dollar (S$)</option>
+        <option value="USD">🇺🇸 USD — US Dollar ($)</option>
+        <option value="JPY">🇯🇵 JPY — Japanese Yen (¥)</option>
+        <option value="MYR">🇲🇾 MYR — Malaysian Ringgit (RM)</option>
+        <option value="EUR">🇪🇺 EUR — Euro (€)</option>
+        <option value="GBP">🇬🇧 GBP — British Pound (£)</option>
+        <option value="AUD">🇦🇺 AUD — Australian Dollar (A$)</option>
+        <option value="HKD">🇭🇰 HKD — Hong Kong Dollar (HK$)</option>
+      </select>
+    </div>
+    <div class="ob-field">
+      <label>Monthly Budget <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+      <input id="ob-budget" type="number" placeholder="Leave blank for no budget" min="0"/>
+    </div>
+    <button class="ob-btn" onclick="finishOnboard()">
+      <span>Start Tracking</span><span style="font-size:18px">→</span>
+    </button>
+  </div>
+</div>
+
+<!-- ══════════ MAIN APP ══════════ -->
+<div id="main" class="hidden" style="display:flex;flex-direction:column;height:100%;overflow:hidden">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="hdr-top">
+      <div>
+        <div class="hdr-greet" id="h-greet"></div>
+        <div class="hdr-name" id="h-name">Cheong</div>
+      </div>
+      <div style="display:flex;align-items:center">
+        <button id="hdr-install-btn" class="hdr-install-btn" onclick="window._installPWA()" title="Install App">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3v13M7 11l5 5 5-5"/>
+            <path d="M5 20h14"/>
+          </svg>
+        </button>
+        <div class="hdr-avatar" id="av" onclick="openSheet()">C</div>
+      </div>
+    </div>
+    <div class="bal-card">
+      <div class="bal-label">Monthly Balance</div>
+      <div class="bal-amount"><span class="bal-sym" id="h-sym">S$</span><span id="h-bal">0.00</span></div>
+      <div class="bal-sub" id="h-balsub">This month's net</div>
+      <div class="bal-pills">
+        <div class="bal-pill">
+          <div class="bal-pill-icon" style="background:rgba(74,222,128,.2)">📥</div>
+          <div class="bal-pill-info">
+            <div class="bpi-label">Income</div>
+            <div class="bpi-val" id="h-inc">S$0.00</div>
+          </div>
+        </div>
+        <div class="bal-pill">
+          <div class="bal-pill-icon" style="background:rgba(244,63,94,.2)">📤</div>
+          <div class="bal-pill-info">
+            <div class="bpi-label">Spent</div>
+            <div class="bpi-val" id="h-exp">S$0.00</div>
+          </div>
+        </div>
+      </div>
+      <div id="budget-bar-wrap" class="budget-bar-wrap hidden">
+        <div class="bb-hdr">
+          <span class="bb-lbl" id="bb-lbl">Budget</span>
+          <span class="bb-pct" id="bb-pct" style="color:#4ade80">0%</span>
+        </div>
+        <div class="bb-track"><div class="bb-fill" id="bb-fill" style="width:0%;background:#4ade80"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="content" id="content"></div>
+
+  <!-- Tab Bar (mobile) / Sidebar (desktop) -->
+  <div class="tabbar">
+
+    <!-- Sidebar brand — desktop only -->
+    <div class="sb-brand">
+      <div class="sb-logo">
+        <!-- Mini logo: gradient arc + spiral notebook + dollar badge -->
+        <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+          <defs>
+            <linearGradient id="sbArc" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#22c55e"/>
+              <stop offset="100%" stop-color="#3b82f6"/>
+            </linearGradient>
+          </defs>
+          <!-- Arc: center(22,20) r=18, 9-oclock to 4-oclock CW -->
+          <path d="M 4,20 A 18,18 0 1,1 37,29" fill="none" stroke="url(#sbArc)" stroke-width="3" stroke-linecap="round"/>
+          <!-- Notebook outer -->
+          <rect x="11" y="8" width="20" height="25" rx="3" fill="#162040"/>
+          <!-- White page -->
+          <rect x="14" y="9" width="16" height="23" rx="2" fill="white"/>
+          <!-- Spiral coils -->
+          <circle cx="10" cy="12" r="1.5" fill="#0f172a"/><circle cx="10" cy="12" r=".8" fill="#2d3f60"/>
+          <circle cx="10" cy="16" r="1.5" fill="#0f172a"/><circle cx="10" cy="16" r=".8" fill="#2d3f60"/>
+          <circle cx="10" cy="20" r="1.5" fill="#0f172a"/><circle cx="10" cy="20" r=".8" fill="#2d3f60"/>
+          <circle cx="10" cy="24" r="1.5" fill="#0f172a"/><circle cx="10" cy="24" r=".8" fill="#2d3f60"/>
+          <circle cx="10" cy="28" r="1.5" fill="#0f172a"/><circle cx="10" cy="28" r=".8" fill="#2d3f60"/>
+          <!-- Page lines -->
+          <line x1="16" y1="14" x2="28" y2="14" stroke="#d1d5db" stroke-width="1.2"/>
+          <line x1="16" y1="17" x2="28" y2="17" stroke="#d1d5db" stroke-width="1.2"/>
+          <line x1="16" y1="20" x2="26" y2="20" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="16" y1="23" x2="27" y2="23" stroke="#e5e7eb" stroke-width="1"/>
+          <!-- Dollar badge -->
+          <circle cx="33" cy="31" r="7" fill="#2563eb"/>
+          <text x="33" y="34.5" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="8" font-weight="900" fill="white">$</text>
+        </svg>
+      </div>
+      <div>
+        <div class="sb-app-name">Daily Expenses Tracker</div>
+        <div class="sb-app-sub">Personal Finance</div>
+      </div>
+    </div>
+    <div class="sb-nav-label">Navigation</div>
+
+    <button class="tb active" id="tb-add" onclick="goTab('add')">
+      <div class="tb-icon">➕</div>
+      <div class="tb-lbl">Add</div>
+      <div class="tb-dot"></div>
+    </button>
+    <button class="tb" id="tb-history" onclick="goTab('history')">
+      <div class="tb-icon">📋</div>
+      <div class="tb-lbl">History</div>
+      <div class="tb-dot"></div>
+    </button>
+    <button class="tb" id="tb-summary" onclick="goTab('summary')">
+      <div class="tb-icon">📊</div>
+      <div class="tb-lbl">Summary</div>
+      <div class="tb-dot"></div>
+    </button>
+    <button class="tb" id="tb-income" onclick="goTab('income')">
+      <div class="tb-icon">💰</div>
+      <div class="tb-lbl">Income</div>
+      <div class="tb-dot"></div>
+    </button>
+
+    <!-- Spacer + Settings — desktop only -->
+    <div class="sb-gap"></div>
+    <button class="tb sb-settings-btn" onclick="openSheet()">
+      <div class="tb-icon">⚙️</div>
+      <div class="tb-lbl">Settings</div>
+      <div class="tb-dot"></div>
+    </button>
+
+  </div>
+</div>
+
+<!-- Settings Sheet -->
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeSheet()">
+  <div class="sheet">
+    <div class="sheet-drag"></div>
+    <div class="sheet-hdr">
+      <div class="sheet-title">Settings</div>
+      <button class="sheet-close" onclick="closeSheet()">✕</button>
+    </div>
+    <div class="sett-section">
+      <div class="sett-section-lbl">Profile</div>
+      <div class="fld"><label>Your Name</label><input id="s-name" type="text" oninput="liveUpdate()"/></div>
+      <div class="fld"><label>Currency</label>
+        <select id="s-cur" onchange="liveUpdate()">
+          <option value="SGD">🇸🇬 SGD — Singapore Dollar (S$)</option>
+          <option value="USD">🇺🇸 USD — US Dollar ($)</option>
+          <option value="JPY">🇯🇵 JPY — Japanese Yen (¥)</option>
+          <option value="MYR">🇲🇾 MYR — Malaysian Ringgit (RM)</option>
+          <option value="EUR">🇪🇺 EUR — Euro (€)</option>
+          <option value="GBP">🇬🇧 GBP — British Pound (£)</option>
+          <option value="AUD">🇦🇺 AUD — Australian Dollar (A$)</option>
+          <option value="HKD">🇭🇰 HKD — Hong Kong Dollar (HK$)</option>
+        </select>
+      </div>
+      <div class="fld"><label>Monthly Budget (optional)</label><input id="s-bgt" type="number" placeholder="Leave blank for no limit" oninput="liveUpdate()"/></div>
+    </div>
+    <div class="sett-section">
+      <div class="sett-section-lbl">Data</div>
+      <input type="file" id="csv-file-input" accept=".csv" style="display:none" onchange="handleCSVImport(this)">
+      <button class="exp-btn" style="background:linear-gradient(135deg,#2563eb,#1d4ed8);color:white;border:none" onclick="importFromCSV()">📥 Import Data (CSV)</button>
+      <button id="install-app-btn" class="exp-btn" style="display:none;background:linear-gradient(135deg,#10b981,#059669);color:white;border:none;margin-bottom:4px" onclick="window._installPWA()">📲 Install as App on Phone</button>
+      <button class="exp-btn exp-csv" onclick="exportAll()">📤 Export All Data (CSV)</button>
+      <button class="danger-btn" onclick="nukeData()">🗑️ Clear All Data</button>
+    </div>
+    <div style="text-align:center;color:var(--light);font-size:12px;margin-top:16px">
+      Daily Expenses Tracker · v2.0 · Offline-first · Personal Finance
+    </div>
+  </div>
+</div>
+
+</div><!-- #app -->
+<div class="toast" id="toast"></div>
+
+<!-- ══════════ APP SCRIPT ══════════ -->
+<script>
+/* ─── CONFIG ──────────────────────────────────────────────────────────── */
+const CATS=[
+  {id:'food',       label:'Food',           icon:'🍹', color:'#F59E0B'},
+  {id:'transport',  label:'Transport',      icon:'🚌', color:'#3B82F6'},
+  {id:'groceries',  label:'Groceries',      icon:'🛒', color:'#10B981'},
+  {id:'utilities',  label:'Utilities',      icon:'💡', color:'#6366F1'},
+  {id:'shopping',   label:'Shopping',       icon:'🛍️', color:'#EC4899'},
+  {id:'healthcare', label:'Healthcare',     icon:'💊', color:'#EF4444'},
+  {id:'entertainment',label:'Entertainment',icon:'🎬', color:'#8B5CF6'},
+  {id:'education',  label:'Education',      icon:'📚', color:'#0EA5E9'},
+  {id:'personal',    label:'Personal',        icon:'👤', color:'#6366F1'},
+  {id:'others',     label:'Others',         icon:'📦', color:'#6B7280'},
+];
+const PAYS=[
+  {id:'posb',  label:'POSB',   color:'#D71920'},
+  {id:'uob',   label:'UOB',    color:'#1A2B5C'},
+  {id:'ocbc',  label:'OCBC',   color:'#E2792F'},
+  {id:'cash',  label:'Cash',   color:'#16A34A'},
+  {id:'others',label:'Others', color:'#6B7280'},
+];
+const INCATS=[
+  {id:'salary',      label:'Salary',              icon:'💼'},
+  {id:'business',    label:'Business Income',      icon:'💹'},
+  {id:'freelance',   label:'Freelance/Consulting', icon:'🧾'},
+  {id:'investment',  label:'Investment/Dividends', icon:'📈'},
+  {id:'other_income',label:'Other Income',         icon:'💰'},
+];
+const SYM={SGD:'S$',USD:'$',JPY:'¥',MYR:'RM',EUR:'€',GBP:'£',AUD:'A$',HKD:'HK$'};
+
+/* ─── STATE ───────────────────────────────────────────────────────────── */
+let S   = JSON.parse(localStorage.getItem('det_s')  || '{"name":"Cheong","currency":"SGD","budget":""}');
+let EXP = JSON.parse(localStorage.getItem('det_e')  || '[]');
+let INC = JSON.parse(localStorage.getItem('det_i')  || '[]');
+
+let curTab='add', addType='expense', selCat='', selPay='', selIC='';
+let smY=new Date().getFullYear(), smM=new Date().getMonth();
+
+const saveS   = ()=> localStorage.setItem('det_s', JSON.stringify(S));
+const saveEXP = ()=> localStorage.setItem('det_e', JSON.stringify(EXP));
+const saveINC = ()=> localStorage.setItem('det_i', JSON.stringify(INC));
+const sym     = ()=> SYM[S.currency] || S.currency;
+const fmt     = v => sym()+(parseFloat(v)||0).toFixed(['JPY','KRW'].includes(S.currency)?0:2);
+
+/* ─── BOOT ────────────────────────────────────────────────────────────── */
+(function boot(){
+  if(localStorage.getItem('det_ready')){
+    document.getElementById('onboard').classList.add('hidden');
+    document.getElementById('main').classList.remove('hidden');
+    applyProfile(); banner(); goTab('add');
+  }
+})();
+
+/* ─── ONBOARDING ─────────────────────────────────────────────────────── */
+function finishOnboard(){
+  S={name:(document.getElementById('ob-name').value.trim()||'Friend'),
+     currency:document.getElementById('ob-cur').value,
+     budget:document.getElementById('ob-budget').value||''};
+  saveS();localStorage.setItem('det_ready','1');
+  document.getElementById('onboard').classList.add('hidden');
+  document.getElementById('main').classList.remove('hidden');
+  applyProfile(); banner(); goTab('add');
+}
+
+/* ─── PROFILE ─────────────────────────────────────────────────────────── */
+function applyProfile(){
+  const n=S.name||'Friend';
+  const h=new Date().getHours();
+  const gr=h<5?'Good night 🌙':h<12?'Good morning ☀️':h<17?'Good afternoon 🌤':h<20?'Good evening 🌅':'Good night 🌙';
+  document.getElementById('h-greet').textContent=gr;
+  document.getElementById('h-name').textContent=n;
+  document.getElementById('av').textContent=n[0].toUpperCase();
+}
+
+/* ─── BANNER ─────────────────────────────────────────────────────────── */
+function banner(){
+  const now=new Date(),yr=now.getFullYear(),mo=now.getMonth();
+  const me=EXP.filter(e=>{const d=new Date(e.date);return d.getFullYear()===yr&&d.getMonth()===mo});
+  const mi=INC.filter(e=>{const d=new Date(e.date);return d.getFullYear()===yr&&d.getMonth()===mo});
+  const te=me.reduce((s,r)=>s+r.amount,0);
+  const ti=mi.reduce((s,r)=>s+r.amount,0);
+  const net=ti-te;
+  const s=sym();
+  document.getElementById('h-sym').textContent=s;
+  document.getElementById('h-bal').textContent=Math.abs(net).toFixed(2);
+  document.getElementById('h-balsub').textContent= net>=0?'Surplus this month ✨':'Deficit this month';
+  document.getElementById('h-bal').style.color=net>=0?'#4ade80':'#f87171';
+  document.getElementById('h-inc').textContent=fmt(ti);
+  document.getElementById('h-exp').textContent=fmt(te);
+  if(S.budget&&parseFloat(S.budget)>0){
+    const b=parseFloat(S.budget),pct=Math.min(100,te/b*100);
+    document.getElementById('budget-bar-wrap').classList.remove('hidden');
+    document.getElementById('bb-lbl').textContent=`Budget: ${fmt(te)} / ${fmt(b)}`;
+    document.getElementById('bb-pct').textContent=Math.round(pct)+'%';
+    const fill=document.getElementById('bb-fill');
+    fill.style.width=pct+'%';
+    fill.style.background=pct>90?'#f43f5e':pct>70?'#f59e0b':'#4ade80';
+    document.getElementById('bb-pct').style.color=pct>90?'#f43f5e':pct>70?'#f59e0b':'#4ade80';
+  } else {
+    document.getElementById('budget-bar-wrap').classList.add('hidden');
+  }
+}
+
+/* ─── TABS ───────────────────────────────────────────────────────────── */
+function goTab(t){
+  curTab=t;
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tb-'+t).classList.add('active');
+  const C=document.getElementById('content');
+  C.scrollTop=0;
+  if(t==='add')     renderAdd(C);
+  if(t==='history') renderHistory(C);
+  if(t==='summary') renderSummary(C);
+  if(t==='income')  renderIncome(C);
+}
+
+/* ─── ADD TAB ────────────────────────────────────────────────────────── */
+function renderAdd(C){
+  const s=sym();
+  C.innerHTML=`<div class="pad anim">
+  <div class="card">
+    <div class="type-toggle">
+      <button class="tt exp ${addType==='expense'?'on':''}" onclick="setType('expense')">📤 Expense</button>
+      <button class="tt inc ${addType==='income'?'on':''}" onclick="setType('income')">📥 Income</button>
+    </div>
+    <div class="amount-area ${addType==='expense'?'exp-mode':''}">
+      <span class="amount-prefix">${s}</span>
+      <input class="amount-inp" id="a-amt" type="number" placeholder="0.00" step="0.01" min="0" inputmode="decimal"/>
+    </div>
+  </div>
+
+  ${addType==='expense'?`
+  <div class="card">
+    <div class="card-title"><span class="card-title-icon">🏷</span>Category</div>
+    <div class="pills">
+      ${CATS.map(c=>`<button class="pill ${selCat===c.id?'on':''}" onclick="pc('cat','${c.id}')">${c.icon} ${c.label}</button>`).join('')}
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="card-title-icon">💳</span>Payment Method</div>
+    <div class="pills">
+      ${PAYS.map(p=>`<button class="pill ${selPay===p.id?'pay-on':''}" style="${selPay===p.id?`background:${p.color};border-color:${p.color}`:''}" onclick="pc('pay','${p.id}')">${p.label}</button>`).join('')}
+    </div>
+  </div>`:
+  `<div class="card">
+    <div class="card-title"><span class="card-title-icon">📂</span>Income Source</div>
+    <div class="pills">
+      ${INCATS.map(ic=>`<button class="pill ${selIC===ic.id?'on':''}" onclick="pc('ic','${ic.id}')">${ic.icon} ${ic.label}</button>`).join('')}
+    </div>
+  </div>`}
+
+  <div class="card">
+    <div class="card-title"><span class="card-title-icon">📝</span>Details</div>
+    <div class="fld"><label>Description</label>
+      <input id="a-dsc" type="text" placeholder="${addType==='expense'?'e.g. Lunch at hawker, MRT fare...':'e.g. June salary, RYU sales batch...'}"/>
+    </div>
+    <div class="fld"><label>Date</label><input id="a-dt" type="date" value="${td()}"/></div>
+    <div class="fld"><label>Notes <span style="font-weight:400;text-transform:none">(optional)</span></label>
+      <textarea id="a-nt" placeholder="Any extra details..."></textarea>
+    </div>
+    <div class="flash" id="flash">✅ Entry saved successfully!</div>
+    <button class="submit-btn ${addType==='expense'?'exp':'inc'}" onclick="doSave()">
+      ${addType==='expense'?'💾 Save Expense':'💾 Save Income'}
+    </button>
+  </div></div>`;
+}
+function setType(t){addType=t;selCat='';selPay='';selIC='';goTab('add');}
+function pc(g,id){
+  if(g==='cat')selCat=selCat===id?'':id;
+  else if(g==='pay')selPay=selPay===id?'':id;
+  else selIC=selIC===id?'':id;
+  renderAdd(document.getElementById('content'));
+}
+function doSave(){
+  const amt=parseFloat(document.getElementById('a-amt')?.value);
+  const dsc=document.getElementById('a-dsc')?.value.trim()||'';
+  const dt =document.getElementById('a-dt')?.value;
+  const nt =document.getElementById('a-nt')?.value.trim()||'';
+  if(!amt||amt<=0){toast('⚠️ Enter a valid amount');return;}
+  if(!dt){toast('⚠️ Pick a date');return;}
+  if(addType==='expense'){
+    if(!selCat){toast('⚠️ Choose a category');return;}
+    if(!selPay){toast('⚠️ Choose a payment method');return;}
+    EXP.unshift({id:uid(),date:dt,amount:amt,category_id:selCat,description:dsc,payment_method_id:selPay,notes:nt,ts:Date.now()});
+    saveEXP();
+  } else {
+    if(!selIC){toast('⚠️ Choose an income source');return;}
+    INC.unshift({id:uid(),date:dt,amount:amt,income_category_id:selIC,source_description:dsc,notes:nt,ts:Date.now()});
+    saveINC();
+  }
+  selCat='';selPay='';selIC='';
+  const fl=document.getElementById('flash');
+  if(fl){fl.style.display='block';setTimeout(()=>{if(fl)fl.style.display='none'},2200);}
+  document.getElementById('a-amt').value='';
+  document.getElementById('a-dsc').value='';
+  document.getElementById('a-nt').value='';
+  toast(addType==='expense'?'✅ Expense saved!':'✅ Income saved!');
+  banner();
+}
+
+/* ─── HISTORY ────────────────────────────────────────────────────────── */
+function renderHistory(C){
+  if(!EXP.length){
+    C.innerHTML=`<div class="pad anim"><div class="empty-state"><div class="ei">📋</div><h3>No expenses yet</h3><p>Tap ➕ Add to log<br>your first expense.</p></div></div>`;
+    return;
+  }
+  const sorted=[...EXP].sort((a,b)=>b.date.localeCompare(a.date)||(b.ts||0)-(a.ts||0));
+  const grp={};
+  sorted.forEach(e=>{(grp[e.date]=grp[e.date]||[]).push(e);});
+  C.innerHTML=`<div class="pad anim">
+  <div style="display:flex;justify-content:flex-end;margin-bottom:10px">
+    <button class="exp-btn exp-csv" style="width:auto;padding:8px 16px;font-size:12px" onclick="exportMonth()">📥 Export CSV</button>
+  </div>
+  ${Object.entries(grp).map(([date,rows])=>{
+    const tot=rows.reduce((s,r)=>s+r.amount,0);
+    return `<div class="day-section">
+      <div class="day-hdr">
+        <span class="day-lbl">${fmtD(date)}</span>
+        <span class="day-total" style="color:var(--red)">−${fmt(tot)}</span>
+      </div>
+      ${rows.map(r=>{
+        const cat=CATS.find(x=>x.id===r.category_id)||{icon:'📦',color:'#6B7280',label:'Other'};
+        const pay=PAYS.find(x=>x.id===r.payment_method_id)||{label:r.payment_method_id,color:'#6B7280'};
+        return `<div class="tx-card">
+          <div class="tx-emoji" style="background:${cat.color}18">${cat.icon}</div>
+          <div class="tx-body">
+            <div class="tx-desc">${r.description||cat.label}</div>
+            <div class="tx-meta">
+              <span class="pay-badge" style="background:${pay.color}">${pay.label}</span>
+              ${r.notes?`<span class="tx-note">${r.notes}</span>`:''}
+            </div>
+          </div>
+          <div class="tx-right">
+            <span class="tx-amount" style="color:var(--red)">−${fmt(r.amount)}</span>
+            <button class="del-btn" onclick="delE('${r.id}')">✕</button>
+          </div>
+        </div>`;
+      }).join('')}
+    </div>`;
+  }).join('')}
+  </div>`;
+}
+function delE(id){
+  if(!confirm('Delete this expense?'))return;
+  EXP=EXP.filter(e=>e.id!==id);saveEXP();banner();renderHistory(document.getElementById('content'));
+}
+
+/* ─── SUMMARY ────────────────────────────────────────────────────────── */
+function renderSummary(C){
+  const s1=`${smY}-${pad(smM+1)}-01`,s2=`${smY}-${pad(smM+1)}-31`;
+  const me=EXP.filter(e=>e.date>=s1&&e.date<=s2);
+  const mi=INC.filter(e=>e.date>=s1&&e.date<=s2);
+  const te=me.reduce((s,r)=>s+r.amount,0);
+  const ti=mi.reduce((s,r)=>s+r.amount,0);
+  const net=ti-te;
+  const sr=ti>0?((net/ti)*100).toFixed(1):'—';
+  const mn=new Date(smY,smM).toLocaleDateString('en-SG',{month:'long',year:'numeric'});
+
+  const catMap={};me.forEach(r=>{catMap[r.category_id]=(catMap[r.category_id]||0)+r.amount;});
+  const catList=Object.entries(catMap).sort((a,b)=>b[1]-a[1]);
+  const maxC=catList[0]?.[1]||1;
+
+  const payMap={};me.forEach(r=>{payMap[r.payment_method_id]=(payMap[r.payment_method_id]||0)+r.amount;});
+  const payList=Object.entries(payMap).sort((a,b)=>b[1]-a[1]);
+
+  // 6-month bar data
+  const bars=Array.from({length:6},(_,i)=>{
+    const d=new Date(smY,smM-5+i,1);
+    const y=d.getFullYear(),m=d.getMonth();
+    const s=`${y}-${pad(m+1)}-01`,e=`${y}-${pad(m+1)}-31`;
+    const ex=EXP.filter(x=>x.date>=s&&x.date<=e).reduce((a,r)=>a+r.amount,0);
+    const ic=INC.filter(x=>x.date>=s&&x.date<=e).reduce((a,r)=>a+r.amount,0);
+    return {lbl:d.toLocaleDateString('en',{month:'short'}),ex,ic,isCur:y===smY&&m===smM};
+  });
+
+  const budLine = S.budget&&parseFloat(S.budget)>0
+    ? `<div class="chart-wrap">
+        <div class="chart-hdr"><span class="chart-title">Budget Usage</span><span style="font-size:13px;font-weight:800;color:${te/parseFloat(S.budget)>.9?'var(--red)':te/parseFloat(S.budget)>.7?'var(--amber)':'var(--g2)'}">${Math.round(te/parseFloat(S.budget)*100)}%</span></div>
+        <div style="background:#f1f5f9;border-radius:8px;height:12px;overflow:hidden">
+          <div style="height:12px;border-radius:8px;background:${te/parseFloat(S.budget)>.9?'var(--red)':te/parseFloat(S.budget)>.7?'var(--amber)':'var(--g2)'};width:${Math.min(100,te/parseFloat(S.budget)*100).toFixed(1)}%;transition:width .6s"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:6px">
+          <span style="font-size:12px;color:var(--muted);font-weight:600">Spent: ${fmt(te)}</span>
+          <span style="font-size:12px;color:var(--muted);font-weight:600">Budget: ${fmt(S.budget)}</span>
+        </div>
+      </div>` : '';
+
+  C.innerHTML=`<div class="pad anim">
+  <div class="month-nav">
+    <button class="mnav-btn" onclick="smPrev()">‹</button>
+    <span class="mname">${mn}</span>
+    <button class="mnav-btn" onclick="smNext()">›</button>
+  </div>
+  <div class="kpi-row">
+    <div class="kpi" data-icon="📤"><div class="kpi-lbl">Expenses</div><div class="kpi-val" style="color:var(--red)">${fmt(te)}</div><div class="kpi-sub">${me.length} entries</div></div>
+    <div class="kpi" data-icon="📥"><div class="kpi-lbl">Income</div><div class="kpi-val" style="color:var(--g2)">${fmt(ti)}</div><div class="kpi-sub">${mi.length} entries</div></div>
+    <div class="kpi" data-icon="💰"><div class="kpi-lbl">Net Savings</div><div class="kpi-val" style="color:${net>=0?'var(--g2)':'var(--red)'}">${net>=0?'':'-'}${fmt(Math.abs(net))}</div><div class="kpi-sub">${net>=0?'Surplus':'Deficit'}</div></div>
+    <div class="kpi" data-icon="🎯"><div class="kpi-lbl">Savings Rate</div><div class="kpi-val" style="color:var(--g2)">${sr}${sr!=='—'?'%':''}</div><div class="kpi-sub">of income saved</div></div>
+  </div>
+  ${budLine}
+  ${bars.some(b=>b.ex>0||b.ic>0)?`<div class="chart-wrap">
+    <div class="chart-hdr">
+      <span class="chart-title">6-Month Overview</span>
+      <div class="chart-legend">
+        <div class="cl"><div class="cl-dot" style="background:#166534"></div>Income</div>
+        <div class="cl"><div class="cl-dot" style="background:#f43f5e"></div>Expense</div>
+      </div>
+    </div>
+    <canvas id="ch" height="150"></canvas>
+  </div>`:''}
+  ${catList.length?`<div class="cat-section">
+    <div class="sec-title">Spending by Category</div>
+    ${catList.map(([cid,amt],i)=>{
+      const cat=CATS.find(x=>x.id===cid)||{label:cid,color:'#6B7280',icon:'📦'};
+      return `<div class="cat-row">
+        <span class="cat-rank">#${i+1}</span>
+        <div class="cat-ico" style="background:${cat.color}18">${cat.icon}</div>
+        <div class="cat-info">
+          <div class="cat-name">${cat.label}</div>
+          <div class="cat-bar"><div class="cat-bar-fill" style="width:${(amt/maxC*100).toFixed(0)}%;background:${cat.color}"></div></div>
+        </div>
+        <span class="cat-amt" style="color:${cat.color}">${fmt(amt)}</span>
+      </div>`;
+    }).join('')}
+  </div>`:''}
+  ${payList.length?`<div class="pay-section">
+    <div class="sec-title">By Payment Method</div>
+    ${payList.map(([pid,amt])=>{
+      const pay=PAYS.find(x=>x.id===pid)||{label:pid,color:'#6B7280'};
+      const pct=te>0?(amt/te*100).toFixed(0):0;
+      return `<div class="pay-row">
+        <div class="pay-color-bar" style="background:${pay.color}"></div>
+        <span class="pay-name">${pay.label}</span>
+        <span class="pay-pct">${pct}%</span>
+        <span class="pay-amt" style="color:${pay.color}">${fmt(amt)}</span>
+      </div>`;
+    }).join('')}
+  </div>`:''}
+  ${!me.length&&!mi.length?`<div class="empty-state"><div class="ei">📊</div><h3>No data</h3><p>No entries for ${mn}</p></div>`:''}
+  <button class="exp-btn exp-csv" onclick="exportMonth()">📥 Export This Month (CSV)</button>
+  </div>`;
+
+  // draw chart
+  if(bars.some(b=>b.ex>0||b.ic>0)){
+    requestAnimationFrame(()=>{
+      const cv=document.getElementById('ch');
+      if(!cv)return;
+      cv.width=cv.parentElement.offsetWidth-36;
+      drawGroupedBars(cv,bars);
+    });
+  }
+}
+function smPrev(){if(smM===0){smM=11;smY--}else smM--;renderSummary(document.getElementById('content'));}
+function smNext(){
+  const n=new Date();
+  if(smY>n.getFullYear()||(smY===n.getFullYear()&&smM>=n.getMonth()))return;
+  if(smM===11){smM=0;smY++}else smM++;
+  renderSummary(document.getElementById('content'));
+}
+function drawGroupedBars(cv,bars){
+  const ctx=cv.getContext('2d');
+  const W=cv.width,H=cv.height;
+  ctx.clearRect(0,0,W,H);
+  const all=[...bars.map(b=>b.ex),...bars.map(b=>b.ic)];
+  const maxV=Math.max(...all,1);
+  const LABEL_H=22,TOP_PAD=24;
+  const chartH=H-LABEL_H-TOP_PAD;
+  const gW=Math.floor(W/bars.length);
+  const bW=Math.max(6,Math.floor(gW*0.3));
+  bars.forEach((b,i)=>{
+    const cx=gW*i+gW/2;
+    // Income bar (left)
+    if(b.ic>0){
+      const bH=Math.round((b.ic/maxV)*chartH);
+      const x=cx-bW-2,y=TOP_PAD+chartH-bH;
+      ctx.fillStyle=b.isCur?'#166534':'#86efac';
+      roundRect(ctx,x,y,bW,bH,3);
+      if(b.ic>maxV*.08){
+        ctx.fillStyle=b.isCur?'#052e16':'#166534';
+        ctx.font='bold 8px system-ui';ctx.textAlign='center';
+        ctx.fillText(abbr(b.ic),x+bW/2,y-3);
+      }
+    }
+    // Expense bar (right)
+    if(b.ex>0){
+      const bH=Math.round((b.ex/maxV)*chartH);
+      const x=cx+2,y=TOP_PAD+chartH-bH;
+      ctx.fillStyle=b.isCur?'#f43f5e':'#fca5a5';
+      roundRect(ctx,x,y,bW,bH,3);
+      if(b.ex>maxV*.08){
+        ctx.fillStyle=b.isCur?'#7f1d1d':'#b91c1c';
+        ctx.font='bold 8px system-ui';ctx.textAlign='center';
+        ctx.fillText(abbr(b.ex),x+bW/2,y-3);
+      }
+    }
+    // Label
+    ctx.fillStyle=b.isCur?'#052e16':'#9ca3af';
+    ctx.font=`${b.isCur?'bold ':''} 10px system-ui`;ctx.textAlign='center';
+    ctx.fillText(b.lbl,cx,H-4);
+  });
+}
+function roundRect(ctx,x,y,w,h,r){
+  ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);
+  ctx.quadraticCurveTo(x+w,y,x+w,y+r);ctx.lineTo(x+w,y+h);
+  ctx.lineTo(x,y+h);ctx.lineTo(x,y+r);
+  ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();ctx.fill();
+}
+function abbr(v){return v>=1000?(v/1000).toFixed(1)+'k':v.toFixed(0);}
+
+/* ─── INCOME TAB ─────────────────────────────────────────────────────── */
+function renderIncome(C){
+  const sorted=[...INC].sort((a,b)=>b.date.localeCompare(a.date));
+  const allTime=INC.reduce((s,r)=>s+r.amount,0);
+  const now=new Date();
+  const thisM=INC.filter(e=>{const d=new Date(e.date);return d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear()}).reduce((s,r)=>s+r.amount,0);
+
+  // By source
+  const srcMap={};INC.forEach(r=>{srcMap[r.income_category_id]=(srcMap[r.income_category_id]||0)+r.amount});
+  const srcPills=Object.entries(srcMap).sort((a,b)=>b[1]-a[1]).slice(0,3);
+
+  C.innerHTML=`<div class="pad anim">
+  <div class="inc-hero">
+    <div class="ih-lbl">This Month's Income</div>
+    <div class="ih-val">${fmt(thisM)}</div>
+    <div class="ih-sub">All-time total: ${fmt(allTime)}</div>
+    ${srcPills.length?`<div class="ih-pills">${srcPills.map(([id,amt])=>{const ic=INCATS.find(x=>x.id===id)||{icon:'💰',label:id};return`<div class="ih-pill">${ic.icon} ${fmt(amt)}</div>`}).join('')}</div>`:''}
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="card-title-icon">➕</span>Add Income</div>
+    <div class="pills" style="margin-bottom:14px">
+      ${INCATS.map(ic=>`<button class="pill ${selIC===ic.id?'on':''}" onclick="sic2('${ic.id}')">${ic.icon} ${ic.label}</button>`).join('')}
+    </div>
+    <div class="fld"><label>Amount (${sym()})</label><input id="i-a" type="number" placeholder="0.00" step="0.01" min="0" inputmode="decimal"/></div>
+    <div class="fld"><label>Description</label><input id="i-d" type="text" placeholder="e.g. June salary, RYU batch sales..."/></div>
+    <div class="fld"><label>Date</label><input id="i-dt" type="date" value="${td()}"/></div>
+    <div class="fld"><label>Notes <span style="font-weight:400;text-transform:none">(optional)</span></label><textarea id="i-n" placeholder="Any extra details..."></textarea></div>
+    <button class="submit-btn inc" onclick="saveInc()">💾 Save Income</button>
+  </div>
+  ${sorted.length?`<div class="inc-hist-card">
+    <div class="sec-title">Income History</div>
+    ${sorted.map(r=>{
+      const ic=INCATS.find(x=>x.id===r.income_category_id)||{icon:'💰',label:r.income_category_id};
+      return `<div class="inc-tx">
+        <div class="inc-ico">${ic.icon}</div>
+        <div class="inc-body">
+          <div class="inc-desc">${r.source_description||ic.label}</div>
+          <div class="inc-meta">${fmtD(r.date)}${r.notes?` · ${r.notes}`:''}</div>
+        </div>
+        <span class="inc-amt">+${fmt(r.amount)}</span>
+        <button class="del-btn" onclick="delI('${r.id}')" style="margin-left:6px">✕</button>
+      </div>`;
+    }).join('')}
+  </div>`:
+  `<div class="empty-state"><div class="ei">💰</div><h3>No income yet</h3><p>Log your first income entry above.</p></div>`}
+  </div>`;
+}
+function sic2(id){selIC=selIC===id?'':id;renderIncome(document.getElementById('content'));}
+function saveInc(){
+  const amt=parseFloat(document.getElementById('i-a')?.value);
+  const dsc=document.getElementById('i-d')?.value.trim()||'';
+  const dt =document.getElementById('i-dt')?.value;
+  const nt =document.getElementById('i-n')?.value.trim()||'';
+  if(!amt||amt<=0){toast('⚠️ Enter a valid amount');return;}
+  if(!selIC){toast('⚠️ Choose an income source');return;}
+  INC.unshift({id:uid(),date:dt,amount:amt,income_category_id:selIC,source_description:dsc,notes:nt,ts:Date.now()});
+  saveINC();selIC='';toast('✅ Income saved!');banner();renderIncome(document.getElementById('content'));
+}
+function delI(id){
+  if(!confirm('Delete this income record?'))return;
+  INC=INC.filter(e=>e.id!==id);saveINC();banner();renderIncome(document.getElementById('content'));
+}
+
+/* ─── SETTINGS SHEET ─────────────────────────────────────────────────── */
+function openSheet(){
+  document.getElementById('s-name').value=S.name||'';
+  document.getElementById('s-cur').value=S.currency||'SGD';
+  document.getElementById('s-bgt').value=S.budget||'';
+  document.getElementById('overlay').classList.add('open');
+}
+function closeSheet(){document.getElementById('overlay').classList.remove('open');}
+function liveUpdate(){
+  S.name=document.getElementById('s-name').value;
+  S.currency=document.getElementById('s-cur').value;
+  S.budget=document.getElementById('s-bgt').value;
+  saveS();applyProfile();banner();
+}
+function nukeData(){
+  if(!confirm('⚠️ Delete ALL expenses and income? This is permanent.'))return;
+  EXP=[];INC=[];saveEXP();saveINC();banner();closeSheet();goTab('add');toast('All data cleared');
+}
+
+/* ─── IMPORT JAN-JUN 2026 ──────────────────────────────────────────── */
+const _EXP2026=[[1735689600000,"2026-06-22",28.6,"groceries","posb","SUPERGREEN PAYA LEBAR"],[1735689661000,"2026-06-22",1.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735689722000,"2026-06-22",40.0,"others","posb","ATM Cash Withdrawal"],[1735689783000,"2026-06-21",120.0,"personal","posb","TAX YIXX CHXX (CHXX YANZXXX"],[1735689844000,"2026-06-21",3.0,"food","posb","CHARCOAL MASTER 170"],[1735689905000,"2026-06-20",500.0,"utilities","posb","AXS PTE LTD"],[1735689966000,"2026-06-20",500.0,"utilities","posb","DCL-0850267566 bill payment"],[1735690027000,"2026-06-20",31.7,"food","posb","417 BAK KUT TEH"],[1735690088000,"2026-06-20",20.0,"shopping","posb","WDL CCT 33726614,RE SUSTAINABILTY SOLUTION NETS"],[1735690149000,"2026-06-19",180.0,"utilities","posb","SINGTEL"],[1735690210000,"2026-06-19",1000.0,"utilities","posb","UOB credit card / bill payment"],[1735690271000,"2026-06-18",20.0,"transport","posb","SIMPLYGO APP Singapore"],[1735690332000,"2026-06-18",14.7,"food","posb","COUNTRY BROT - WATERWA"],[1735690393000,"2026-06-17",18.7,"food","posb","DON DON DONKI - WWP"],[1735690454000,"2026-06-17",23.8,"food","posb","HO KEE PAU (SINGAPORE) PTE LTD"],[1735690515000,"2026-06-17",18.0,"personal","posb","MX YAXX JINXXX"],[1735690576000,"2026-06-17",11.7,"food","posb","XUYU FOOD MANUFACTURING PTE. LT"],[1735690637000,"2026-06-17",11.0,"food","posb","DJ BAKERY KOVAN 204"],[1735690698000,"2026-06-16",14.9,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735690759000,"2026-06-16",5.1,"food","posb","SMP*YOURS BAKERY_SENGK"],[1735690820000,"2026-06-13",13.0,"food","posb","JIA JIA3 VEGETARIAN PTE. LTD."],[1735690881000,"2026-06-12",250.0,"healthcare","posb","ACM AIRCON SERVICING PTE. LTD."],[1735690942000,"2026-06-12",8.0,"food","posb","SRISUN EXPRESS RESTAURANT PTE."],[1735691003000,"2026-06-12",4.0,"food","posb","182RIV CHINESE VEG RICE"],[1735691064000,"2026-06-08",140.0,"healthcare","posb","ACM AIRCON SERVICING PTE. LTD."],[1735691125000,"2026-06-08",16.5,"food","posb","CHARCOAL MASTER 170"],[1735691186000,"2026-06-08",5.4,"personal","posb","ROSLIXXX BINXX JAMXX"],[1735691247000,"2026-06-06",23.6,"groceries","posb","SUPERGREEN PAYA LEBAR"],[1735691308000,"2026-06-06",6.6,"food","posb","OLD CHANG KEE Singapore"],[1735691369000,"2026-06-06",3.8,"food","posb","CS371"],[1735691430000,"2026-06-06",5.8,"personal","posb","LEOXX YOXX MOXX"],[1735691491000,"2026-06-05",20.6,"food","posb","DON DON DONKI - WWP"],[1735691552000,"2026-06-05",22.8,"groceries","posb","FAIRPRICE FINEST-WATER"],[1735691613000,"2026-06-05",4.2,"food","posb","FOMO PAY PTE. LTD."],[1735691674000,"2026-06-04",20.0,"transport","posb","SIMPLYGO SINGAPORE"],[1735691735000,"2026-06-04",3.3,"food","posb","FUN TOAST PTE. LTD."],[1735691796000,"2026-06-03",10.6,"food","posb","SK170 SEAFOOD"],[1735691857000,"2026-06-02",5.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735691918000,"2026-06-01",9.8,"food","posb","MOLLY NONYA-CAKE AND CONFECTION"],[1735691979000,"2026-06-01",22.4,"food","posb","WANG JIAO COOKED FOOD"],[1735692040000,"2026-06-01",3.0,"food","posb","FRIED CARROT STICKS"],[1735692101000,"2026-06-01",6.0,"food","posb","DAD & MUM PANCAKE"],[1735692162000,"2026-05-31",11.6,"food","posb","SK 170 CHOP&SEAR"],[1735692223000,"2026-05-29",21.7,"food","posb","DON DON DONKI - WWP"],[1735692284000,"2026-05-29",7.8,"groceries","posb","FAIRPRICE FINEST-WATER"],[1735692345000,"2026-05-29",35.43,"groceries","posb","NTUC FP - NPCT SINGAPORE"],[1735692406000,"2026-05-29",8.1,"food","posb","NAM KEE PAU NORTHPOINT"],[1735692467000,"2026-05-29",6.55,"shopping","posb","TIKTOK SHOP SELLER"],[1735692528000,"2026-05-29",2.0,"food","posb","FOMO PAY PTE. LTD."],[1735692589000,"2026-05-28",20.1,"healthcare","posb","WELCIA SG (NORTHPOINT)"],[1735692650000,"2026-05-28",20.0,"transport","posb","TRANSIT 30750626091431"],[1735692711000,"2026-05-28",9.3,"shopping","posb","TIKTOK SHOP SELLER"],[1735692772000,"2026-05-28",5.8,"food","posb","DJ BAKERY EVENT"],[1735692833000,"2026-05-28",26.4,"food","posb","KUN JI"],[1735692894000,"2026-05-28",40.0,"shopping","posb","SINGAPURA MOBILE REPAIR PTE. LT"],[1735692955000,"2026-05-28",3.5,"personal","posb","TAN HWEE HIANG"],[1735693016000,"2026-05-28",1.8,"food","posb","HUANG PU SOYA BEAN MP"],[1735693077000,"2026-05-26",111.15,"groceries","posb","NTUC FP - PDD SINGAPORE"],[1735693138000,"2026-05-26",2.99,"food","posb","Luckin Coffee Singapore"],[1735693199000,"2026-05-26",9.0,"utilities","posb","GRO NTUC-UMS S7622429C"],[1735693260000,"2026-05-25",28.5,"food","posb","MUJI-CAFE-PUNGGOL"],[1735693321000,"2026-05-25",23.5,"shopping","posb","MUJI-PUNGGOL SINGAPORE"],[1735693382000,"2026-05-25",9.0,"food","posb","Qashier-YISHUN ITH S"],[1735693443000,"2026-05-23",0.5,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735693504000,"2026-05-23",1.99,"food","posb","Luckin Coffee Singapore"],[1735693565000,"2026-05-23",22.8,"food","posb","HIANG SOON FOOD CATERING SERVIC"],[1735693626000,"2026-05-22",4.0,"food","posb","DOUGH CULTURE PTE LTD"],[1735693687000,"2026-05-22",43.0,"shopping","posb","STAR WATCHES SINGAPORE"],[1735693748000,"2026-05-21",23.6,"groceries","posb","SUPERGREEN PAYA LEBAR"],[1735693809000,"2026-05-21",4.0,"food","posb","OLD CHANG KEE Singapore"],[1735693870000,"2026-05-21",5.0,"food","posb","THE VADAI ORGINS PTE. LTD."],[1735693931000,"2026-05-21",500.0,"utilities","posb","DCL-0850267566 bill payment"],[1735693992000,"2026-05-21",500.0,"utilities","posb","AXS PTE LTD"],[1735694053000,"2026-05-21",9.1,"food","posb","YONG XING TEOCHEW HOUSE"],[1735694114000,"2026-05-20",7.6,"food","posb","OLD CHANG KEE Singapore"],[1735694175000,"2026-05-20",10.5,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735694236000,"2026-05-20",15.6,"food","posb","POLAR PUFFS & CAKES -"],[1735694297000,"2026-05-20",20.0,"transport","posb","SIMPLYGO SINGAPORE"],[1735694358000,"2026-05-19",10.88,"shopping","posb","TIKTOK SHOP SELLER"],[1735694419000,"2026-05-19",425.1,"utilities","posb","PAYNOW - SUPPORTED BY 2C2P PTE"],[1735694480000,"2026-05-19",197.66,"healthcare","posb","SPORE HEALTH"],[1735694541000,"2026-05-19",1000.0,"utilities","posb","UOB credit card / bill payment"],[1735694602000,"2026-05-18",1.6,"food","posb","FOOD N BEVERAGE UBI"],[1735694663000,"2026-05-17",6.0,"personal","posb","Roslinah Jamil"],[1735694724000,"2026-05-17",14.9,"food","posb","SK 170 CHOP&SEAR"],[1735694785000,"2026-05-17",8.0,"personal","posb","UQPAY PTE LTD"],[1735694846000,"2026-05-16",23.1,"groceries","posb","SUPERGREEN PAYA LEBAR"],[1735694907000,"2026-05-16",10.5,"food","posb","FENG JIE PTE. LTD."],[1735694968000,"2026-05-16",6.6,"food","posb","FOOD N BEVERAGE UBI"],[1735695029000,"2026-05-16",3.9,"food","posb","FOOD N BEVERAGE UBI"],[1735695090000,"2026-05-15",4.2,"education","posb","POPULAR BOOK COMPANY-P"],[1735695151000,"2026-05-15",8.95,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735695212000,"2026-05-15",7.9,"food","posb","JIN SHENG MIXED VEG 476T"],[1735695273000,"2026-05-15",63.22,"healthcare","posb","AE MEDICAL FERNVALE PTE LTD"],[1735695334000,"2026-05-14",6.9,"food","posb","OLD CHANG KEE Singapore"],[1735695395000,"2026-05-14",6.6,"food","posb","OLD CHANG KEE Singapore"],[1735695456000,"2026-05-14",20.0,"transport","posb","SIMPLYGO SINGAPORE"],[1735695517000,"2026-05-14",0.99,"food","posb","Luckin Coffee Singapore"],[1735695578000,"2026-05-14",18.2,"food","posb","PAWA CATERING PTE LTD"],[1735695639000,"2026-05-14",4.0,"food","posb","FOMO PAY PTE. LTD."],[1735695700000,"2026-05-12",45.77,"groceries","posb","FAIRPRICE FINEST-WATER"],[1735695761000,"2026-05-12",10.5,"food","posb","NAM KEE PAU WATERWAY"],[1735695822000,"2026-05-12",5.47,"shopping","posb","TIKTOK SHOP SELLER"],[1735695883000,"2026-05-12",19.9,"food","posb","M path western food"],[1735695944000,"2026-05-11",4.9,"groceries","posb","SCARLETT SUPERMARKET"],[1735696005000,"2026-05-11",4.7,"food","posb","FOMO PAY PTE. LTD."],[1735696066000,"2026-05-09",3.8,"food","posb","BAKE INC. PTE. LTD."],[1735696127000,"2026-05-09",5.0,"shopping","posb","N S DEPARTMENT STORE"],[1735696188000,"2026-05-08",23.9,"shopping","posb","CHALLENGER - PLQ"],[1735696249000,"2026-05-07",2.0,"food","posb","OLD CHANG KEE Singapore"],[1735696310000,"2026-05-07",5.5,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735696371000,"2026-05-07",8.0,"healthcare","posb","WATSONS - PLQ MALL"],[1735696432000,"2026-05-07",4.5,"food","posb","YA KUN KAYA TOASTY - P"],[1735696493000,"2026-05-07",60.0,"utilities","posb","UOB credit card / bill payment"],[1735696554000,"2026-05-06",4.7,"education","posb","POPULAR BOOK COMPANY-W"],[1735696615000,"2026-05-06",5.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735696676000,"2026-05-06",21.1,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735696737000,"2026-05-06",12.05,"groceries","posb","FAIRPRICE FINEST-WATER"],[1735696798000,"2026-05-06",4.5,"food","posb","SK170-MVR"],[1735696859000,"2026-05-06",7.0,"food","posb","BAKECAKERY (170) PTE. LTD."],[1735696920000,"2026-05-06",10.6,"food","posb","SK170 SEAFOOD"],[1735696981000,"2026-05-06",25.0,"personal","posb","REPAIR STATION PTE. LTD."],[1735697042000,"2026-05-05",24.1,"groceries","posb","GIANT CCK Singapore"],[1735697103000,"2026-05-05",20.0,"transport","posb","SIMPLYGO SINGAPORE"],[1735697164000,"2026-05-04",5.8,"food","posb","PEZZO PIZZA Singapore"],[1735697225000,"2026-05-04",33.0,"shopping","posb","CHALLENGER - PLQ"],[1735697286000,"2026-05-04",5.5,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735697347000,"2026-05-04",18.8,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735697408000,"2026-05-03",41.7,"food","posb","DON DON DONKI"],[1735697469000,"2026-05-02",4.3,"food","posb","OLD CHANG KEE Singapore"],[1735697530000,"2026-05-02",5.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735697591000,"2026-05-02",0.3,"food","posb","SF - PAYA LEBAR SINGAPORE"],[1735697652000,"2026-05-02",3.5,"food","posb","SF - PAYA LEBAR SINGAPORE"],[1735697713000,"2026-05-02",5.0,"food","posb","Nasi Padang by NL Delights"],[1735697774000,"2026-05-02",7.8,"food","posb","182A YAP KUEH & ROJAK"],[1735697835000,"2026-05-02",5.3,"food","posb","SRISUN EXPRESS RESTAURANT PTE."],[1735697896000,"2026-04-30",30.0,"personal","posb","Rayteoh"],[1735697957000,"2026-04-30",4.2,"food","posb","MR BEAN"],[1735698018000,"2026-04-29",3.3,"food","posb","YOURS BAKERY"],[1735698079000,"2026-04-29",10.6,"food","posb","SK170 SEAFOOD"],[1735698140000,"2026-04-28",36.4,"groceries","posb","NTUC FP - PDD SINGAPORE"],[1735698201000,"2026-04-28",20.0,"transport","posb","SIMPLYGO SINGAPORE"],[1735698262000,"2026-04-28",16.5,"food","posb","CHARCOAL MASTER 170"],[1735698323000,"2026-04-28",4.2,"food","posb","MR BEAN"],[1735698384000,"2026-04-27",21.8,"food","posb","MUJI-CAFE-PUNGGOL"],[1735698445000,"2026-04-27",4.4,"food","posb","MR BEAN"],[1735698506000,"2026-04-27",9.0,"utilities","posb","GRO NTUC-UMS S7622429C"],[1735698567000,"2026-04-25",5.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735698628000,"2026-04-25",5.7,"food","posb","NAM KEE PAU SINGPOST C"],[1735698689000,"2026-04-25",4.2,"food","posb","YA KUN KAYA TOASTY - P"],[1735698750000,"2026-04-25",900.0,"personal","posb","Jessica Tan"],[1735698811000,"2026-04-24",5.1,"food","posb","MASTER TANG"],[1735698872000,"2026-04-22",4.5,"food","posb","OLD CHANG KEE Singapore"],[1735698933000,"2026-04-22",18.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735698994000,"2026-04-22",4.7,"food","posb","DON DON DONKI - PLQ"],[1735699055000,"2026-04-22",24.72,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735699116000,"2026-04-21",7.25,"groceries","posb","NTUC FP - HOME TEAM NS"],[1735699177000,"2026-04-21",500.0,"utilities","posb","DCL-0850267566 bill payment"],[1735699238000,"2026-04-20",24.3,"food","posb","HOKKAIDO-YA SINGAPORE"],[1735699299000,"2026-04-20",6.9,"food","posb","SHIHLIN TAIWAN - PL"],[1735699360000,"2026-04-20",30.0,"transport","posb","SIMPLYGO SINGAPORE"],[1735699421000,"2026-04-20",30.0,"others","posb","ATM Cash Withdrawal"],[1735699482000,"2026-04-19",900.0,"utilities","posb","UOB credit card / bill payment"],[1735699543000,"2026-04-18",7.3,"food","posb","K & B NONYA KUEH MANUFACTURE PT"],[1735699604000,"2026-04-18",3.6,"food","posb","CS371"],[1735699665000,"2026-04-18",8.0,"food","posb","GOOD CHANCE RESTAURANT PTE. LTD"],[1735699726000,"2026-04-17",5.2,"food","posb","DOUGH CULTURE PTE LTD"],[1735699787000,"2026-04-17",7.8,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735699848000,"2026-04-17",18.48,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735699909000,"2026-04-17",109.0,"education","posb","CDG DRIVING CENTR"],[1735699970000,"2026-04-17",300.0,"utilities","posb","UOB credit card / bill payment"],[1735700031000,"2026-04-16",6.6,"food","posb","OLD CHANG KEE Singapore"],[1735700092000,"2026-04-16",10.0,"food","posb","BAKECAKERY (170) PTE. LTD."],[1735700153000,"2026-04-16",1.8,"food","posb","SK170-WESTERN"],[1735700214000,"2026-04-16",40.0,"others","posb","ATM Cash Withdrawal"],[1735700275000,"2026-04-15",5.5,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735700336000,"2026-04-15",1.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735700397000,"2026-04-14",63.48,"groceries","posb","FP XTRA VIVO SINGAPORE"],[1735700458000,"2026-04-13",20.0,"transport","posb","SIMPLYGO SINGAPORE"],[1735700519000,"2026-04-13",20.6,"food","posb","SK170-WESTERN"],[1735700580000,"2026-04-13",2.3,"food","posb","FUN TOAST PTE. LTD."],[1735700641000,"2026-04-11",6.1,"food","posb","STARBUCKS@PLQ(PLQ)"],[1735700702000,"2026-04-11",6.54,"shopping","posb","DAISO JAPAN - BJN"],[1735700763000,"2026-04-10",6.6,"food","posb","OLD CHANG KEE Singapore"],[1735700824000,"2026-04-10",5.5,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735700885000,"2026-04-10",27.1,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735700946000,"2026-04-10",3.6,"food","posb","PEANUTS SOUP"],[1735701007000,"2026-04-10",85.0,"shopping","posb","YEAHPAY SINGAPORE PTE. LTD."],[1735701068000,"2026-04-09",4.0,"food","posb","GREEN OLIVE GROUP PT.."],[1735701129000,"2026-04-09",5.5,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735701190000,"2026-04-09",3.2,"food","posb","YA KUN KAYA TOASTY - P"],[1735701251000,"2026-04-09",6.0,"food","posb","RONG LIANG 269B"],[1735701312000,"2026-04-08",5.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735701373000,"2026-04-08",18.03,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735701434000,"2026-04-08",3.2,"food","posb","YA KUN KAYA TOASTY - P"],[1735701495000,"2026-04-07",20.0,"transport","posb","SIMPLYGO SINGAPORE"],[1735701556000,"2026-04-06",7.4,"food","posb","SUPER SUSHI Singapore"],[1735701617000,"2026-04-06",11.4,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735701678000,"2026-04-06",10.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735701739000,"2026-04-06",3.4,"food","posb","NAM KEE PAU SINGPOST C"],[1735701800000,"2026-04-04",1.3,"food","posb","182A YAP KUEH & ROJAK"],[1735701861000,"2026-04-04",7.2,"food","posb","182A YAP KUEH & ROJAK"],[1735701922000,"2026-04-04",5.3,"food","posb","SRISUN EXPRESS RESTAURANT PTE."],[1735701983000,"2026-04-02",6.6,"food","posb","OLD CHANG KEE Singapore"],[1735702044000,"2026-04-02",4.0,"food","posb","OLD CHANG KEE Singapore"],[1735702105000,"2026-04-02",7.8,"food","posb","SMP*DJ BAKERY_THOMSON"],[1735702166000,"2026-04-02",2.3,"food","posb","FUN TOAST PTE. LTD."],[1735702227000,"2026-04-01",20.0,"transport","posb","TRANSIT 30001018039251"],[1735702288000,"2026-03-31",21.33,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735702349000,"2026-03-29",0.8,"food","posb","HONG JI CLAYPOT BKT"],[1735702410000,"2026-03-28",19.3,"groceries","posb","FINEST PAYA LEBAR QUAR"],[1735702471000,"2026-03-28",386.0,"utilities","posb","CPF SELF-EMPLOYED CONTRIBUTIONS"],[1735702532000,"2026-03-28",5.5,"food","posb","182A YAP KUEH & ROJAK"],[1735702593000,"2026-03-28",5.3,"food","posb","SRISUN EXPRESS RESTAURANT PTE."],[1735702654000,"2026-03-27",4.3,"food","posb","OLD CHANG KEE Singapore"],[1735702715000,"2026-03-26",4.3,"food","posb","CHARCOAL MASTER 170"],[1735702776000,"2026-03-26",1.6,"food","posb","CHARCOAL MASTER 170"],[1735702837000,"2026-03-26",18.0,"utilities","posb","GRO NTUC-UMS S7622429C"],[1735702898000,"2026-03-25",7.55,"groceries","posb","COLD STORAGE-COMPASS O"],[1735702959000,"2026-03-25",5.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735703020000,"2026-03-25",8.6,"food","posb","BREADTALK - COMPASS ON"],[1735703081000,"2026-03-24",50.34,"healthcare","posb","SINGHEALTH PHARMACARE"],[1735703142000,"2026-03-24",28.23,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735703203000,"2026-03-24",7.4,"food","posb","MCDONALD'S (PLSQ)"],[1735703264000,"2026-03-21",40.0,"utilities","posb","STRIPE PAYMENTS SINGAPORE PTE."],[1735703325000,"2026-03-21",500.0,"utilities","posb","DCL-0850267566 bill payment"],[1735703386000,"2026-03-20",6.8,"food","posb","OLD CHANG KEE Singapore"],[1735703447000,"2026-03-20",4.36,"shopping","posb","DAISO JAPAN - SPC"],[1735703508000,"2026-03-20",15.2,"food","posb","POLAR PUFFS & CAKES -"],[1735703569000,"2026-03-20",30.0,"others","posb","ATM Cash Withdrawal"],[1735703630000,"2026-03-19",5.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735703691000,"2026-03-19",35.03,"food","posb","DON DON DONKI - PLQ"],[1735703752000,"2026-03-19",4.9,"groceries","posb","FINEST PAYA LEBAR QUAR"],[1735703813000,"2026-03-19",1.0,"food","posb","CHARCOAL MASTER 170"],[1735703874000,"2026-03-19",16.8,"food","posb","SK170 SEAFOOD"],[1735703935000,"2026-03-19",20.0,"shopping","posb","SINGAPORE POOLS (PRIVATE) LIMIT"],[1735703996000,"2026-03-18",4.5,"food","posb","OLD CHANG KEE Singapore"],[1735704057000,"2026-03-18",21.6,"food","posb","SK170-WESTERN"],[1735704118000,"2026-03-17",33.19,"food","posb","NOB S KITCHEN SINGAPORE"],[1735704179000,"2026-03-16",9.6,"food","posb","BREADTALK-TM SINGAPORE"],[1735704240000,"2026-03-16",2.5,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735704301000,"2026-03-16",4.36,"shopping","posb","DAISO JAPAN - T1"],[1735704362000,"2026-03-15",400.0,"utilities","posb","UOB credit card / bill payment"],[1735704423000,"2026-03-14",4.1,"food","posb","CHEERS - PAYA LEBAR MR"],[1735704484000,"2026-03-13",20.8,"food","posb","GREEN OLIVE GROUP PT.."],[1735704545000,"2026-03-12",7.5,"food","posb","STARBUCKS@PLQ(PLQ)"],[1735704606000,"2026-03-12",7.5,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735704667000,"2026-03-12",22.66,"food","posb","JFE (Tokyo Shokudo @ T"],[1735704728000,"2026-03-11",24.8,"food","posb","SK170-WESTERN"],[1735704789000,"2026-03-10",1.2,"food","posb","ATLAS VENDING SINGAPORE"],[1735704850000,"2026-03-09",8.6,"food","posb","OLD CHANG KEE Singapore"],[1735704911000,"2026-03-09",29.85,"groceries","posb","COLD STORAGE-COMPASS O"],[1735704972000,"2026-03-09",17.8,"shopping","posb","DECATHLON 3459 Singapore"],[1735705033000,"2026-03-09",8.3,"food","posb","SWEE HENG BAKERY-SHB43"],[1735705094000,"2026-03-09",5.0,"food","posb","JIA JIA3 VEGETARIAN PTE. LTD."],[1735705155000,"2026-03-07",5.0,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735705216000,"2026-03-07",14.73,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735705277000,"2026-03-06",30.0,"transport","posb","TRANSIT 30000569041155"],[1735705338000,"2026-03-05",200.0,"utilities","posb","UOB credit card / bill payment"],[1735705399000,"2026-03-02",350.0,"utilities","posb","UOB credit card / bill payment"],[1735705460000,"2026-02-27",37.77,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735705521000,"2026-02-27",70.0,"utilities","posb","UOB credit card / bill payment"],[1735705582000,"2026-02-25",15.65,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735705643000,"2026-02-22",20.0,"shopping","posb","SINGAPORE POOLS (PRIVATE) LIMIT"],[1735705704000,"2026-02-21",20.0,"utilities","posb","UOB credit card / bill payment"],[1735705765000,"2026-02-21",500.0,"utilities","posb","DCL-0850267566 bill payment"],[1735705826000,"2026-02-20",4.81,"groceries","posb","NTUC FP - HOME TEAM NS"],[1735705887000,"2026-02-20",6.5,"shopping","posb","NIPPON HOME - SKE170"],[1735705948000,"2026-02-19",20.0,"utilities","posb","UOB credit card / bill payment"],[1735706009000,"2026-02-16",9.0,"food","posb","JIA JIA3 VEGETARIAN PTE. LTD."],[1735706070000,"2026-02-11",1.0,"food","posb","CHARCOAL MASTER 170"],[1735706131000,"2026-02-11",5.3,"food","posb","SK170 SEAFOOD"],[1735706192000,"2026-02-11",2.0,"personal","posb","Roslinah Jamil"],[1735706253000,"2026-02-11",1.9,"food","posb","SK170-DRINKSTALL"],[1735706314000,"2026-02-11",40.0,"shopping","posb","SINGAPORE POOLS (PRIVATE) LIMIT"],[1735706375000,"2026-02-10",10.77,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735706436000,"2026-02-09",9.2,"food","posb","TOAST BOX - WWP SINGAPORE"],[1735706497000,"2026-02-09",29.83,"groceries","posb","FAIRPRICE FINEST-WATER"],[1735706558000,"2026-02-09",7.9,"personal","posb","Roslinah Jamil"],[1735706619000,"2026-02-09",20.0,"shopping","posb","SINGAPORE POOLS (PRIVATE) LIMIT"],[1735706680000,"2026-02-09",5.0,"food","posb","JIA JIA VEGETARIAN"],[1735706741000,"2026-02-08",6.6,"food","posb","182A YAP KUEH & ROJAK"],[1735706802000,"2026-02-08",5.3,"food","posb","SRISUN EXPRESS RESTAURANT"],[1735706863000,"2026-02-07",18.8,"food","posb","DON DON DONKI - WWP"],[1735706924000,"2026-02-07",20.0,"utilities","posb","UOB credit card / bill payment"],[1735706985000,"2026-02-06",26.18,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735707046000,"2026-02-05",5.5,"food","posb","NETS 33726614,TASTE & TASTE PTE LTD"],[1735707107000,"2026-02-04",13.6,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735707168000,"2026-02-04",22.84,"food","posb","SCARLETT @ PLS SINGAPORE"],[1735707229000,"2026-02-03",8.75,"groceries","posb","NTUC FP - NPCT SINGAPORE"],[1735707290000,"2026-02-03",1.8,"food","posb","MALAYSIA BOLEH - NORTH"],[1735707351000,"2026-02-03",5.5,"food","posb","MALAYSIA BOLEH - NORTH"],[1735707412000,"2026-02-03",5.8,"food","posb","MALAYSIA BOLEH - NORTH"],[1735707473000,"2026-02-03",10.3,"personal","posb","Roslinah Jamil"],[1735707534000,"2026-02-02",49.25,"food","posb","DON DON DONKI - NORTHP"],[1735707595000,"2026-02-02",10.0,"transport","posb","TRANSIT 30750626053829"],[1735707656000,"2026-02-02",5.88,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735707717000,"2026-02-02",1.5,"shopping","posb","NIPPON HOME - SKE170"],[1735707778000,"2026-02-02",10.0,"food","posb","SMP*YOURS BAKERY_SENGK"],[1735707839000,"2026-02-02",9.1,"food","posb","Golden Jade H.K Dessert Caf - A"],[1735707900000,"2026-02-01",2.6,"personal","posb","TAN CHYE HAK"],[1735707961000,"2026-02-01",2.0,"personal","posb","Roslinah Jamil"],[1735708022000,"2026-02-01",11.7,"food","posb","SK170-WESTERN"],[1735708083000,"2026-02-01",10.0,"personal","posb","Roslinah Jamil"],[1735708144000,"2026-01-31",5.3,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735708205000,"2026-01-31",5.0,"food","posb","JIA JIA VEGETARIAN"],[1735708266000,"2026-01-31",4.3,"personal","posb","Roslinah Jamil"],[1735708327000,"2026-01-30",5.9,"food","posb","QI JI EATERY PTE. LTD."],[1735708388000,"2026-01-29",16.28,"shopping","posb","TIKTOK SHOP SELLER"],[1735708449000,"2026-01-28",0.3,"groceries","posb","COLD STORAGE-COMPASS O"],[1735708510000,"2026-01-28",3.75,"groceries","posb","COLD STORAGE-COMPASS O"],[1735708571000,"2026-01-28",5.9,"food","posb","TORI-Q COMPASS ONE"],[1735708632000,"2026-01-28",16.9,"groceries","posb","MEIDI-YA @ GWC SINGAPORE"],[1735708693000,"2026-01-28",12.8,"food","posb","DON DON DONKI - WWP"],[1735708754000,"2026-01-28",74.4,"groceries","posb","ISETAN (SUPERMARKET)"],[1735708815000,"2026-01-28",30.0,"shopping","posb","NETS 33726614,SINGAPORE POOLS PTE LTD"],[1735708876000,"2026-01-27",5.36,"groceries","posb","FP XTRA VIVO SINGAPORE"],[1735708937000,"2026-01-27",6.4,"shopping","posb","GREATWORLDCITYBCX"],[1735708998000,"2026-01-27",18.4,"food","posb","SMP*TSUZUMI DANGO VIVO"],[1735709059000,"2026-01-26",39.9,"shopping","posb","CHALLENGER - VIVOCITY"],[1735709120000,"2026-01-26",10.2,"food","posb","BREADTALK - VIVOCITY"],[1735709181000,"2026-01-26",9.95,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735709242000,"2026-01-26",5.8,"groceries","posb","FAIRPRICE FINEST-WATER"],[1735709303000,"2026-01-26",11.3,"food","posb","Zensho Japanese Restau"],[1735709364000,"2026-01-26",9.0,"utilities","posb","GRO NTUC-UMS S7622429C"],[1735709425000,"2026-01-24",12.6,"food","posb","DON DON DONKI - WWP"],[1735709486000,"2026-01-24",20.0,"transport","posb","TRANSIT 30750613036237"],[1735709547000,"2026-01-24",6.0,"shopping","posb","NIPPON HOME - SKE170"],[1735709608000,"2026-01-24",5.1,"groceries","posb","HWA AIK GENERAL S"],[1735709669000,"2026-01-24",12.0,"food","posb","WANLILAI LLP"],[1735709730000,"2026-01-24",6.0,"food","posb","KOONG WOH TONG-AM"],[1735709791000,"2026-01-24",50.0,"others","posb","ATM Cash Withdrawal"],[1735709852000,"2026-01-24",6.54,"shopping","posb","NETS 33726614,DAISO SINGAPORE PTE LTD"],[1735709913000,"2026-01-24",3.0,"food","posb","SOY FRESH"],[1735709974000,"2026-01-24",10.5,"food","posb","HONG CHONG WANTON NOODLE"],[1735710035000,"2026-01-23",40.0,"shopping","posb","IMMIGRATION & CHECKPOINTS AUTHO"],[1735710096000,"2026-01-23",20.0,"utilities","posb","UOB credit card / bill payment"],[1735710157000,"2026-01-23",20.0,"utilities","posb","UOB credit card / bill payment"],[1735710218000,"2026-01-22",40.0,"others","posb","ATM Cash Withdrawal"],[1735710279000,"2026-01-22",11.3,"personal","posb","Roslinah Jamil"],[1735710340000,"2026-01-22",20.0,"shopping","posb","NETS 33726614,SINGAPORE POOLS PTE LTD"],[1735710401000,"2026-01-21",8.8,"food","posb","SMP*YOURS BAKERY_SENGK"],[1735710462000,"2026-01-21",2.0,"food","posb","DE TIAN COFFEE SHOP"],[1735710523000,"2026-01-21",500.0,"utilities","posb","DCL-0850267566 bill payment"],[1735710584000,"2026-01-20",2.56,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735710645000,"2026-01-19",45.8,"shopping","posb","IKEA SINGAPORE"],[1735710706000,"2026-01-18",33.9,"food","posb","DOMINOS SINGAPORE PTD"],[1735710767000,"2026-01-17",5.0,"groceries","posb","KOUFU @ TAMPINES GIANT"],[1735710828000,"2026-01-17",1.4,"groceries","posb","KOUFU @ TAMPINES GIANT"],[1735710889000,"2026-01-17",20.4,"food","posb","HIANG SOON FOOD CATERING SERVIC"],[1735710950000,"2026-01-17",8.8,"groceries","posb","SWEE LEONG EGGS DISTRIBUTOR"],[1735711011000,"2026-01-16",18.83,"groceries","posb","GIANT TAMPINES Singapore"],[1735711072000,"2026-01-16",8.8,"food","posb","182A Yap"],[1735711133000,"2026-01-15",4.8,"personal","posb","Roslinah Jamil"],[1735711194000,"2026-01-15",8.0,"personal","posb","Roslinah Jamil"],[1735711255000,"2026-01-15",10.0,"shopping","posb","NETS 33726614,SINGAPORE POOLS PTE LTD"],[1735711316000,"2026-01-13",15.0,"shopping","posb","XGEAR SINGAPORE"],[1735711377000,"2026-01-13",15.3,"healthcare","posb","SINGHEALTH PHARMACARE"],[1735711438000,"2026-01-13",4.5,"groceries","posb","FAIRPRICE FINEST-WATER"],[1735711499000,"2026-01-12",29.9,"shopping","posb","UNIQLO WATERWAY POINT"],[1735711560000,"2026-01-12",73.6,"shopping","posb","CHALLENGER-COM Singapore"],[1735711621000,"2026-01-12",24.5,"food","posb","DON DON DONKI - WWP"],[1735711682000,"2026-01-11",5.8,"food","posb","NETS 33726614,NATURE VEGE DELIGHTS PL"],[1735711743000,"2026-01-11",10.0,"shopping","posb","NETS 33726614,SINGAPORE POOLS PTE LTD"],[1735711804000,"2026-01-11",43.4,"food","posb","NATURE VEGETARIAN DELIGHTS PRIV"],[1735711865000,"2026-01-10",8.9,"groceries","posb","KIM ABLE HOUSEHOLD - C"],[1735711926000,"2026-01-10",2.5,"personal","posb","Roslinah Jamil"],[1735711987000,"2026-01-10",11.0,"personal","posb","Roslinah Jamil"],[1735712048000,"2026-01-09",23.65,"groceries","posb","COLD STORAGE-COMPASS O"],[1735712109000,"2026-01-09",7.0,"food","posb","SUSHI GOGO-SENGKANG SQ"],[1735712170000,"2026-01-09",6.86,"groceries","posb","FAIRPRICE FINEST-WATER"],[1735712231000,"2026-01-09",7.9,"shopping","posb","NIPPON HOME - SKE170"],[1735712292000,"2026-01-09",5.5,"food","posb","TASTE & TASTE P/L"],[1735712353000,"2026-01-08",2.2,"education","posb","POPULAR BOOK COMPANY-W"],[1735712414000,"2026-01-08",15.5,"food","posb","DON DON DONKI - WWP"],[1735712475000,"2026-01-08",9.2,"food","posb","TOAST BOX - WWP SINGAPORE"],[1735712536000,"2026-01-08",10.0,"transport","posb","TRANSIT 30000577180166"],[1735712597000,"2026-01-07",13.87,"utilities","posb","UOB credit card / bill payment"],[1735712658000,"2026-01-06",7.33,"groceries","posb","NTUC FP - SENGKANG EAS"],[1735712719000,"2026-01-05",5.8,"groceries","posb","COLD STORAGE-COMPASS O"],[1735712780000,"2026-01-05",15.4,"healthcare","posb","SINGHEALTH PHARMACARE"],[1735712841000,"2026-01-05",56.91,"healthcare","posb","SINGHEALTH PHARMACARE"],[1735712902000,"2026-01-05",2.0,"education","posb","POPULAR BOOK COMPANY-2"],[1735712963000,"2026-01-05",10.0,"transport","posb","TRANSIT 30750486193557"],[1735713024000,"2026-01-05",2.9,"food","posb","ICAKES ENTERPRISE"],[1735713085000,"2026-01-04",6.2,"food","posb","K & B NONYA KUEH MANUFACTURE PT"],[1735713146000,"2026-01-04",4.4,"food","posb","YI SIN BAKERY PTE. LTD."],[1735713207000,"2026-01-04",1.9,"food","posb","CS371"],[1735713268000,"2026-01-04",4.8,"shopping","posb","GIMEE FACE"],[1735713329000,"2026-01-04",5.1,"food","posb","LEONG YOKE MOOI"],[1735713390000,"2026-01-03",5.5,"food","posb","SUSHI GOGO-SENGKANG SQ"],[1735713451000,"2026-01-03",8.8,"food","posb","POLAR PUFFS & CAKES -"]];
+const _INC2026=[[1735739600000,"2026-06-20",1000.0,"other_income","ICT Incoming PayNow Ref 8134356 From: CHEONG WAI SIONG OTHR PayNow Tra"],[1735739661000,"2026-06-18",1935.0,"salary","ICT Incoming PayNow Ref 6999967 From: SkillsFuture Singapore Agency OT"],[1735739722000,"2026-06-12",500.0,"other_income","ICT Incoming PayNow Ref 8319048 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735739783000,"2026-06-08",500.0,"other_income","ICT Incoming PayNow Ref 6428025 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735739844000,"2026-06-06",60.0,"business","ICT Transfer 20260606UOVBSGSGBRT2762078 OTHR"],[1735739905000,"2026-06-02",500.0,"other_income","ICT Incoming PayNow Ref 6996575 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735739966000,"2026-05-26",200.0,"business","ICT Transfer 20260526UOVBSGSGBRT8987728 OTHR"],[1735740027000,"2026-05-23",200.0,"business","ICT Transfer 20260523UOVBSGSGBRT7947888 OTHR"],[1735740088000,"2026-05-21",1000.0,"other_income","ICT Incoming PayNow Ref 7471581 From: CHEONG WAI SIONG OTHR PayNow Tra"],[1735740149000,"2026-05-19",500.0,"business","ICT Transfer 20260519UOVBSGSGBRT6466215 OTHR"],[1735740210000,"2026-05-18",1935.0,"salary","ICT Incoming PayNow Ref 6334625 From: SkillsFuture Singapore Agency OT"],[1735740271000,"2026-05-15",200.0,"other_income","ICT Incoming PayNow Ref 9303970 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735740332000,"2026-05-06",500.0,"other_income","ICT Incoming PayNow Ref 8914165 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735740393000,"2026-05-04",100.0,"business","ICT Transfer 20260504UOVBSGSGBRT1333642 OTHR"],[1735740454000,"2026-05-03",100.0,"business","ICT Transfer 20260503UOVBSGSGBRT0825683 OTHR"],[1735740515000,"2026-04-30",15.0,"other_income","IBG Rakuten Insight Singapore Pte Ltd PayNow rewards from Rakuten Insi"],[1735740576000,"2026-04-29",500.0,"other_income","ICT Incoming PayNow Ref 5066379 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735740637000,"2026-04-27",50.0,"business","ICT Transfer 20260427UOVBSGSGBRT8740567 OTHR"],[1735740698000,"2026-04-25",900.0,"business","ICT Transfer 20260425UOVBSGSGBRT7923767 OTHR"],[1735740759000,"2026-04-21",1000.0,"other_income","ICT Incoming PayNow Ref 5727040 From: CHEONG WAI SIONG OTHR PayNow Tra"],[1735740820000,"2026-04-16",1935.0,"salary","ICT Incoming PayNow Ref 5250050 From: SkillsFuture Singapore Agency OT"],[1735740881000,"2026-04-15",500.0,"other_income","ICT Incoming PayNow Ref 8317734 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735740942000,"2026-04-15",15.0,"other_income","IBG Rakuten Insight Singapore Pte Ltd PayNow rewards from Rakuten Insi"],[1735741003000,"2026-04-06",79.0,"other_income","ICT Incoming PayNow Ref 6992421 From: CHEONG WAI SIONG OTHR PayNow tra"],[1735741064000,"2026-04-05",500.0,"other_income","ICT Incoming PayNow Ref 6960944 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735741125000,"2026-03-30",300.0,"other_income","ICT Incoming PayNow Ref 7586980 From: MISTER MOBILE TRADING PTE. LT OT"],[1735741186000,"2026-03-27",500.0,"other_income","ICT Incoming PayNow Ref 5739993 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735741247000,"2026-03-27",40.0,"business","ICT Transfer 20260327UOVBSGSGBRT7988448 OTHR"],[1735741308000,"2026-03-23",100.0,"business","ICT Transfer 20260323UOVBSGSGBRT6682070 OTHR"],[1735741369000,"2026-03-21",1000.0,"other_income","ICT Incoming PayNow Ref 9933691 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735741430000,"2026-03-15",500.0,"other_income","ICT Incoming PayNow Ref 8673720 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735741491000,"2026-03-10",100.0,"other_income","DEP 33726614,PAYA LEBAR BRC"],[1735741552000,"2026-03-06",79.0,"other_income","ICT Incoming PayNow Ref 9845693 From: CHEONG WAI SIONG OTHR PayNow tra"],[1735741613000,"2026-03-04",500.0,"other_income","ICT Incoming PayNow Ref 6629584 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735741674000,"2026-02-21",1000.0,"other_income","ICT Incoming PayNow Ref 9864676 From: CHEONG WAI SIONG OTHR PayNow tra"],[1735741735000,"2026-02-20",450.0,"other_income","ICT Incoming PayNow Ref 7560735 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735741796000,"2026-02-06",500.0,"other_income","ICT Incoming PayNow Ref 9050083 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735741857000,"2026-02-06",79.0,"other_income","ICT Incoming PayNow Ref 7348922 From: CHEONG WAI SIONG OTHR PayNow tra"],[1735741918000,"2026-01-30",500.0,"other_income","ICT Incoming PayNow Ref 7900214 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735741979000,"2026-01-23",20.0,"business","UOB credit card / bill payment"],[1735742040000,"2026-01-22",500.0,"other_income","ICT Incoming PayNow Ref 7902709 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735742101000,"2026-01-21",1000.0,"other_income","ICT Incoming PayNow Ref 9675578 From: CHEONG WAI SIONG OTHR PayNow tra"],[1735742162000,"2026-01-09",500.0,"other_income","ICT Incoming PayNow Ref 9583911 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"],[1735742223000,"2026-01-06",79.0,"other_income","ICT Incoming PayNow Ref 8027209 From: CHEONG WAI SIONG OTHR PayNow tra"],[1735742284000,"2026-01-03",500.0,"other_income","ICT Incoming PayNow Ref 5764025 From: TAN YIAN CHOO (CHEN YANZHU) OTHR"]];
+function importJanJun2026(){
+  if(!confirm('Import 392 expenses + 45 income entries for Jan–Jun 2026?\n\nExisting Jan–Jun 2026 entries will be replaced.'))return;
+  EXP=EXP.filter(e=>!e.date||!e.date.startsWith('2026-0'));
+  INC=INC.filter(e=>!e.date||!e.date.startsWith('2026-0'));
+  _EXP2026.forEach(r=>EXP.push({id:r[0],date:r[1],amount:r[2],category_id:r[3],payment_method_id:r[4],description:r[5]}));
+  _INC2026.forEach(r=>INC.push({id:r[0],date:r[1],amount:r[2],income_category_id:r[3],source_description:r[4]}));
+  saveEXP();saveINC();banner();closeSheet();goTab('add');
+  toast('✅ Imported 392 expenses + 45 income entries');
+}
+
+/* ─── IMPORT CSV ─────────────────────────────────────────────────────── */
+function importFromCSV(){
+  document.getElementById('csv-file-input').click();
+}
+function handleCSVImport(input){
+  const file=input.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>parseAndImportCSV(e.target.result);
+  reader.readAsText(file);
+  input.value='';
+}
+function parseAndImportCSV(text){
+  function parseLine(line){
+    const r=[];let q=false,cur='';
+    for(let i=0;i<line.length;i++){
+      const c=line[i];
+      if(c==='"'){q=!q;}
+      else if(c===','&&!q){r.push(cur.trim());cur='';}
+      else cur+=c;
+    }
+    r.push(cur.trim());return r;
+  }
+  // label → id maps
+  const catMap={};CATS.forEach(c=>catMap[c.label.toLowerCase()]=c.id);
+  const icMap={};INCATS.forEach(c=>icMap[c.label.toLowerCase()]=c.id);
+  const payMap={};PAYS.forEach(p=>payMap[p.label.toLowerCase()]=p.id);
+  // dedup keys
+  const expKeys=new Set(EXP.map(e=>`${e.date}|${e.amount}|${(e.description||'').trim()}`));
+  const incKeys=new Set(INC.map(i=>`${i.date}|${i.amount}|${(i.source_description||'').trim()}`));
+  let addE=0,addI=0,skip=0;
+  const lines=text.split('\n');
+  for(let i=1;i<lines.length;i++){
+    const line=lines[i].trim();
+    if(!line||line.startsWith('Exported:')||line.startsWith('Total'))continue;
+    const cols=parseLine(line);
+    if(cols.length<6)continue;
+    const[type,date,catLbl,desc,payLbl,amt,notes]=cols;
+    const amount=parseFloat(amt);
+    if(!type||!date||isNaN(amount))continue;
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(date))continue;
+    if(type==='Expense'){
+      const key=`${date}|${amount}|${desc.trim()}`;
+      if(expKeys.has(key)){skip++;continue;}
+      EXP.push({id:uid(),date,amount,category_id:catMap[catLbl.toLowerCase()]||'others',payment_method_id:payMap[(payLbl||'').toLowerCase()]||'others',description:desc,notes:notes||''});
+      expKeys.add(key);addE++;
+    }else if(type==='Income'){
+      const key=`${date}|${amount}|${desc.trim()}`;
+      if(incKeys.has(key)){skip++;continue;}
+      INC.push({id:uid(),date,amount,income_category_id:icMap[catLbl.toLowerCase()]||'other_income',source_description:desc,notes:notes||''});
+      incKeys.add(key);addI++;
+    }
+  }
+  saveEXP();saveINC();banner();closeSheet();goTab('add');
+  toast(`✅ Added ${addE} expenses + ${addI} income · ${skip} duplicates skipped`);
+}
+
+/* ─── EXPORT CSV ─────────────────────────────────────────────────────── */
+function exportMonth(){
+  const s1=`${smY}-${pad(smM+1)}-01`,s2=`${smY}-${pad(smM+1)}-31`;
+  const rows=EXP.filter(e=>e.date>=s1&&e.date<=s2);
+  if(!rows.length){toast('No data for this month');return;}
+  let csv='Date,Category,Description,Payment,Amount,Notes\n';
+  [...rows].sort((a,b)=>b.date.localeCompare(a.date)).forEach(r=>{
+    const cat=CATS.find(x=>x.id===r.category_id)||{label:r.category_id};
+    const pay=PAYS.find(x=>x.id===r.payment_method_id)||{label:r.payment_method_id};
+    csv+=`${r.date},"${cat.label}","${r.description||''}","${pay.label}",${r.amount},"${r.notes||''}"\n`;
+  });
+  const te=rows.reduce((s,r)=>s+r.amount,0);
+  const mn=new Date(smY,smM).toLocaleDateString('en-SG',{month:'long',year:'numeric'});
+  csv+=`\nTotal,,,, ${te.toFixed(2)},\nGenerated by Daily Expenses Tracker · ${new Date().toLocaleDateString('en-SG')}`;
+  dlCSV(csv,`expenses_${mn.replace(' ','_')}.csv`);
+}
+function exportAll(){
+  if(!EXP.length&&!INC.length){toast('No data to export');return;}
+  let csv='Type,Date,Category/Source,Description,Payment,Amount,Notes\n';
+  [...EXP].sort((a,b)=>b.date.localeCompare(a.date)).forEach(r=>{
+    const cat=CATS.find(x=>x.id===r.category_id)||{label:r.category_id};
+    const pay=PAYS.find(x=>x.id===r.payment_method_id)||{label:r.payment_method_id};
+    csv+=`Expense,${r.date},"${cat.label}","${r.description||''}","${pay.label}",${r.amount},"${r.notes||''}"\n`;
+  });
+  [...INC].sort((a,b)=>b.date.localeCompare(a.date)).forEach(r=>{
+    const ic=INCATS.find(x=>x.id===r.income_category_id)||{label:r.income_category_id};
+    csv+=`Income,${r.date},"${ic.label}","${r.source_description||''}","—",${r.amount},"${r.notes||''}"\n`;
+  });
+  csv+=`\nExported: ${new Date().toLocaleString('en-SG')} · Daily Expenses Tracker`;
+  dlCSV(csv,'daily_expenses_all.csv');closeSheet();
+}
+function dlCSV(csv,name){
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download=name;a.click();toast('📥 CSV downloaded!');
+}
+
+/* ─── HELPERS ────────────────────────────────────────────────────────── */
+function td(){const d=new Date();return`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;}
+function pad(n){return String(n).padStart(2,'0');}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2);}
+function fmtD(iso){
+  const d=new Date(iso+'T00:00:00'),now=new Date();now.setHours(0,0,0,0);
+  const y=new Date(now);y.setDate(now.getDate()-1);
+  if(d.getTime()===now.getTime())return'Today';
+  if(d.getTime()===y.getTime())return'Yesterday';
+  return d.toLocaleDateString('en-SG',{weekday:'short',day:'numeric',month:'short'});
+}
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2800);
+}
+</script></body></html>

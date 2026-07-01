@@ -1,0 +1,187 @@
+<svg width="500" height="575" viewBox="0 0 500 575" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Daily Expenses Tracker — App Logo</title>
+<desc>Modern fintech logo: gradient circular arc enclosing a spiral-bound expense notebook with category icons, dollar badge, and wordmark</desc>
+
+<defs>
+  <!-- Arc gradient: green at top → blue at lower-right -->
+  <linearGradient id="arcGrad" x1="0%" y1="0%" x2="80%" y2="100%">
+    <stop offset="0%"   stop-color="#22c55e"/>
+    <stop offset="55%"  stop-color="#3b82f6"/>
+    <stop offset="100%" stop-color="#60a5fa"/>
+  </linearGradient>
+
+  <!-- Dollar badge gradient -->
+  <linearGradient id="dollarGrad" x1="30%" y1="0%" x2="70%" y2="100%">
+    <stop offset="0%"   stop-color="#60a5fa"/>
+    <stop offset="100%" stop-color="#1d4ed8"/>
+  </linearGradient>
+
+  <!-- Notebook drop shadow -->
+  <filter id="nbShadow" x="-15%" y="-10%" width="135%" height="130%">
+    <feDropShadow dx="4" dy="6" stdDeviation="9" flood-color="rgba(15,23,42,0.30)"/>
+  </filter>
+
+  <!-- Badge glow shadow -->
+  <filter id="badgeGlow" x="-25%" y="-25%" width="150%" height="150%">
+    <feDropShadow dx="2" dy="4" stdDeviation="8" flood-color="rgba(37,99,235,0.45)"/>
+  </filter>
+</defs>
+
+<!-- White background -->
+<rect width="500" height="575" fill="white"/>
+
+<!-- ═══════════════════════════════════
+     GRADIENT CIRCULAR ARC
+     Center (237,212), r=207
+     9 o'clock  = (30, 212)
+     4 o'clock  = (416, 316)
+     Clockwise via 12 o'clock — 210° arc, gap at bottom-left
+     ═══════════════════════════════════ -->
+<path d="M 30,212 A 207,207 0 1,1 416,316"
+      fill="none"
+      stroke="url(#arcGrad)"
+      stroke-width="24"
+      stroke-linecap="round"/>
+
+<!-- ═══════════════════════════════════
+     SPIRAL-BOUND NOTEBOOK
+     ═══════════════════════════════════ -->
+
+<!-- Outer dark-navy cover (shadow) -->
+<rect x="110" y="58" width="238" height="308" rx="18" fill="#162040" filter="url(#nbShadow)"/>
+
+<!-- White page area -->
+<rect x="140" y="62" width="206" height="302" rx="12" fill="white"/>
+
+<!-- Spiral binding coils -->
+<circle cx="126" cy="90"  r="10" fill="#0f172a"/>
+<circle cx="126" cy="116" r="10" fill="#0f172a"/>
+<circle cx="126" cy="142" r="10" fill="#0f172a"/>
+<circle cx="126" cy="168" r="10" fill="#0f172a"/>
+<circle cx="126" cy="194" r="10" fill="#0f172a"/>
+<circle cx="126" cy="220" r="10" fill="#0f172a"/>
+<circle cx="126" cy="246" r="10" fill="#0f172a"/>
+<circle cx="126" cy="272" r="10" fill="#0f172a"/>
+<circle cx="126" cy="298" r="10" fill="#0f172a"/>
+<circle cx="126" cy="324" r="10" fill="#0f172a"/>
+<circle cx="126" cy="350" r="10" fill="#0f172a"/>
+<!-- Coil holes -->
+<circle cx="126" cy="90"  r="5.5" fill="#2d3f60"/>
+<circle cx="126" cy="116" r="5.5" fill="#2d3f60"/>
+<circle cx="126" cy="142" r="5.5" fill="#2d3f60"/>
+<circle cx="126" cy="168" r="5.5" fill="#2d3f60"/>
+<circle cx="126" cy="194" r="5.5" fill="#2d3f60"/>
+<circle cx="126" cy="220" r="5.5" fill="#2d3f60"/>
+<circle cx="126" cy="246" r="5.5" fill="#2d3f60"/>
+<circle cx="126" cy="272" r="5.5" fill="#2d3f60"/>
+<circle cx="126" cy="298" r="5.5" fill="#2d3f60"/>
+<circle cx="126" cy="324" r="5.5" fill="#2d3f60"/>
+<circle cx="126" cy="350" r="5.5" fill="#2d3f60"/>
+
+<!-- EXPENSES header text -->
+<text x="243" y="103"
+      text-anchor="middle"
+      font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+      font-size="19" font-weight="900" fill="#162040" letter-spacing="2">EXPENSES</text>
+
+<!-- Header underline -->
+<line x1="153" y1="115" x2="333" y2="115" stroke="#e5e7eb" stroke-width="1.5"/>
+
+<!-- ─── ROW 1: Grocery / green ─── -->
+<circle cx="175" cy="148" r="19" fill="#22c55e"/>
+<g fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="166,140 169,140 173,153 183,153 185,146 169,146"/>
+  <circle cx="174" cy="157" r="2" fill="white" stroke="none"/>
+  <circle cx="182" cy="157" r="2" fill="white" stroke="none"/>
+</g>
+<rect x="204" y="141" width="68" height="7" rx="3.5" fill="#d1d5db"/>
+<rect x="204" y="152" width="50" height="5.5" rx="2.5" fill="#e5e7eb"/>
+<text x="329" y="153" text-anchor="end"
+      font-family="'Arial Black',Arial,sans-serif"
+      font-size="14" font-weight="800" fill="#162040">$45.00</text>
+<line x1="153" y1="173" x2="333" y2="173" stroke="#f3f4f6" stroke-width="1.2"/>
+
+<!-- ─── ROW 2: Dining / orange ─── -->
+<circle cx="175" cy="201" r="19" fill="#f59e0b"/>
+<g fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round">
+  <line x1="168" y1="192" x2="168" y2="210"/>
+  <line x1="173" y1="192" x2="173" y2="197"/>
+  <path d="M 170.5,192 Q 175.5,192 175.5,197 L 173,197"/>
+  <line x1="180" y1="192" x2="180" y2="210"/>
+  <path d="M 177.5,192 L 182.5,192 L 182.5,198 L 177.5,198 Z"/>
+</g>
+<rect x="204" y="194" width="62" height="7" rx="3.5" fill="#d1d5db"/>
+<rect x="204" y="205" width="44" height="5.5" rx="2.5" fill="#e5e7eb"/>
+<text x="329" y="206" text-anchor="end"
+      font-family="'Arial Black',Arial,sans-serif"
+      font-size="14" font-weight="800" fill="#162040">$25.00</text>
+<line x1="153" y1="226" x2="333" y2="226" stroke="#f3f4f6" stroke-width="1.2"/>
+
+<!-- ─── ROW 3: Transport / blue ─── -->
+<circle cx="175" cy="254" r="19" fill="#3b82f6"/>
+<g fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 163,257 L 163,251 L 167,245 L 183,245 L 187,251 L 187,257 Z"/>
+  <line x1="167" y1="245" x2="165" y2="251"/>
+  <line x1="183" y1="245" x2="185" y2="251"/>
+  <line x1="163" y1="252" x2="187" y2="252"/>
+  <circle cx="168" cy="258" r="2.5" fill="#3b82f6" stroke="white" stroke-width="1.5"/>
+  <circle cx="182" cy="258" r="2.5" fill="#3b82f6" stroke="white" stroke-width="1.5"/>
+</g>
+<rect x="204" y="247" width="66" height="7" rx="3.5" fill="#d1d5db"/>
+<rect x="204" y="258" width="48" height="5.5" rx="2.5" fill="#e5e7eb"/>
+<text x="329" y="259" text-anchor="end"
+      font-family="'Arial Black',Arial,sans-serif"
+      font-size="14" font-weight="800" fill="#162040">$30.00</text>
+<line x1="153" y1="279" x2="333" y2="279" stroke="#f3f4f6" stroke-width="1.2"/>
+
+<!-- ─── ROW 4: Home / purple ─── -->
+<circle cx="175" cy="307" r="19" fill="#8b5cf6"/>
+<g fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="163,311 175,298 187,311"/>
+  <rect x="167" y="311" width="16" height="12" rx="1"/>
+  <rect x="172" y="315" width="6" height="8" fill="white" stroke="none"/>
+</g>
+<rect x="204" y="300" width="60" height="7" rx="3.5" fill="#d1d5db"/>
+<rect x="204" y="311" width="42" height="5.5" rx="2.5" fill="#e5e7eb"/>
+<text x="329" y="312" text-anchor="end"
+      font-family="'Arial Black',Arial,sans-serif"
+      font-size="14" font-weight="800" fill="#162040">$50.00</text>
+
+<!-- Total divider -->
+<line x1="153" y1="334" x2="333" y2="334" stroke="#d1d5db" stroke-width="2"/>
+
+<!-- TOTAL row -->
+<text x="165" y="354"
+      font-family="Arial,sans-serif"
+      font-size="11" font-weight="600" fill="#9ca3af" letter-spacing="2.5">TOTAL</text>
+<text x="329" y="355" text-anchor="end"
+      font-family="'Arial Black',Arial,sans-serif"
+      font-size="18" font-weight="900" fill="#162040">$150.00</text>
+
+<!-- ═══════════════════════════════════
+     DOLLAR BADGE
+     ═══════════════════════════════════ -->
+<circle cx="385" cy="332" r="46" fill="url(#dollarGrad)" filter="url(#badgeGlow)"/>
+<text x="385" y="350" text-anchor="middle"
+      font-family="'Arial Black',Arial,sans-serif"
+      font-size="50" font-weight="900" fill="white">$</text>
+
+<!-- ═══════════════════════════════════
+     WORDMARK
+     ═══════════════════════════════════ -->
+<text x="250" y="435" text-anchor="middle"
+      font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+      font-size="37" font-weight="900" letter-spacing="0.5">
+  <tspan fill="#162040">DAILY </tspan><tspan fill="#2563eb">EXPENSES</tspan>
+</text>
+
+<!-- Dashes + TRACKER -->
+<text x="250" y="477" text-anchor="middle"
+      font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+      font-size="25" font-weight="700" fill="#16a34a" letter-spacing="5">&#x2014; TRACKER &#x2014;</text>
+
+<!-- Sub-brand -->
+<text x="250" y="510" text-anchor="middle"
+      font-family="Georgia,serif" font-size="9" fill="#94a3b8" letter-spacing="2">PERSONAL FINANCE · SINGAPORE</text>
+
+</svg>

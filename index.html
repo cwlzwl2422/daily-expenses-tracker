@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Daily Expenses Tracker — Free Personal Finance App</title>
+<meta name="description" content="A smart, offline-first personal finance tracker. No login, no server, works on any device. Download free."/>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTkyIDE5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQzMzIwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE2NjUzNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYXJjIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyYzU1ZSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYjgyZjYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJhZGdlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYwYTVmYSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZDRlZDgiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gQmFja2dyb3VuZCByb3VuZGVkIHNxdWFyZSAtLT4KICA8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQyIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gR3JhZGllbnQgYXJjIC0tPgogIDxwYXRoIGQ9Ik0gMjIsOTYgQSA3NCw3NCAwIDEsMSAxNTYsMTM4IgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNhcmMpIiBzdHJva2Utd2lkdGg9IjExIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIE5vdGVib29rIGNvdmVyIChkYXJrKSAtLT4KICA8cmVjdCB4PSI1MiIgeT0iMzQiIHdpZHRoPSI4OCIgaGVpZ2h0PSIxMTQiIHJ4PSI5IiBmaWxsPSIjMGExZjBkIi8+CiAgPCEtLSBOb3RlYm9vayBwYWdlICh3aGl0ZSkgLS0+CiAgPHJlY3QgeD0iNjIiIHk9IjM3IiB3aWR0aD0iNzYiIGhlaWdodD0iMTEwIiByeD0iNyIgZmlsbD0id2hpdGUiLz4KICA8IS0tIFNwaXJhbCBjb2lscyAtLT4KICA8Y2lyY2xlIGN4PSI1MiIgY3k9IjU1IiAgcj0iNiIgZmlsbD0iIzIyYzU1ZSIvPgogIDxjaXJjbGUgY3g9IjUyIiBjeT0iNzUiICByPSI2IiBmaWxsPSIjMjJjNTVlIi8+CiAgPGNpcmNsZSBjeD0iNTIiIGN5PSI5NSIgIHI9IjYiIGZpbGw9IiMyMmM1NWUiLz4KICA8Y2lyY2xlIGN4PSI1MiIgY3k9IjExNSIgcj0iNiIgZmlsbD0iIzIyYzU1ZSIvPgogIDxjaXJjbGUgY3g9IjUyIiBjeT0iMTM1IiByPSI2IiBmaWxsPSIjMjJjNTVlIi8+CiAgPCEtLSBDb2lsIGhvbGVzIC0tPgogIDxjaXJjbGUgY3g9IjUyIiBjeT0iNTUiICByPSIzIiBmaWxsPSIjMGQzMzIwIi8+CiAgPGNpcmNsZSBjeD0iNTIiIGN5PSI3NSIgIHI9IjMiIGZpbGw9IiMwZDMzMjAiLz4KICA8Y2lyY2xlIGN4PSI1MiIgY3k9Ijk1IiAgcj0iMyIgZmlsbD0iIzBkMzMyMCIvPgogIDxjaXJjbGUgY3g9IjUyIiBjeT0iMTE1IiByPSIzIiBmaWxsPSIjMGQzMzIwIi8+CiAgPGNpcmNsZSBjeD0iNTIiIGN5PSIxMzUiIHI9IjMiIGZpbGw9IiMwZDMzMjAiLz4KICA8IS0tIFBhZ2UgbGluZXMgLS0+CiAgPHJlY3QgeD0iNzIiIHk9IjYwIiAgd2lkdGg9IjUyIiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiNlNWU3ZWIiLz4KICA8cmVjdCB4PSI3MiIgeT0iNzIiICB3aWR0aD0iNDAiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNmM2Y0ZjYiLz4KICA8cmVjdCB4PSI3MiIgeT0iODMiICB3aWR0aD0iNDgiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNmM2Y0ZjYiLz4KICA8cmVjdCB4PSI3MiIgeT0iOTQiICB3aWR0aD0iMzYiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNmM2Y0ZjYiLz4KICA8cmVjdCB4PSI3MiIgeT0iMTA1IiB3aWR0aD0iNDQiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNmM2Y0ZjYiLz4KICA8IS0tIERvbGxhciBiYWRnZSAtLT4KICA8Y2lyY2xlIGN4PSIxNDIiIGN5PSIxNDIiIHI9IjMyIiBmaWxsPSJ1cmwoI2JhZGdlKSIvPgogIDx0ZXh0IHg9IjE0MiIgeT0iMTU0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIgogICAgICAgIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjM0IgogICAgICAgIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IndoaXRlIj4kPC90ZXh0Pgo8L3N2Zz4="/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0A1628;color:#F7F7F2;overflow-x:hidden}
+
+/* ── HERO ── */
+.hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#071020 0%,#0A1628 50%,#0d2010 100%);overflow:hidden}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:820px;padding:0 24px}
+.hero-eyebrow{display:inline-block;background:rgba(0,212,170,0.12);border:1px solid rgba(0,212,170,0.25);color:#00D4AA;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 18px;border-radius:100px;margin-bottom:28px}
+.hero-title{font-size:clamp(44px,7vw,80px);font-weight:800;line-height:1.1;color:#F7F7F2;margin-bottom:22px}
+.hero-title span{color:#00D4AA}
+.hero-subtitle{font-size:18px;color:rgba(247,247,242,0.68);max-width:560px;margin:0 auto 40px;line-height:1.7}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:#00D4AA;color:#0A1628;padding:16px 38px;border-radius:8px;font-weight:700;font-size:16px;border:none;cursor:pointer;text-decoration:none;transition:all .2s}
+.btn-primary:hover{background:#00bfa0;transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,212,170,0.3)}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#F7F7F2;padding:16px 38px;border-radius:8px;font-weight:600;font-size:16px;border:1px solid rgba(247,247,242,0.2);cursor:pointer;text-decoration:none;transition:all .2s}
+.btn-secondary:hover{background:rgba(247,247,242,0.06);border-color:rgba(247,247,242,0.4)}
+.hero-note{margin-top:20px;font-size:12px;color:rgba(247,247,242,0.38);letter-spacing:.02em}
+
+/* App mockup */
+.hero-mockup{position:relative;z-index:2;margin-top:56px}
+.mockup-phone{width:220px;margin:0 auto;background:#0d3320;border-radius:32px;padding:6px;box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.06),inset 0 1px 0 rgba(255,255,255,0.08)}
+.mockup-screen{background:#f0f9f4;border-radius:28px;overflow:hidden;padding:12px 10px 10px}
+.mockup-bar{background:linear-gradient(135deg,#0d3320,#166534);border-radius:16px;padding:10px 12px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.mockup-avatar{width:24px;height:24px;background:#4ade80;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#052e16}
+.mockup-bal{flex:1}
+.mockup-bal-label{font-size:8px;color:rgba(255,255,255,0.6);letter-spacing:.05em}
+.mockup-bal-val{font-size:16px;font-weight:800;color:white}
+.mockup-stats{display:flex;gap:4px;margin-bottom:8px}
+.mockup-stat{flex:1;background:white;border-radius:10px;padding:6px 8px}
+.mockup-stat-label{font-size:7px;color:#6b7280;text-transform:uppercase;letter-spacing:.05em}
+.mockup-stat-val{font-size:11px;font-weight:700;color:#052e16}
+.mockup-stat-val.red{color:#f43f5e}
+.mockup-stat-val.green{color:#16a34a}
+.mockup-tx{display:flex;flex-direction:column;gap:5px}
+.mockup-tx-item{background:white;border-radius:10px;padding:7px 9px;display:flex;align-items:center;gap:7px}
+.mockup-tx-icon{width:24px;height:24px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
+.mockup-tx-body{flex:1;min-width:0}
+.mockup-tx-name{font-size:9px;font-weight:600;color:#052e16;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mockup-tx-cat{font-size:7px;color:#6b7280}
+.mockup-tx-amt{font-size:10px;font-weight:700;color:#f43f5e;flex-shrink:0}
+
+/* Shapes */
+.hero-shapes-back,.hero-shapes-mid{position:absolute;inset:0;pointer-events:none}
+.shape-rect{position:absolute;width:340px;height:200px;border:2px solid rgba(0,212,170,0.1);border-radius:12px;top:12%;right:7%}
+.shape-circle{position:absolute;width:70px;height:70px;border-radius:50%;background:rgba(0,212,170,0.06);bottom:22%;left:8%}
+.shape-diamond{position:absolute;width:55px;height:55px;background:rgba(245,166,35,0.15);transform:rotate(45deg);top:58%;right:16%}
+.shape-dot{position:absolute;width:10px;height:10px;border-radius:50%;background:#00D4AA;top:28%;left:7%}
+.shape-ring{position:absolute;width:160px;height:160px;border-radius:50%;border:1.5px solid rgba(0,212,170,0.07);bottom:15%;right:20%}
+.shape-mini{position:absolute;width:28px;height:28px;border-radius:6px;background:rgba(0,212,170,0.08);top:20%;left:18%}
+
+@keyframes floatA{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-16px) rotate(4deg)}}
+@keyframes floatB{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+@keyframes floatC{0%,100%{transform:translateY(0) rotate(45deg)}50%{transform:translateY(-9px) rotate(50deg)}}
+@keyframes floatD{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-8px) rotate(-5deg)}}
+@keyframes pulse{0%,100%{opacity:.07}50%{opacity:.14}}
+.float-a{animation:floatA 7s ease-in-out infinite}
+.float-b{animation:floatB 9s ease-in-out infinite 1.5s}
+.float-c{animation:floatC 6s ease-in-out infinite .5s}
+.float-d{animation:floatD 8s ease-in-out infinite 2s}
+.float-pulse{animation:pulse 4s ease-in-out infinite}
+
+/* Scroll indicator */
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0);opacity:.4}50%{transform:translateX(-50%) translateY(8px);opacity:1}}
+.scroll-indicator{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);animation:bounce 2s ease-in-out infinite;cursor:pointer}
+
+/* ── STATS BAR ── */
+.stats-bar{background:#0D1F38;border-top:1px solid rgba(0,212,170,0.1);border-bottom:1px solid rgba(0,212,170,0.1);padding:28px 24px}
+.stats-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.stat-num{font-size:36px;font-weight:800;color:#00D4AA;line-height:1}
+.stat-lbl{font-size:13px;color:rgba(247,247,242,0.55);margin-top:6px;font-weight:500}
+
+/* ── FEATURES ── */
+.features-section{padding:110px 24px;background:#0D1F38}
+.section-label{text-align:center;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#00D4AA;margin-bottom:14px}
+.features-headline{text-align:center;font-size:clamp(34px,5vw,50px);font-weight:700;color:#F7F7F2;margin-bottom:14px}
+.features-sub{text-align:center;font-size:16px;color:rgba(247,247,242,0.55);max-width:540px;margin:0 auto 60px}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1060px;margin:0 auto}
+@media(max-width:900px){.features-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.features-grid{grid-template-columns:1fr}.hero-btns{flex-direction:column;align-items:center}}
+.feature-card{background:rgba(0,212,170,0.05);border:1px solid rgba(0,212,170,0.13);border-radius:14px;padding:36px 28px;transition:all .25s}
+.feature-card:hover{background:rgba(0,212,170,0.09);border-color:rgba(0,212,170,0.28);transform:translateY(-5px)}
+.feature-icon{margin-bottom:20px}
+.feature-title{font-size:20px;font-weight:700;color:#F7F7F2;margin-bottom:10px}
+.feature-desc{font-size:14px;color:rgba(247,247,242,0.6);line-height:1.7}
+
+/* ── HOW IT WORKS ── */
+.how-section{padding:100px 24px;background:#0A1628}
+.how-steps{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:0}
+.how-step{display:flex;gap:32px;align-items:flex-start;padding:36px 0;border-bottom:1px solid rgba(0,212,170,0.08)}
+.how-step:last-child{border-bottom:none}
+.step-num{width:52px;height:52px;border-radius:50%;background:rgba(0,212,170,0.12);border:1.5px solid rgba(0,212,170,0.25);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:#00D4AA;flex-shrink:0}
+.step-body h3{font-size:20px;font-weight:700;color:#F7F7F2;margin-bottom:8px}
+.step-body p{font-size:14px;color:rgba(247,247,242,0.58);line-height:1.7}
+
+/* ── CLOSING ── */
+.closing-section{padding:130px 24px;text-align:center;background:#0A1628;position:relative;overflow:hidden}
+.closing-glow{position:absolute;inset:0;background:radial-gradient(ellipse 600px 300px at 50% 60%,rgba(0,212,170,0.08),transparent);pointer-events:none}
+.closing-content{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.closing-title{font-size:clamp(36px,6vw,60px);font-weight:800;color:#F7F7F2;margin-bottom:18px;line-height:1.15}
+.closing-title span{color:#00D4AA}
+.closing-sub{font-size:17px;color:rgba(247,247,242,0.58);margin-bottom:40px;line-height:1.6}
+.closing-note{margin-top:18px;font-size:12px;color:rgba(247,247,242,0.3)}
+
+/* ── FOOTER ── */
+.footer{background:#060e1c;padding:28px 24px;text-align:center;border-top:1px solid rgba(255,255,255,0.05)}
+.footer-logo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px}
+.footer-brand{font-size:14px;font-weight:700;color:#F7F7F2}
+.footer-sub{font-size:12px;color:rgba(247,247,242,0.3)}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-shapes-back">
+    <div class="shape-rect float-a"></div>
+    <div class="shape-circle float-b"></div>
+    <div class="shape-ring float-pulse"></div>
+  </div>
+  <div class="hero-shapes-mid">
+    <div class="shape-diamond float-c"></div>
+    <div class="shape-dot"></div>
+    <div class="shape-mini float-d"></div>
+  </div>
+
+  <div style="position:relative;z-index:2;text-align:center;max-width:860px;padding:0 24px" class="hero-content">
+    <div class="hero-eyebrow">Free · Offline-First · No Login Required</div>
+    <h1 class="hero-title">Track Every Dollar,<br/><span>Every Day</span></h1>
+    <p class="hero-subtitle">A smart personal finance tracker built for Singapore. Import your DBS/POSB statements, categorize expenses, and see where your money goes — all in one offline-first app.</p>
+
+    <div class="hero-btns">
+      <a href="webapp.html" download="DailyExpensesTracker.html" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Free App
+      </a>
+      <a href="webapp.html" target="_blank" class="btn-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Open in Browser
+      </a>
+    </div>
+    <p class="hero-note">Single HTML file · Works offline · No account needed · Free forever</p>
+
+    <!-- Phone mockup -->
+    <div class="hero-mockup">
+      <div class="mockup-phone">
+        <div class="mockup-screen">
+          <div class="mockup-bar">
+            <div class="mockup-avatar">C</div>
+            <div class="mockup-bal">
+              <div class="mockup-bal-label">BALANCE</div>
+              <div class="mockup-bal-val">S$1,328</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+          </div>
+          <div class="mockup-stats">
+            <div class="mockup-stat"><div class="mockup-stat-label">Income</div><div class="mockup-stat-val green">S$4,495</div></div>
+            <div class="mockup-stat"><div class="mockup-stat-label">Spent</div><div class="mockup-stat-val red">S$3,167</div></div>
+          </div>
+          <div class="mockup-tx">
+            <div class="mockup-tx-item"><div class="mockup-tx-icon" style="background:#f59e0b18">🍜</div><div class="mockup-tx-body"><div class="mockup-tx-name">Old Chang Kee</div><div class="mockup-tx-cat">Food</div></div><div class="mockup-tx-amt">-S$6.60</div></div>
+            <div class="mockup-tx-item"><div class="mockup-tx-icon" style="background:#22c55e18">🛒</div><div class="mockup-tx-body"><div class="mockup-tx-name">NTUC FairPrice</div><div class="mockup-tx-cat">Groceries</div></div><div class="mockup-tx-amt">-S$23.60</div></div>
+            <div class="mockup-tx-item"><div class="mockup-tx-icon" style="background:#3b82f618">🚌</div><div class="mockup-tx-body"><div class="mockup-tx-name">SimplyGo</div><div class="mockup-tx-cat">Transport</div></div><div class="mockup-tx-amt">-S$20.00</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" onclick="document.getElementById('stats').scrollIntoView({behavior:'smooth'})">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round"><polyline points="6,9 12,15 18,9"/></svg>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar" id="stats">
+  <div class="stats-inner">
+    <div><div class="stat-num">392</div><div class="stat-lbl">Transactions tracked</div></div>
+    <div><div class="stat-num">9</div><div class="stat-lbl">Expense categories</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-lbl">Offline — no server</div></div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <div class="section-label">Features</div>
+  <h2 class="features-headline">Everything you need to manage money</h2>
+  <p class="features-sub">Built specifically for Singapore — handles DBS, POSB, UOB, OCBC, and Cash out of the box.</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round">
+          <rect x="4" y="4" width="28" height="28" rx="6"/><line x1="4" y1="13" x2="32" y2="13"/>
+          <line x1="12" y1="4" x2="12" y2="13"/><line x1="24" y1="4" x2="24" y2="13"/>
+          <line x1="9" y1="21" x2="15" y2="21"/><line x1="9" y1="27" x2="20" y2="27"/>
+        </svg>
+      </div>
+      <div class="feature-title">Bank Statement Import</div>
+      <div class="feature-desc">Import DBS/POSB CSV or PDF statements in one click. Auto-categorizes 90%+ of transactions.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round">
+          <circle cx="18" cy="18" r="14"/><path d="M18 8v4M18 24v4M8 18h4M24 18h4"/>
+          <circle cx="18" cy="18" r="5"/>
+        </svg>
+      </div>
+      <div class="feature-title">Offline-First</div>
+      <div class="feature-desc">No internet, no account, no server. All data lives on your device — private and always accessible.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round">
+          <path d="M4 28 L10 18 L16 22 L22 12 L32 8"/>
+          <circle cx="10" cy="18" r="2.5" fill="#00D4AA" stroke="none"/>
+          <circle cx="16" cy="22" r="2.5" fill="#00D4AA" stroke="none"/>
+          <circle cx="22" cy="12" r="2.5" fill="#00D4AA" stroke="none"/>
+        </svg>
+      </div>
+      <div class="feature-title">Visual Summaries</div>
+      <div class="feature-desc">Monthly charts, category breakdowns, and income vs. spending trends — at a glance.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round">
+          <rect x="6" y="8" width="24" height="20" rx="4"/>
+          <circle cx="13" cy="18" r="3"/><line x1="18" y1="16" x2="26" y2="16"/>
+          <line x1="18" y1="20" x2="24" y2="20"/>
+        </svg>
+      </div>
+      <div class="feature-title">Smart Categories</div>
+      <div class="feature-desc">Food, Groceries, Transport, Utilities, Healthcare, Shopping, Education and more — with icons and colours.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round">
+          <rect x="4" y="10" width="28" height="18" rx="4"/>
+          <path d="M10 10V8a2 2 0 012-2h12a2 2 0 012 2v2"/>
+          <line x1="4" y1="16" x2="32" y2="16"/>
+        </svg>
+      </div>
+      <div class="feature-title">Multiple Payment Methods</div>
+      <div class="feature-desc">Track POSB, UOB, OCBC, Cash, and Others. Know exactly which card you're overspending on.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round">
+          <circle cx="18" cy="18" r="12"/>
+          <path d="M18 11v7l5 3"/>
+        </svg>
+      </div>
+      <div class="feature-title">Income Tracking</div>
+      <div class="feature-desc">Log salary, freelance, business, and investment income. See your full financial picture in one place.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="section-label">How it Works</div>
+  <h2 class="features-headline" style="text-align:center;margin-bottom:56px">Up and running in 3 steps</h2>
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>Download the app</h3>
+        <p>Click "Download Free App" to save a single <code style="background:rgba(0,212,170,0.1);color:#00D4AA;padding:2px 7px;border-radius:4px;font-size:13px">DailyExpensesTracker.html</code> file to your computer. No installation required — just open it in Chrome or Safari.</p>
+      </div>
+    </div>
+    <div class="how-step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>Import your bank statement</h3>
+        <p>Export your DBS/POSB CSV from digibank, then go to Settings → Import Jan–Jun 2026 Data. 392 transactions auto-categorized in under a second.</p>
+      </div>
+    </div>
+    <div class="how-step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>Track, review, and share</h3>
+        <p>Add daily expenses, view monthly summaries, export CSV reports, and share the app file with anyone — your family, partner, or team. No accounts, no subscriptions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOSTING -->
+<section style="padding:100px 24px;background:#0D1F38">
+  <div style="max-width:960px;margin:0 auto">
+    <div class="section-label">Deploy Online</div>
+    <h2 class="features-headline">Host it free — share a link</h2>
+    <p class="features-sub">Two minutes to deploy. Get a shareable URL anyone can open from any device.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:48px">
+
+      <!-- GitHub Pages -->
+      <div style="background:rgba(0,212,170,0.05);border:1px solid rgba(0,212,170,0.18);border-radius:16px;padding:36px 32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+          <div style="width:44px;height:44px;background:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#0A1628"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:18px;font-weight:700;color:#F7F7F2">GitHub Pages</div>
+            <div style="font-size:12px;color:#00D4AA;font-weight:600">Free · Custom domain support</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:26px;height:26px;border-radius:50%;background:rgba(0,212,170,0.15);border:1.5px solid rgba(0,212,170,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#00D4AA;flex-shrink:0;margin-top:1px">1</div>
+            <div style="font-size:14px;color:rgba(247,247,242,0.7);line-height:1.6">Go to <a href="https://github.com/new" target="_blank" style="color:#00D4AA;text-decoration:none;font-weight:600">github.com/new</a> → Create a public repo named <code style="background:rgba(0,212,170,0.12);color:#00D4AA;padding:1px 6px;border-radius:4px;font-size:12px">daily-expenses-tracker</code></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:26px;height:26px;border-radius:50%;background:rgba(0,212,170,0.15);border:1.5px solid rgba(0,212,170,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#00D4AA;flex-shrink:0;margin-top:1px">2</div>
+            <div style="font-size:14px;color:rgba(247,247,242,0.7);line-height:1.6">Click <strong style="color:#F7F7F2">Add file → Upload files</strong> → drag in <code style="background:rgba(0,212,170,0.12);color:#00D4AA;padding:1px 6px;border-radius:4px;font-size:12px">index.html</code>, <code style="background:rgba(0,212,170,0.12);color:#00D4AA;padding:1px 6px;border-radius:4px;font-size:12px">webapp.html</code> → Commit</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:26px;height:26px;border-radius:50%;background:rgba(0,212,170,0.15);border:1.5px solid rgba(0,212,170,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#00D4AA;flex-shrink:0;margin-top:1px">3</div>
+            <div style="font-size:14px;color:rgba(247,247,242,0.7);line-height:1.6">Go to <strong style="color:#F7F7F2">Settings → Pages</strong> → Source: <em>Deploy from branch</em> → Branch: <code style="background:rgba(0,212,170,0.12);color:#00D4AA;padding:1px 6px;border-radius:4px;font-size:12px">main</code> → Save</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:26px;height:26px;border-radius:50%;background:rgba(0,212,170,0.15);border:1.5px solid rgba(0,212,170,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#00D4AA;flex-shrink:0;margin-top:1px">4</div>
+            <div style="font-size:14px;color:rgba(247,247,242,0.7);line-height:1.6">Your live URL: <code style="background:rgba(0,212,170,0.12);color:#00D4AA;padding:1px 6px;border-radius:4px;font-size:12px">https://[username].github.io/daily-expenses-tracker/</code></div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding:12px 16px;background:rgba(0,212,170,0.07);border-radius:8px;border-left:3px solid #00D4AA">
+          <div style="font-size:12px;color:rgba(247,247,242,0.55)">⏱ Takes ~2 min to go live after enabling Pages</div>
+        </div>
+      </div>
+
+      <!-- Supabase Storage -->
+      <div style="background:rgba(0,212,170,0.05);border:1px solid rgba(0,212,170,0.18);border-radius:16px;padding:36px 32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+          <div style="width:44px;height:44px;background:#1c1c1c;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C.111 12.957.776 14.5 1.88 14.5h9.19l.012 8.468c.015.986 1.26 1.408 1.875.635l9.263-11.648c.653-.908-.012-2.451-1.118-2.451l-9.19-.012-.013-8.456z" fill="#3ECF8E"/></svg>
+          </div>
+          <div>
+            <div style="font-size:18px;font-weight:700;color:#F7F7F2">Supabase Storage</div>
+            <div style="font-size:12px;color:#00D4AA;font-weight:600">Free tier · 1GB storage</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:26px;height:26px;border-radius:50%;background:rgba(0,212,170,0.15);border:1.5px solid rgba(0,212,170,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#00D4AA;flex-shrink:0;margin-top:1px">1</div>
+            <div style="font-size:14px;color:rgba(247,247,242,0.7);line-height:1.6">Go to <a href="https://supabase.com/dashboard" target="_blank" style="color:#00D4AA;text-decoration:none;font-weight:600">supabase.com/dashboard</a> → New project → give it a name</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:26px;height:26px;border-radius:50%;background:rgba(0,212,170,0.15);border:1.5px solid rgba(0,212,170,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#00D4AA;flex-shrink:0;margin-top:1px">2</div>
+            <div style="font-size:14px;color:rgba(247,247,242,0.7);line-height:1.6">Sidebar → <strong style="color:#F7F7F2">Storage</strong> → New bucket → name <code style="background:rgba(0,212,170,0.12);color:#00D4AA;padding:1px 6px;border-radius:4px;font-size:12px">app</code> → ✅ Public bucket</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:26px;height:26px;border-radius:50%;background:rgba(0,212,170,0.15);border:1.5px solid rgba(0,212,170,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#00D4AA;flex-shrink:0;margin-top:1px">3</div>
+            <div style="font-size:14px;color:rgba(247,247,242,0.7);line-height:1.6">Upload <code style="background:rgba(0,212,170,0.12);color:#00D4AA;padding:1px 6px;border-radius:4px;font-size:12px">index.html</code> and <code style="background:rgba(0,212,170,0.12);color:#00D4AA;padding:1px 6px;border-radius:4px;font-size:12px">webapp.html</code> → click each file → Copy URL</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:26px;height:26px;border-radius:50%;background:rgba(0,212,170,0.15);border:1.5px solid rgba(0,212,170,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#00D4AA;flex-shrink:0;margin-top:1px">4</div>
+            <div style="font-size:14px;color:rgba(247,247,242,0.7);line-height:1.6">Share the public URL: <code style="background:rgba(0,212,170,0.12);color:#00D4AA;padding:1px 6px;border-radius:4px;font-size:11px">[project].supabase.co/storage/v1/object/public/app/webapp.html</code></div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding:12px 16px;background:rgba(0,212,170,0.07);border-radius:8px;border-left:3px solid #00D4AA">
+          <div style="font-size:12px;color:rgba(247,247,242,0.55)">💡 Best for sharing the app file directly. GitHub Pages gives a cleaner URL.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Files to upload checklist -->
+    <div style="margin-top:36px;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:24px 28px">
+      <div style="font-size:13px;font-weight:700;color:#F7F7F2;margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em">📁 Files to upload</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px">
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(247,247,242,0.7)"><span style="color:#00D4AA">✓</span> <code style="background:rgba(0,212,170,0.1);color:#00D4AA;padding:2px 8px;border-radius:4px">index.html</code> Landing page</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(247,247,242,0.7)"><span style="color:#00D4AA">✓</span> <code style="background:rgba(0,212,170,0.1);color:#00D4AA;padding:2px 8px;border-radius:4px">webapp.html</code> The app</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(247,247,242,0.55)"><span style="color:#6b7280">○</span> <code style="background:rgba(255,255,255,0.05);color:#9ca3af;padding:2px 8px;border-radius:4px">icon-192.png</code> Optional</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(247,247,242,0.55)"><span style="color:#6b7280">○</span> <code style="background:rgba(255,255,255,0.05);color:#9ca3af;padding:2px 8px;border-radius:4px">icon-512.png</code> Optional</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="closing-section">
+  <div class="closing-glow"></div>
+  <div class="closing-content">
+    <h2 class="closing-title">Start tracking your<br/><span>expenses today</span></h2>
+    <p class="closing-sub">Free forever. No account needed. Works 100% offline. One HTML file — that's it.</p>
+    <a href="webapp.html" download="DailyExpensesTracker.html" class="btn-primary" style="font-size:18px;padding:18px 48px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Free App
+    </a>
+    <p class="closing-note">Share this page · Works on Windows, Mac, iPhone, Android</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAABmJLR0QA/wD/AP+gvaeTAAAgAElEQVR4nO2deZgbx3mn32rcmHuGw/sakSIlXhJFiZJsyYfk2FZ8yLYsX7KdKM7m8fFkk82TTTbZ3cR7JrFjx7vxEWsd2ZZPRbZ1WZRl67Kom6QkUiTF+xjec88Ag7u79g8AAzTQaHQDjRnMsH96xEH3V/V1ofFWd3VXfVWCJlDH1hV9msezHk2uRShrFSnXIuiW0AJ0Aq0IfOU5he5PRVWwi8ofquatbrdQNsu+hXHSmnzXd870duNEIrs7IWFcwJhEjAs4B+wVQtutKGL30NYDR/giWpWjNFzVvmZDFLp+zRKvqr5DCO0mEG9HsMw0g9mv78JvwzZt8FvxPQ48CuJBGQz8auyB18aq5GyIpq0CdF+7uj2NdhvITwvEWwDFUglc+O3lnx3wlxrSIJ+QeL41dt2+X07nnaHhFaD1uhWXK9LzFwI+KiFk6+gu/Pbyz074S+zimBDaN2Qq9a+jjx8br+K1bjWsAnRd27dJhT8H8QnAY/vILvz28s8J+HUaBf6hIx7/PyeePpGocoSa5XgFCG9ZscjrFV8B8bGKp8aF38Tuwl9y3GMC/mpk2/77AFnlaLblZAVQOq7t+0MJXwI6qpNop0Qu/PZ9zwX4dfq1kL7PjDy653SVo9qSIxWg45rll0jh+SmCa0zduvCb2F34q+dlBMEXRh9546dVjm5ZdVeAjmv7Piwl30HQYerShd/E7sJfPa/O/sOWcOSPTt93Ol4ldVXVXgHe9jZve+zkV4E/NgXMylFc+O3lv7jhBwRSssPrVT8w9NDBs1VyWXNpS6tXB9q61R8K+LALv528pXYX/up5S+26hGcVIT44/Mt9L1fJXfNhy9R55cpO6RcPSniLC7+dvKV2F/7qeUvthgljCvLW4UfeeLyKl5oOrVPnlSs7Nb94CrjShd9O3lK7C3/1vKV20x89psjaKoFiOeX1S0OaXzyEC7/NvKV2F/7qeUvtVTkLS6E81P2e9e+q4rFM1irA7XjaNO8PgRtd+O3kLbW78FfPW2qvzln2owwhuL/7fZdfV8WzrWIA0L617//ivu2xlleA0hbG0x7G29GC0hpCCYdQQgGE34sS8CN8XoTHU8ggAVVDy2SQyQxaIoWMJ9FiCdRYHHViEnUiijYZBymtlcuyfS7Ar7Od11R53di2N05WOYqlouTf89/nwl8upSWAb2EXvoWdeOZ14JvXgae7DeH1ZhPIfGYxtS10ToVhmuJtka8gCMhkSI9GUIfHSQ+NkB4aJn1hCC2RtPG9iu1zDv689mse/5utDLE2LU6uh/cV3E4uADwdYfx9C/Avm4dvWQ/ezlYoBnQqk8E+WdwAMoa9DP5SewW/mdEJUucvkDp9nuTpM2iTkxa+95yFHwAJD44+vP+DVBk/VLlIt+NpP9n3Ahfx8AahCHzL5xG4dBH+1YvwdrdOQToFcxWIDeEvqzDl+azBX/gsinxkRsZInOwncaKf1LnzIIuG118E8OclEV8YfXjfNy0dtlTt1678ExBfs1oo6/Ymh18I/H3zCK5fRmDNEpSQj1L4HIXf4O4hqqahekXM5dMSCeJHj5M4cpjk2XOVvvicgz9nSGiS68Z+uW+3raJlhzQrB4D2iwV+T1cboc3LCW1agdIapBKAluHXtfet5RElx6pWYexWRC06SezgAWIHD5CZmCickrkJf/7P6yMLg1u4a1faKGV5oAoQWt51F4ir5zz8QuC/dCHtt1xB2zs34l82D+H3YgScyP87BWDR/7J8W+jS4Fh73xx+47JkUwsUf4DA4iW0briCwPyFqKkkWqRQESyds1JDc8MPsCAYVSOJgwPPWypi5zUrr9QU8UrF68JcgN/nIXzFcsLXrcbT1ZrdNwVOUeKZau+XQl2yT5gc27QsBvkyo6NEX3+V+OEDSFVFp9kPf14xLaOtM3o1WnYH8C3r+meBWF+tUNbtTQS/z0t46yV03HYNwfXLUEJ+9FfNXOKGt/cLV2VR4YptBH/+vuJkRVSCIYIrVhFeux6hSVIjQ9mH5rkDP4BPKGJp/ODgfabu2q5feZnQlH0Y9RDPYviFRyF01QrCN6zFY9K+N4TfwhW80OQxT1O83ej2fqEJZi1P/sFbnYww8eqLxA/vQ2qlbxBnJfyFVArXDj+gHzmquwMEl3R/GdhsViiz49dSqEbD71+7kM6PbiW0cTlKcfvepAmRvz6XX40N9pXC79grzqL0Oj/mZSncJ6xXxOK3Too/SGjZKkIr15KJjKNOjOnzz1L4c/bF8YODPzZ0233t6vYM2jkgbO3AZvaZh9/b20LruzYRWDXf4EGx2IEeDCeaPFLVUCMxtLEImYkYWjSGGksgE0lkMoWWToOqn/pGeHzZIRLBIEoggBIK4mltwdPWiretA097G0JRyo5VsSwWvoN5RczuS/QfY/ylp8hExmY7/NmPGluHH963I7/tzX9Io90m5gD8wqMQvnEN4RsuRVE8DW9myFSG9PkRUueGUQdGSA+PoY5GkKrB3E51/JBCUfB0deDr6cHXOw///AX4eucjfD4bD96FfWV9DRW+d3DZKgKLVxDd/SKRvS8jNTvfq9Q+s/ADSIW/Aj5UZm67tu8pgXhb9QOb2WcWft/iLto/cCWe3nZbzQxRyQ5ldw+Z0UifHiB1/DypUxfIDIwW2so1XSFrP2dCEXh75xNYsoTgshX4Fy5CCI8+g0l7f2q/xTtiemSQ0ee2kRq5YOF7ldpnHv6cMorMrMiHUgqA7mtXL82gnWSWTlcoFEH4LWsJ37gGRRGWr+DZn7d6GpnKkDhyhuShUyRPnIdUxnLZzG31nTO9Pfeef/lygn2rCC3vQ3h8xQmo78E7+1lqksjuZ4m8/iKy2gyGzQc/kL0LjN6/7++nkrVdt+r3hZTfrd3xzMGvdIbpuG0LvqXd2SQmrzTtNXkkyWMXiO89RuLIGcioxTkslc3c5iz8Zbu9XsJ9qwmvWYd/yVKEVIozZP+aXCgq3hVz28mBU4w8+xDqZIWOtCaFP2c7NPLAvsvIf+P26/q+hxS/N9vg969dSMetmxEhv0M9qaBNpojtPkr8taOoE5O6cs0W+AFdN6a3rYPwZZtoWbsBJRiq2tQTJdtTf0vyack4I889ROLM0Qrlbkr4AYGicc3QQ3t3egACS7q/hqDTvuMZgl8IWm6+nPZbrkD4PLbb+0ZNgcxolMjTu5nY9jKp4+eRyfScgB9ASyVJnu1ncv9rqJNRvJ09KIGi/pCaOtoEisdHS98GBILkQH9JuZsXfgApxOn4gYFnRMfWFX1S8Ryz73hm4BcBL+23bSFw6UJbP1b2U3mazHCEyef2Ed/fD8VDx+cI/EZ5hSIIXbKOtiuux9veldudvTRUH60KZYE9UhA7fYCR5x9AZtKVv0CTwJ/T8yMP7H2zaLv+kvcKycP2HM8M/EpnmK5PbMXT22F4Fa/YXt1/itiuIyQPnUUbi6AlDR5iXaEEg3i7egivXUfbNdfj75lPpbuo0QUnNXqOoafvRY1Hyp03F/wAqpoWvaLt2r4/F0J82brjmYHfu7CdjjvehKc1YLnJk74wztg9T5I8XNfkYRelhMdD+5vfTs8734vw+i30NWT3qbEJBp/+EenxwSJnhh8r7CgxNAb+3F7lHZ7Qsp47gausOZ4Z+H3Lu+n61JtQwgYPuxUqQ/LwOYa++gCZCzOy8s7sl5QkTx4jcfwILes3o3hzgUFTTcqS/3MVQvEFCa/YQHLgJGp8omnhzxZbe010XLfqaYl8a3XHMwO/f1UvnR/divB5q7T3C/vSF8YY/Lv70GIGweIG6u3p5fN3fpZ33/QuVq1cTUs4XD3THNREZIIDRw5y7wP38t2ffJ9kKnv+QpesYfEf/El2JguLA+tkJsXgMz8mMXhCZ53STMOf1d2i47pLXpewwdzxzMAfuHQB7R/diuKxN6Rh8Mv3kzx8pkphs/rQez7It770DVpbWi2lv1h06OghPvpHn+DQ0UMAdN/8Xrpvfl/Oag5//oIk1TSDz/yQ5MBxvfPmgB8EzysS2swdz9CV/5Je2j9yje3xPMn9p23Bf8/Xv+fCb6A1q9bwxM9+zeqVqwAYe+bXZMbHqNQMErI0tgGE4qf3hk8R6F1ZcNws8ANIehTyFaCJ4Pct66bjY9eieLz6RLIy/LmfgdiOQ1UKm1VvTy/f+tI3EFXfG1686u7q5kf/8gO8Xi9aOsXEzmcxugAZji3Kv3r2+pl3wyfxdy9pLviz6lTILkLteKFqhd8zv43Oj1+L4jWAf2pbfxUSRduJA6eqFDirz9/5WffKb0EbLtvAxz/4MQCie3dag794G1C8Iebd8Pt4W+cZHGHG4EdAp4LA73ShaoVfaQvSfcebUIIBjEAvbGPYuRV/7RjaaLRKobO65eZ3W0rnCu647eMApIYuMHl8D4BBk8fodyrs8wZamH/jnXgCxRedmYMfQELAYHLcmYEfn5fOj12H0hYqSmDe3p/qDNME0d++zvijOw3C+IzVt/wSS+lcwaZ1m7IfVI2Rlx5kYu92Sq/yVQfWSYE33M28N306N0p1ZuEHEKIs9neG4BfQcetmfIs60Z1AK+N5JIw/upPo829UL3eRWltarCe+yNXR3lHYkJLx159kdNcjuW0swZ/fDnQvp3vzB3XJK6rB8IOuAswQ/EDLm9cQXLcE/Qk0vr0Wt/elCmMPvkR89zFb8LuqX5HDLzP80v1Imb/jljeDDOOqpaBl+dW0rX6z+QGmAX6YqgAzB7//kl5a376O8hOYy1ShvS9VydgDz5N4o9+FfyYkYPLEa4y89PNsJSi6Y+vu0BWar50b30uge0VF32bHNU1kA34AZSbh97QG6fjgNblSWWzvS5G9DT/8EslDZ1z4Z0JF5zzWv4fRHQ+QX7dgqslT5e2QwEPP1Z9E8ZX0uk8j/FBXCGR98COg/QNbUFoCFtv7hdvoxGOvuFf+mZIo/zh54hXG9jxa1t43ahYVb/vCXfRc9RFD35WP6xz8AN4ZgR8IX7MK/yULTKOTjMbvR5/bR+zVo4Ubl0chuHUB/ivn4Z0fRmqSzJkJEs/2E3viJDJTMt2fK0dU+tNGDj+HJ9hO+5q3FlJYiCUIL9xI6/KtRE+ZrHTaIPhBFKZFseO4Xvi9Pa203bzedshifO9Jotv3TmVR2v20/97leBYWbqMC8K3qwreqi9DbVjD65RdRR+peUNxVkcp+2tyOsdd/hbelh/CSjaZ39NILXdeGD5AYOkwmPmpyMOfhR5gtktcg+BGC9vddBV4LszAXwZ8+O8zEozsKbjxKGfyl8q7opOs/XofwGk6C7aoGVYI/K8nwzn8jNXoW49/WuFmk+EJ0X/ERytRg+KFSBWgU/EDoqpX4ls3D9ASVtBnVySSjP39ON3txcOuCAvwplch9Rxj+6xcY/usXiNx3BFLZtN4VnYRuqvC2wVV9MvitZSbF0Es/QEvFKf4tdXd0g7tDqPdyWpZebeC7cfCDjUlwnYBfaQ3QetMGdFcBoxNU7EyD8QdfyK6QWCT/lYVxJdGHjpPYfhYtmkaLpklsP0v0ocIQ3NANy8wL5sq+TADLTI4yvOte0PK/dIXftqTZ273uAyi+0LTBD6UVoIHwI6D1pg0owfyU5IVMZvPzRJ/fT6r/AqXyzC80fZKvDZXZk68WQvI8SzvK7K7qkBlguT/x828QOVo0ZMKot7jkTu/xt9O59nfND+Ig/FBcARoMv29RF6FNK7DS3ofsdursMJPP763ivIKUoq821Vvpqm5ZgD+vsf2Pkho/V/E16FQGyVSoa9uKt+BrXWTz2DmzTfihSj+AU/ADtL1jEwjFcEiD7uTk9sm0ysQvX6w4uE0diE19DlxZPsw2cEXP1OfMmSrLALmqU+XwA0gtw/ArPymaULe8/S9Kgu2FUOi67NaKh6hYghrgB1CmA/7AqoX4lveavt+f2s6doOizr5MZNZheI6fUa4UmTuv7+wjeuBil1YfS6iN442Ja3983ZY8/ay1GwFUtMoY/r9T4WcYPPW748FseS5D9Pzx/I8HuVWWHqFiCGuEHjPsBnIQfAa1vWz+1w8oU5OkLI0zuOGjqO7FjgMCW+XgWtYDfQ9vtq+H21WVJMyfHiD95okphXdUmc/jzmjjyOC2LN+NrWziVuNrsHp2X3sr5l77aUPgRBm+BHIUfsgtML+w2ae+XNoNg4rGdubEllX1LVRL5wUHUc5VXRc+cHGP0yy8iM1VmMXZVg6zBjwCpqQzv/Tml7X2zB+Rg9yqC89aau64Tfii5AzgNP0DrDessXfXzf+N7jpE+N1zFd9ajNpFi4l/24r96AcEre1AWtGSHQpwaJ/HcKeJPnqgbflXVGBuPkEqnK9bJZpcQgoDfR2dHK4pSue/Thkfdn2rJAJJDh4mdeZWWxVfpjSZMdK36Xc4NG7cEnIAfiipAI+D3r5yPf3HuYdQC/DKZIbK9wqLeJfDnJVVJ8qXzJF8+D0DqaOXV0GvR2HiEZMpwjeVZIykliWSKsYko3Z3tdXqzD39eowceIrzwCoRiMMdTyQOyQBDsWkOgs4/kmH5aFafgh1wTqBHwA7Rcl7uFWbjlCQmxnQfRogbjdirAb7lsdSiVnjvziCaTDlXkGlgAyMRGiJzYbvryI/tvYbtjxe/oXTsIP4DSKPi9PW0E+haZvAMubAsEWiJFdMcbJr6nH36AQMBXPdEskd9nPvbRkmqEP28bP/prpJrE6GKoe07M2cMLNuMNdmdTOAw/lPUDOAM/QPiq1UwFukDFMSB5rGM7DyGTqQq+ZwZ+gM72VoIB/6yeP0iIbEXu7GirnriuA1W3qalJJk5sz24YhU+WTriFh7alNzYEftDFAzgHP14vwY0r0cGvy6CHX6YyTO46UMH3zMEPoCgK3V31tpsvAlmAP/9h4sSTtK98O0Lx5/YaXxzz221Lb2T82C+RsjS2oz74oTQm2EbGynZBaO2S3Nw+VGjv64fGxl47glZ89W8S+F1ZlA34AdRkhOjpl3N7zeEHgcffQWjexnLHdcKPKI4JtpnRzBDc1IdZe38qrQSpor/61wO/WzGmXzbhz2vixBPZnmCj3uDSZ0YpaF1UPIuEM/CDjeHQ1e1Zg6c1RGDFQtP2fnEtTx49jRqZLPHtwj8rVCP8AOnYBeLDByl/QVKUp2joTMu8jbkAeufgh9KQyDrhR0DwsqX6h18T+AFirx0qK5Qd+IVHIbB1Af5NPW5M8HSqDvjzuydOPUOoZ521uHDhp2Xe1UTOb6+9XAZl85Yb7DoWuj/By5ZTqNEl4IOulquRSZInztUMv9Lup+1Tl7kxwdMtB+AHiA/sQUtGUPzteqMucL5wwWxZsMW8AtiEH+qcFqUUfiUUwLe0l4pX/ZJbXHzfcXJDAqnlyl8Kf6ncmOAGyCH4AaRUiZ7fSWl7Xx87XMgY6lqH4g3aL5dJ2WqeFqUUfoDAqsVkx/xXbvIU1/L4geNT++y2+QOlMcEPHieViwLzb+6l7dY+8HumYoJjvzZfCbaSMqpKMpkumgKwOaQIQSDgx+NxYmyPA7IJf17R8y/Tvvzm6kPlESB8hLrWMzm4y5JvK2UzP3s24Afw9y0ygV9fy9PD42SGRqn1gde/qRDw0siY4GaEH0CTkmQqVT3hdKhG+AGS48fJxEZyyUzgz3EU6t5k2beVstmeFqUS/AgIrlhUcvsq+gy6L5Y83E+t8MP0xQRXO78zqaaol3XAnzVLYoOvFrgxWWMABMHu9ZZ9WymbrWlRKsIPeHs6UVqCVGrvl24nj52uGX5LcigmOBDwozThMAghBMGZHqdUL/w5e3xoD4ZNZYOmsz8wH1+w1xH4wSgirAb4AQLLc6uKm7zSym/LeIr0eYMx/zbgVwdieJdmVxsJXDmP+DP6xbCdign2eBTC4QoPXhezHIIfID52GKkmEUr+PBtXhnx7Idi1lvT5ooW46yibpWlRqsEP4F08r+rtS5AdBpHsvwCyJFDF5pU/tbvQ7HFjgqdZDsIPgJYmMZpf3LC8GVQ6dCbYtsaxslnoB6gOPwL8i3r16Uuu+sVhcKnTJUErNTR7kjsHCWzpxbPQjQmeVjkNf07xkYOEuq8oclDODQBSEGhfVZq95rJV6QewBr8S8OPtbMMK/ADpswOmhapuE0hVI/KjQ6jn3Zjg6Zez8IMgOXEYHfwmscO+8LKpkaTlx7ZXNpN+AGvwA3jnd5N//6+vweVTX8hkmvTgqGXfZuXSJlJM3LUP/5b5BK+Yh5IfCuFgTLCrUjkPPwKSkZNImUEIn8EIAv0zgRBe/OElJKPHS45tv2wVQoSsww/gm9dRftWv8CCTHhzJtv/rhD8vqUqSL18g+XJ2+sTU4bMG+Vw1VHXCDyC1NOnoWQKtK/VOK/QJ+FuWZytAPU0yYfga1B78AJ7uLp1BmKz4kh4Ydgx+V00gB+DPKxU9qXdq0iHmCy+pG34ouwPYhx/A21Vo/5e123R3AkFmZMyWb8vlsmKvQc06FKKapmWohIPwA6SiZ6gIf8lcUv7wIr3dTtmKbPaWSa30INHVTv4V51SbDWEQ4wmZ4QoVoAnhh+YdClFNDR8q4TD8AOl4bmENk4kURO650hsozDJnq2wlNuvLpJp8IU9ra/VevFzvcGZ83JbvquWyYq9Ds7nF1bB62wD4AVKxC6YcFT9X+gK9Ri5sM2xtmVQTm6clhFCUioXWbWcyaLGERd8zDz8071CIamrYUIkGwQ+gJofIwWI6VxCA4gmjeELWy2ZgE+SfAWqEH0BpDRUSlc77PrUvu61OxvWXpSaHH9yhEHZU79QlUqqoqQk8vi6KORJg+Ezg8XehxeO63ZV8G+8SladHr+o0Z1fCuQpgAn++I1uLxnR5TQ/aBPC7si6n5u3JJMco4JnrR6rwQOzxdZTlN/Ot35X9t/JUYRYLrQQC1dttuUKr+eaPg/ALj0Lg6vnZmOBeNyZ4JuTkpFVqOpLbbdCUBl1l8Hhb64IfUakCWC60QAn4MYe/sE8mk47Cr7T7abtjLZ4FbkzwTMnpGdu0TNQYfoPX64qncjisFfihrmlRcnj7fLmdhWZQ/r/SBxlZcaLZ2q78pfCXyo0JbqwaMV2hzCQqvAYtypTjSvFYjw82gh9K7wA24QcQXm+hUMUWg0LLtNHsxLW1+QNXzy/A38CYYFfGatRcnZqa0icymStIKAFLvivBDxZWiSy368MYhaJYgh9AqqUD02p/4J2umGBX5WoU/FllmGo2m8APAiGMBzKU76rMWfXXoDq7QQyvKCpUlUUP9B0ztcMP4OmtHhPc+uFsfEA9McHNMhSiWWaBaCj8gux5NuFI6LbLBzKUH86cM/PXoLqMFQLYpTX4szW2JE3dVwsTORQT3AzwQ5PNAlEmZ+AHQCr6Hbn2viiDXzDVaVYj/GB5WhST2Rsy6YoPKWWVQVUtFcqKXR2cnnWC66mDTqsJ6qGBHIQfgVA86DhC98Spb1FgPKzeKvxgqR/AfOqS1OCIfkfpCpC5fQJIDY1YKpQVe2rPMN4l2aD41vf3ISW6h2CnYoIDAT/JZApthulrilkgyuQs/EAh0mvqjWLOZtQnoJa/VLEDP6JqP0D1eXtSp86gTkTxtLebRvJnJiKkTp9y6IQJkrsGCWzuzc4O18CYYHcoRCU5Dz+AooSrw5/b1qR+XJld+MG0H8DapFVS0xj7zVO5NzzG8EtNMvbEE8jSmSCq+Da253yqGpGfHEI9H6uY3I0JbpQaAz+A4glVaO+Xb2uZQgdnLfBDxX4AezO2Jc+cZeTBh+m8+SY87R1lV/6xJ54gee6M5UJVtusTaRMpJr6zj8CW+QQ29aD0ujHBjVfj4Iei8T2GL1X0+zR1smirtmdLg2lRapuuMHnmLAM//DH+pUvx9/QAgtTwCKnTpxy98pdJkyR3XCC5IxsTnDxQpaK5qk8NhB/A6+usOqo4v53JjNcFP5T1A9S3MovUNJL9/ST7++sqVLndONEsHKY/t1Un/CgCr68HHfwGD7/5sFstXRg5WitnilPwGxpc+C8e1Qu/AI+3vWh4gzn8UmpomQmbxy6XN5/Chd9VzXIAfgBfcGFhh9HqokXbamo427SuhzMBXhd+czXLUIhqmrGhEg7BD+APLsUK/EhBOnm+bvgBlDkFfwMqx2yAH2ZoqISD8EOuAhhMq1kKP0A6eaH2shWVy8b06Ga2uQl/3m3z45/VtNZTh+EH8LdcUjBWmR4xleivrWwl5bI4PbqZbe7CD7NnVohpHSrRAPgBAqFV5JtAupWGDB6IU/GT9stmUC5ry6Q2MfzCqxDYMh//xh4880JIbYujMcHuUIgSNQh+X2ARHl97xRmhdW+DJCTjJ+yVrUK56pgWZebhV9r9tH58jRsT3ACNxyX7z6icGtE4Papx/ScfwxvowBfuRCghQKKqcTLpKJn0BPF4P/FEP7HYMcajr5NJj5Y7Nfk9g+2XW4Y/kx5GzZT4rwF+qLZMahPDL7xKGfylyscED//XZ9zZISzoyIDGs4cz7OnP0D+sZYOycv+0zd8AMv+cIZESvEobnkArAf9CwuE1WTsSNMlk4gRj4zsYGX2CyckDVQENt26gFPRK24nJw2X5zXybJaphWpSZhx8BgS1uTLATiqckv9mf4ck3Mpwe1UDKqYfpPPw55nXwT8Ge31+8jSAU7CMUWMnC3tuJJ04yOLKNoeGHUdWSwYu53zrUvrmwo8o0m8nJ/WX5DWWhOWZzWpTmgB/Av6F7alc+JjivxPazCMFUSGTohmVuBShRNCnZtifNttczTCbykDsAv6TMVzCwgmULP8vC3jsYGPoFg0M/J6NGCr9lcCk+f2/VqML8dCmJ6D59MiNZfBaxMS1K88APoFiICc6rnpjguSYJPHMow5/+NM59O9MNh7/Yl1dpY1Hvp1m35gfM77kNkcMv3HlNhajCwlugfNitpsZJxA87Aj9YnhalueC3JIdiggBLj6AAABDMSURBVOeSzo9LvvFUkoPn1SJ4mRb4s2myBo/SzpIFX6C97a30n/17WjvehFmTR8BUBYnH9iGpNL8UtuAHS9OiNCf82jTFBM8VvXxc5a9/kZhx+IvztobWs7bvLtoCG3KlLG/ylM4NGovsqvwlbcIPVV+DNif8AKnXhwlNQ0zwbJeUcM8LKbbtySB1MDOj8OfzKiKELyERmkrGryFL2vu6OwOCyfEXjb9oDfBDvatEWrY73ewRJF8Zwr+5N/smyF0n2FAZDb75VJLnDqtNCX92f3bbk/SAKkgHZZYLg2eCZOIE6VTJGtNFSezCDxWnRWlu+AGkphH96WHUC25MsJEyGvzjY7MD/nx6JSXwxQRoBg/EwOT49vIvWgf8YPgatPnhz//RIikid+/Hv3k+gY3dbkxwThL49m9TvHpy9sCfTy/SAo+UqC16+EEQLa0AdcJv0A8we+DPS6qS5M4LJHdeAAHJfaerHGDu657nUzxzsDnb/Nn9xvDL3GeRAkVItFBh6a1U4hjJxPHCl3QAfrC7SqRl+/TAby3vxaUXj6lN+8Cb3W8Of94mEiCmwhsEE6OPF76kQ/CDnVUiLdtd+GdKFyYk3346Nevhz9vEpAoZgdQyTIz+JuvEQfghFxJZS0Zjuwv/TEkCX38yyWRKmxPwA0gNRFRlkpeyoz8dhh9sT49uZnfhn0k99UamqTq56oY/7yujkor1NwR+qLZKpGXHLvwzqWhS8qOXUnMP/pyxzX8zHtGC0/CD5enRzewu/DOtR/akmYgXwzR34JcSPEon7eFbjb98HfAjzCqAC/+sUDwlefT1zLTB/4kbQjz2n7t57L90s2aRt+Hw5311BG9FESXBT3XCD3Utk9oc8AuPQuCqXvwb8jHBV11U6wT/Zn/jx/PrfBVpyneD4UeCorTRFnwX4/H7swYH4BcYVYBZBL/S5qf1Y2vwzA/pkl1MMcG/PZCZ1maPKK4G0wR/vkytgd/JVgCH4Ac706JM2ZsDfuFRyuAv1VxfJ/jIgMbJEYfCGC3AL6XU/dAdYYEipgd+KcHvWY7ft8r8pNiAH6xOizJlbw74AQJX9Rbgv0hjgp89nGko/B4huXaNnxsu83PpQg/dbQrhQOEH+d93tJNRYWBc5eyIysEzGfafTvPGqQwjEXXKjxPw59O3eN9KKnPU+ITYhB9s9QM0D/wA/g3l6wTndbHEBO/uzzQM/pW9Cn95ayt9883vnl4PLO72sLjbw9Wrs+t7nR1R+cRXhh2HHykJ+q4A/cpIWdUAP1heJrW54AdQegtNn4sxJng8Ljk1nB3p6jT8izsVvvTJ9qrwm6kR8EvAp/ShiHb9wWqEHyz1AzQf/JZehc7xmOD9Z1RyXDgKP1Ly2XeGaQ+Vn+RzoypnRgpv1fb1p9nbn2Y0Wj7kvBHwZz8Lgt4NhQPVAT+i6rxAzQu/NhjHs7gFyMYEx585q0s212OC+0e0hsDf0aJwzaryOUa/+1SMHz8T4xM3hrnzpuz7+K9vi3LgTLYPortVcM2lft6yPsDSHk+D4M/m9Ypl2QR1wg+m/QDNCz8IUnuHCeUqwMUYE3wmP4kVOAa/BPp6PWW/cVqV/HR7DK3kQl8M+HBE8uiuBNt2xmkJiIbBjwSvWOII/FCxH6C54QdIvjqE/4p5F21M8LlRzXH4kRD2lx/Lqwhagwpjk9oU0EwduwB4HuZoQpbZnIJfSvAqSwzOiH34wbAfoPnhB5CqRvTfjly0McHj8WKYnHvPH4nLsmMJAX/zkTZWLfDofiqn3/OXlqnSd1JEW2kJjf6Uy8BQ0g8wO+DPS4ukiHz/DfxX9hLYkI0JRpOk+6vHBE9EJmhvaze0zQbFU9Jx+AEOnc2Q0cBb8nrkipU+7vp811R+gHdtDtEeTnLgdJrxaK2D5OzBL5EIWdz5WTv8oOsHmF3w53dLVZLcNUBq1wAAmYEJMhfGqziG3fv3cOO1N1RN16yKp7JEOAm/lBBLSn6zO8Etm43XRCjm4UPXh/jQ9SGkhAOn0zz+WoKHXooRTzUOfiQI8hWgPvhhqh9gdsJvlMLTFUYYr3ym009+8dOqaZpbzsOfz/utX01y+JzJ9IMlEgIuX+bjj9/Xxr3/qZerL/U3DP7CHah++AGUuQQ/gPB78cwrbSOW60c//zH7Duyrmq5ZFfCKhsCPhMmE5N9/Z5wf/jZGLCmNDl9R3a0KX76zi3XLvQ2DX9Vyz311wo+o0BE2W+Gfere7oB2lxXxZo0wmwx2f+xQjoyNVCtScCvtEQ+DPp0+mNe5+fJLbvjTMf7t3gkd3JTg5mCm6AleWzyv44/e1NwR+KSVSxh2BHwwqwGyHP/tZ4F/Zg9ISKE2l0+HjR7j5w+/k4JGDVQrWfGrLrlLUEPiLgU0kJU/tSfAPv5jg0/80wt2PR6fK8Oz+JMcvGDeVNvX56WlTHIcfCSrZjs164QehrwBzAv68PAq+S+bjmd9u+sUOHT3Edbe8mT/7mz/nxV0vMT5R/QG6GbS4U2k4/KXpZZFfgO89HuVTXxniW9sihmXsW+h1HH4JZORZR+CHotegcwr+nEEI8C3qxNPdijYSRY0kkKkMqPpXo6l0im/fcxffvueuKgVtHvVt/TP6rvkP0wo/Bs0fKeEnT0/yh+9sxefV/xiFHmHn4EdKVFlh9r8aOPPC3IS/+I8S8KIs6sS7yEbZbJTL0GxWtprPd8Ge7hpuCPwbV/rYtMLHAy/GiMT18Jfyn/clFBAGXzgbqO8s/FJCRjMY2lIjZ965Dn/1Y9dXLkNzg+EHGI++DppEYn6VtXvlbw8qfOYdLXzyrWFeOJDi6b0J9p1Mc35M1eXJy+uFz97SRmnQnSbhyJmU4/CDRor9+oPVwZkXSALGT4su/PbyMj3wgyCTHmUycYJQsM/ZZk/uOh/wCd62McDbNmbRiMQ1RqMa4UDhsfG/f7KTzhaFlmB5wZ/fn2AsWh6vUB/8kJYnkBQ9c9TDmSDpFTAuYX7ljBUMLvzl5mmCP6/xiR2EAisdb/MbqS2k0BbSvzRc0mMcMDMR0/inX4yXlale+KWEtNxtcE4qyBx+kEQUoPy1hwu/vbxMP/wAwyNPOA7/6SGVff3psqaOVR09l+Zz/zzEqXyfgYPwIyUJ+azRqShXNfgBhIh4pWQYwaXlGSvkcuEvN88A/ACTkweIJ44TDPQ5Ar+UcOx8ms99c4R57QpbVvvZuMLHygVeFnd7aQ0KAj4x9X01DSaTGgNjGgdPp3h6d5ztexOomvNXfqQkzSkyHHcG/qznqFcIDki4rlJ6XS4X/nLzDMGf3z048iuWLfysI/AX2wbHNR7dGefRnXGdr8+8s43PvDO7OOFnvjbIG/1p04dwp+CXQFI+4SD8gGBIQfB6pfS6XC785eYZhh9gaPhh0mrEUfjNfRW1jaoA6yT8moyQEEWLZNg9Zwa7pBQHFTTxugu/zbw0B/wAqhpjYPD+aYK/4C+XdFrgR0KCR5CYzPBnE/7cUQ4qGaHsAgwm0HThr5i9SeDPa3D4Z2Qy4w2Hf2p/kaYDflWOEeeR2s6ZyfkWmjyoTDy2bwTYYZjLhb/c3GTwA2TUCGcG7poG+CXnRjK8ciTFK0eSTMadf89fCr+UMKncgxQVQl9rhB8gg7LPm0v3mMw/CLvwV87ehPDnbcNjv6Kr/RZaQ+sbBj8Stu2Is+3l2LRc+aWEtNhHimfsn7Mq51sKTo7es6tfARCK8qgulwt/ubmJ4QdASvrP/j0ZdTK36Tz8ZsA2An6NKFG+Ti619XNm4XwLmX2iVgCGt+1/GcSRqpld+MszNgP8OaXSZzl9/h/nBPwSyaT4JpoYsHfOLJ5vCU9CISBGIsV3XfgNzLME/vyu8ch2hkZ/NuvhT/AgKfGSvXNm/fdQBYquAuD1iLsB4/AeF/7yjE0If/7fc0N3MTbx61kLf5LtxJQf2Ttntn4P+eTg93ach6IKMLht33ngl7U7duG36ruR8Gf/SM4M/BPR+MuzDv4Uu4gpXwdK5nNyDH4Qkh/kP+uG92ka/wOKnjhc+MszNj38WUky9J//W8Yiv5pF8D/DpPIlZGm3lIPwA5MynLo/v6Ebz5o8OnQudGnvVuBSF36DjLME/oIkkdiLKEqAkH99E8OvkeAhJpXv0Mgrf7YA4geD/2/3z/KbZQO6W9bMPyoFf2jNsQu/Vd/TD39Bk8lXSKaPEg5ejaDxk1bZe9UZY1L8MwnFoKfXafhBlZr3E7HdZ4bzO8oqQPzw4JngpfM3Clhn7tiF36rvmYQ/b09lThOJbSfoXY3X29sU8KfFPiLK/yIjDph8b8fgRyDuHfz+Tt3MB4YhPeG+BS/gkf8O0E+W7cJv23czwJ+XJqNMxH9DJnOeoG8digjOCPwqEWLibibF3UiilKkB8IOQiuSOydfO6ToWDCtA/OjAROjSeRLEOywVqmS3C3+pfebhL1ZSPUYk/is0mcTv6UOIwLTAL2WEOPcT5WtkRIXJyBoDP0i+P/C9XWXz3lR2eft6f9ektgvY4MJv33ezwl9aLkWEaAu+m9bA7+D3LG8I/Bn6ScgnSIjHkYZLPBqXzfJ3MrULEIwq6fRlF36wp6xb2dRt97vWrZdeuQMIufBb9z1b4C+V37eKFu9bCfmuxKusAKnUCL9GWp4kLV8jIZ91OIzRLK+xQcDnB76761u2subV9buXfwEhvl7twC78pfbZBX/pbkW0E/RuwKsswyuW4hVLUGhB0AK5+fk1LYaUMVQiZLTTqJwho50ixX4cnLrEYt4KBiFeGFy+8wa+WPp+1Zp7ANH1nnX3A7dWyunCX2qf3fBbswujP3X4bgT8jHqFtvncv756slJK83WCs5JCS30aKfcYHdiFv9Tuwm/fd0PglwL5GTP4wVoFYOTRIxMS3g+cd+E3s7vw2/fdEPgR8NWBu1+5v1LKvCxVAICxbW+c1NDeC0walsGF335+F36HyqUvlBQ8OBC55C+reAJsVACA8UcO7BJS3CYQ+vB8F377+V34HSpXSaEkT7eqbR/jvvsMJnqwf0hD9bzn8ndIIR4Ewi78Lvz2fTcIfngl4+Wm0bt2WV7lxNYdIK/hR954XErejTDqxy4rVGW58BftmvlzNrvhl7+1Cz/UWAEARh/Zv11TxY1Af+VCmciFv2jXzJ+z2Qy/hAcCkcAtduGHOioAwNi2fa8pQr0eeLm0UKZy4S/aNfPnbBbDLwV8ZShyyYdP3/eCybRxNRzCjpbevjQ0mej4toBPufBbs7nw11IuXaFGFSnuvPDdnQ9W8VTbYWpR960bPoqU3wB6bB/Nhb8O3xcb/OIFr1A/Xq2Ty4rqagKVauTBvfd6EeslPFRmdOEv2uXCb69cU4YxFP50MNJ3oxPwWylOzX6737/uwwLxdxJWufAX73Lht1cuACGBe5RM+i+MhjTXo0ZVgKz+aIuveyBxp9D4n1LQW/noLvz2fV8U8Gsgtkn426Hv7nqlioea1NgKkFPX7Vs6RCrxBwK+IGGV/sgu/PZ9z3n4J5Hip1LzfGnonpcPVcldl6alAkzpiyhdr65/jxB8DrgZhN8wnQu/s+WqaG8q+FWQTwrBD2Uw9YvBb+6r0MnqrKa3AhQpe1dIvhshbgV5C9BppUQu/DbzVrQ3AfyI48CTUpFPCc3zRH66wunUjFUAnb6I0vvK+ktUL1eisUkqYqOQLCRbKfL/B134beataG88/EKQAhmViDEgimBYSA5pgoNClQcyKPtG79nVX5ZxmvX/AcQc/MGHakKcAAAAAElFTkSuQmCC" width="28" height="28" style="border-radius:8px" alt="icon"/>
+    <span class="footer-brand">Daily Expenses Tracker</span>
+  </div>
+  <div class="footer-sub">Personal Finance · Singapore · Offline-first · Free forever</div>
+</footer>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// Hide for entrance
+gsap.set([".hero-eyebrow",".hero-title",".hero-subtitle",".hero-btns",".hero-note",".hero-mockup",".scroll-indicator"],{opacity:0,y:30});
+
+// Hero entrance
+const tl = gsap.timeline({delay:.15});
+tl.to(".hero-eyebrow",   {opacity:1,y:0,duration:.6,ease:"power3.out"})
+  .to(".hero-title",     {opacity:1,y:0,duration:1.0,ease:"power3.out"},"-=.3")
+  .to(".hero-subtitle",  {opacity:1,y:0,duration:.8,ease:"power2.out"},"-=.5")
+  .to(".hero-btns",      {opacity:1,y:0,duration:.7,ease:"power2.out"},"-=.4")
+  .to(".hero-note",      {opacity:1,y:0,duration:.5,ease:"power2.out"},"-=.3")
+  .to(".hero-mockup",    {opacity:1,y:0,duration:.9,ease:"power2.out"},"-=.2")
+  .to(".scroll-indicator",{opacity:1,y:0,duration:.4,ease:"power2.out"},"-=.2");
+
+// Mouse parallax
+const hero = document.querySelector('.hero');
+hero.addEventListener('mousemove',e=>{
+  const r=hero.getBoundingClientRect();
+  const xP=(e.clientX-r.left)/r.width-.5;
+  const yP=(e.clientY-r.top)/r.height-.5;
+  gsap.to(".hero-shapes-back",{duration:2.0,x:xP*-45,y:yP*-22,ease:"power1.out"});
+  gsap.to(".hero-shapes-mid", {duration:1.5,x:xP*-22,y:yP*-11,ease:"power1.out"});
+  gsap.to(".hero-content",    {duration:1.2,x:xP*  8,y:yP*  5,ease:"power1.out"});
+});
+
+// Stats count up
+gsap.from(".stats-inner",{scrollTrigger:{trigger:".stats-bar",start:"top 85%"},opacity:0,y:25,duration:.7,ease:"power2.out"});
+
+// Features headline
+gsap.from(".features-headline,.features-sub,.section-label",{
+  scrollTrigger:{trigger:".features-section",start:"top 72%"},
+  opacity:0,y:35,duration:.8,stagger:.12,ease:"power3.out"
+});
+
+// Feature cards 3D reveal
+gsap.set(".feature-card",{opacity:0,y:55,rotateX:18,transformPerspective:900,transformOrigin:"top center"});
+gsap.to(".feature-card",{
+  scrollTrigger:{trigger:".features-section",start:"top 65%",toggleActions:"play none none reverse"},
+  opacity:1,y:0,rotateX:0,duration:.75,stagger:.1,ease:"power2.out"
+});
+
+// How steps
+gsap.from(".how-step",{
+  scrollTrigger:{trigger:".how-section",start:"top 70%"},
+  opacity:0,x:-30,duration:.7,stagger:.15,ease:"power2.out"
+});
+
+// Closing
+gsap.from(".closing-content",{
+  scrollTrigger:{trigger:".closing-section",start:"top 75%"},
+  opacity:0,y:45,duration:1.0,ease:"power3.out"
+});
+</script>
+</body>
+</html>
