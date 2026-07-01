@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Import CSV Data — Daily Expenses Tracker</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0fdf4;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:20px;box-sizing:border-box}
+  .card{background:white;border-radius:16px;padding:32px;max-width:480px;width:100%;box-shadow:0 4px 24px rgba(0,0,0,.1);text-align:center}
+  h1{color:#166534;font-size:1.5rem;margin:0 0 8px}
+  p{color:#555;margin:0 0 24px;font-size:.95rem}
+  .data-preview{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:16px;margin:20px 0;text-align:left;font-size:.85rem}
+  .row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #dcfce7}
+  .row:last-child{border:none}
+  .lbl{color:#166534;font-weight:600}
+  .val{color:#333}
+  button{background:linear-gradient(135deg,#166534,#15803d);color:white;border:none;border-radius:10px;padding:14px 28px;font-size:1rem;font-weight:600;cursor:pointer;width:100%;margin-top:8px;transition:.2s}
+  button:hover{opacity:.9}
+  .done{background:linear-gradient(135deg,#2563eb,#1d4ed8)}
+  #status{margin-top:16px;font-weight:600;font-size:1rem;min-height:24px}
+  .success{color:#166534} .error{color:#dc2626}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>📥 Import CSV Data</h1>
+  <p>The following entries from your CSV will be added to Daily Expenses Tracker</p>
+
+  <div class="data-preview">
+    <div class="row"><span class="lbl">Type</span><span class="val">Expense</span></div>
+    <div class="row"><span class="lbl">Date</span><span class="val">23 Jun 2026</span></div>
+    <div class="row"><span class="lbl">Description</span><span class="val">lunch</span></div>
+    <div class="row"><span class="lbl">Category</span><span class="val">Food</span></div>
+    <div class="row"><span class="lbl">Payment</span><span class="val">POSB</span></div>
+    <div class="row"><span class="lbl">Amount</span><span class="val">SGD 5.00</span></div>
+    <div class="row"><span class="lbl">Notes</span><span class="val">sukiya</span></div>
+  </div>
+
+  <button onclick="doImport()" id="importBtn">✅ Import 1 Entry</button>
+  <button class="done" onclick="goApp()" id="doneBtn" style="display:none">🏠 Open App</button>
+  <div id="status"></div>
+</div>
+
+<script>
+const IMPORT_EXP = [
+  {"id":"csv_"+Date.now(),"date":"2026-06-23","amount":5,"category_id":"food","payment_method_id":"posb","description":"lunch","notes":"sukiya"}
+];
+const IMPORT_INC = [];
+
+function doImport(){
+  try{
+    const existing_exp = JSON.parse(localStorage.getItem('det_e')||'[]');
+    const existing_inc = JSON.parse(localStorage.getItem('det_i')||'[]');
+
+    const expKeys = new Set(existing_exp.map(e=>`${e.date}|${e.amount}|${(e.description||'').trim()}`));
+    const incKeys = new Set(existing_inc.map(i=>`${i.date}|${i.amount}|${(i.source_description||'').trim()}`));
+
+    let addE=0, addI=0, skip=0;
+
+    IMPORT_EXP.forEach(r=>{
+      const key=`${r.date}|${r.amount}|${(r.description||'').trim()}`;
+      if(expKeys.has(key)){skip++;return;}
+      existing_exp.push(r); expKeys.add(key); addE++;
+    });
+
+    IMPORT_INC.forEach(r=>{
+      const key=`${r.date}|${r.amount}|${(r.source_description||'').trim()}`;
+      if(incKeys.has(key)){skip++;return;}
+      existing_inc.push(r); incKeys.add(key); addI++;
+    });
+
+    localStorage.setItem('det_e', JSON.stringify(existing_exp));
+    localStorage.setItem('det_i', JSON.stringify(existing_inc));
+    localStorage.setItem('det_ready','1');
+
+    document.getElementById('status').innerHTML =
+      `<span class="success">✅ Added ${addE} expense${addE!==1?'s':''} · ${skip} duplicate${skip!==1?'s':''} skipped</span>`;
+    document.getElementById('importBtn').style.display='none';
+    document.getElementById('doneBtn').style.display='block';
+  } catch(e){
+    document.getElementById('status').innerHTML=`<span class="error">❌ Error: ${e.message}</span>`;
+  }
+}
+
+function goApp(){
+  window.location.href='webapp.html';
+}
+</script>
+</body>
+</html>

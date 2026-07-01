@@ -1452,10 +1452,18 @@ function parseAndImportCSV(text){
     if(!line||line.startsWith('Exported:')||line.startsWith('Total'))continue;
     const cols=parseLine(line);
     if(cols.length<6)continue;
-    const[type,date,catLbl,desc,payLbl,amt,notes]=cols;
+    const[type,rawDate,catLbl,desc,payLbl,amt,notes]=cols;
     const amount=parseFloat(amt);
-    if(!type||!date||isNaN(amount))continue;
-    if(!/^\d{4}-\d{2}-\d{2}$/.test(date))continue;
+    if(!type||!rawDate||isNaN(amount))continue;
+    // Normalize date: accepts YYYY-MM-DD or D/M/YYYY or DD/MM/YYYY
+    function normDate(d){
+      if(/^\d{4}-\d{2}-\d{2}$/.test(d))return d;
+      const p=d.split('/');
+      if(p.length===3){const[dd,mm,yyyy]=p;return`${yyyy}-${mm.padStart(2,'0')}-${dd.padStart(2,'0')}`;}
+      return null;
+    }
+    const date=normDate(rawDate);
+    if(!date)continue;
     if(type==='Expense'){
       const key=`${date}|${amount}|${desc.trim()}`;
       if(expKeys.has(key)){skip++;continue;}
