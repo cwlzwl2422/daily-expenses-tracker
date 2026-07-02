@@ -962,7 +962,7 @@ let S   = JSON.parse(localStorage.getItem('det_s')  || '{"name":"Cheong","curren
 let EXP = JSON.parse(localStorage.getItem('det_e')  || '[]');
 let INC = JSON.parse(localStorage.getItem('det_i')  || '[]');
 
-let curTab='add', addType='expense', selCat='', selPay='', selIC='', histQ='';
+let curTab='add', addType='expense', selCat='', selPay='', selIC='', histQ='', incQ='';
 let smY=new Date().getFullYear(), smM=new Date().getMonth();
 
 const saveS   = ()=> localStorage.setItem('det_s', JSON.stringify(S));
@@ -1402,21 +1402,53 @@ function renderIncome(C){
   </div>
   ${sorted.length?`<div class="inc-hist-card">
     <div class="sec-title">Income History</div>
-    ${sorted.map(r=>{
-      const ic=INCATS.find(x=>x.id===r.income_category_id)||{icon:'💰',label:r.income_category_id};
-      return `<div class="inc-tx">
-        <div class="inc-ico">${ic.icon}</div>
-        <div class="inc-body">
-          <div class="inc-desc">${r.source_description||ic.label}</div>
-          <div class="inc-meta">${fmtD(r.date)}${r.notes?` · ${r.notes}`:''}</div>
-        </div>
-        <span class="inc-amt">+${fmt(r.amount)}</span>
-        <button class="del-btn" onclick="delI('${r.id}')" style="margin-left:6px">✕</button>
-      </div>`;
-    }).join('')}
+    <div class="search-wrap">
+      <span class="search-ico">🔍</span>
+      <input id="inc-search" class="search-input" type="text" placeholder="Search description, source, amount, date..." autocomplete="off" oninput="incQ=this.value;renderIncList()">
+      <button class="search-clear" id="inc-clear" onclick="incQ='';document.getElementById('inc-search').value='';renderIncList();document.getElementById('inc-search').focus()">✕</button>
+    </div>
+    <div id="inc-list"></div>
   </div>`:
   `<div class="empty-state"><div class="ei">💰</div><h3>No income yet</h3><p>Log your first income entry above.</p></div>`}
   </div>`;
+  const isi=document.getElementById('inc-search');
+  if(isi){isi.value=incQ;renderIncList();}
+}
+function renderIncList(){
+  const L=document.getElementById('inc-list');if(!L)return;
+  const clr=document.getElementById('inc-clear');
+  const q=incQ.trim().toLowerCase();
+  if(clr)clr.style.display=q?'flex':'none';
+  let rows=[...INC].sort((a,b)=>b.date.localeCompare(a.date));
+  if(q){
+    rows=rows.filter(r=>{
+      const ic=INCATS.find(x=>x.id===r.income_category_id)||{label:r.income_category_id||''};
+      return (r.source_description||'').toLowerCase().includes(q)
+        ||(r.notes||'').toLowerCase().includes(q)
+        ||String(ic.label).toLowerCase().includes(q)
+        ||String(r.amount).includes(q)
+        ||r.date.includes(q)
+        ||fmtD(r.date).toLowerCase().includes(q);
+    });
+  }
+  if(!rows.length){
+    L.innerHTML=`<div class="empty-state" style="padding:24px 0"><div class="ei">🔍</div><h3>No matches</h3><p>No income entries match<br>"${incQ.replace(/</g,'&lt;')}"</p></div>`;
+    return;
+  }
+  const total=rows.reduce((s,r)=>s+r.amount,0);
+  L.innerHTML=`${q?`<div class="search-count">${rows.length} result${rows.length===1?'':'s'} · +${fmt(total)}</div>`:''}
+  ${rows.map(r=>{
+    const ic=INCATS.find(x=>x.id===r.income_category_id)||{icon:'💰',label:r.income_category_id};
+    return `<div class="inc-tx">
+      <div class="inc-ico">${ic.icon}</div>
+      <div class="inc-body">
+        <div class="inc-desc">${r.source_description||ic.label}</div>
+        <div class="inc-meta">${fmtD(r.date)}${r.notes?` · ${r.notes}`:''}</div>
+      </div>
+      <span class="inc-amt">+${fmt(r.amount)}</span>
+      <button class="del-btn" onclick="delI('${r.id}')" style="margin-left:6px">✕</button>
+    </div>`;
+  }).join('')}`;
 }
 function sic2(id){selIC=selIC===id?'':id;renderIncome(document.getElementById('content'));}
 function saveInc(){
