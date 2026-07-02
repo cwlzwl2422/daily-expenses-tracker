@@ -398,6 +398,21 @@ canvas{width:100%!important}
   color:#fff;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.2);
 }
 
+.search-wrap{position:relative;margin-bottom:12px}
+.search-ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:15px;pointer-events:none;opacity:.6}
+.search-input{
+  width:100%;padding:12px 40px 12px 40px;border-radius:12px;border:1.5px solid var(--border2);
+  background:#fff;font-size:14px;font-family:inherit;color:var(--txt);outline:none;
+  box-shadow:var(--sh2);transition:border-color .15s;
+}
+.search-input:focus{border-color:var(--green)}
+.search-clear{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);width:26px;height:26px;
+  border:none;border-radius:50%;background:#f3f4f6;color:#6b7280;font-size:12px;
+  cursor:pointer;display:none;align-items:center;justify-content:center;
+}
+.search-count{font-size:12px;font-weight:700;color:var(--sub);margin-bottom:10px}
+
 .inc-hist-card{background:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--sh2)}
 .inc-tx{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border2)}
 .inc-tx:last-child{border-bottom:none}
@@ -947,7 +962,7 @@ let S   = JSON.parse(localStorage.getItem('det_s')  || '{"name":"Cheong","curren
 let EXP = JSON.parse(localStorage.getItem('det_e')  || '[]');
 let INC = JSON.parse(localStorage.getItem('det_i')  || '[]');
 
-let curTab='add', addType='expense', selCat='', selPay='', selIC='';
+let curTab='add', addType='expense', selCat='', selPay='', selIC='', histQ='';
 let smY=new Date().getFullYear(), smM=new Date().getMonth();
 
 const saveS   = ()=> localStorage.setItem('det_s', JSON.stringify(S));
@@ -1118,13 +1133,49 @@ function renderHistory(C){
     C.innerHTML=`<div class="pad anim"><div class="empty-state"><div class="ei">📋</div><h3>No expenses yet</h3><p>Tap ➕ Add to log<br>your first expense.</p></div></div>`;
     return;
   }
-  const sorted=[...EXP].sort((a,b)=>b.date.localeCompare(a.date)||(b.ts||0)-(a.ts||0));
-  const grp={};
-  sorted.forEach(e=>{(grp[e.date]=grp[e.date]||[]).push(e);});
   C.innerHTML=`<div class="pad anim">
+  <div class="search-wrap">
+    <span class="search-ico">🔍</span>
+    <input id="hist-search" class="search-input" type="text" placeholder="Search description, category, amount, date..." autocomplete="off" oninput="histQ=this.value;renderHistList()">
+    <button class="search-clear" id="hist-clear" onclick="histQ='';document.getElementById('hist-search').value='';renderHistList();document.getElementById('hist-search').focus()">✕</button>
+  </div>
   <div style="display:flex;justify-content:flex-end;margin-bottom:10px">
     <button class="exp-btn exp-csv" style="width:auto;padding:8px 16px;font-size:12px" onclick="exportMonth()">📥 Export CSV</button>
   </div>
+  <div id="hist-list"></div>
+  </div>`;
+  const si=document.getElementById('hist-search');
+  if(si)si.value=histQ;
+  renderHistList();
+}
+function renderHistList(){
+  const L=document.getElementById('hist-list');if(!L)return;
+  const clr=document.getElementById('hist-clear');
+  const q=histQ.trim().toLowerCase();
+  if(clr)clr.style.display=q?'flex':'none';
+  let rows=[...EXP];
+  if(q){
+    rows=rows.filter(r=>{
+      const cat=CATS.find(x=>x.id===r.category_id)||{label:'Other'};
+      const pay=PAYS.find(x=>x.id===r.payment_method_id)||{label:r.payment_method_id||''};
+      return (r.description||'').toLowerCase().includes(q)
+        ||(r.notes||'').toLowerCase().includes(q)
+        ||cat.label.toLowerCase().includes(q)
+        ||String(pay.label).toLowerCase().includes(q)
+        ||String(r.amount).includes(q)
+        ||r.date.includes(q)
+        ||fmtD(r.date).toLowerCase().includes(q);
+    });
+  }
+  if(!rows.length){
+    L.innerHTML=`<div class="empty-state"><div class="ei">🔍</div><h3>No matches</h3><p>No transactions match<br>"${histQ.replace(/</g,'&lt;')}"</p></div>`;
+    return;
+  }
+  const sorted=rows.sort((a,b)=>b.date.localeCompare(a.date)||(b.ts||0)-(a.ts||0));
+  const grp={};
+  sorted.forEach(e=>{(grp[e.date]=grp[e.date]||[]).push(e);});
+  const total=sorted.reduce((s,r)=>s+r.amount,0);
+  L.innerHTML=`${q?`<div class="search-count">${sorted.length} result${sorted.length===1?'':'s'} · −${fmt(total)}</div>`:''}
   ${Object.entries(grp).map(([date,rows])=>{
     const tot=rows.reduce((s,r)=>s+r.amount,0);
     return `<div class="day-section">
@@ -1151,8 +1202,7 @@ function renderHistory(C){
         </div>`;
       }).join('')}
     </div>`;
-  }).join('')}
-  </div>`;
+  }).join('')}`;
 }
 function delE(id){
   if(!confirm('Delete this expense?'))return;
@@ -1487,49 +1537,4 @@ function exportMonth(){
   let csv='Date,Category,Description,Payment,Amount,Notes\n';
   [...rows].sort((a,b)=>b.date.localeCompare(a.date)).forEach(r=>{
     const cat=CATS.find(x=>x.id===r.category_id)||{label:r.category_id};
-    const pay=PAYS.find(x=>x.id===r.payment_method_id)||{label:r.payment_method_id};
-    csv+=`${r.date},"${cat.label}","${r.description||''}","${pay.label}",${r.amount},"${r.notes||''}"\n`;
-  });
-  const te=rows.reduce((s,r)=>s+r.amount,0);
-  const mn=new Date(smY,smM).toLocaleDateString('en-SG',{month:'long',year:'numeric'});
-  csv+=`\nTotal,,,, ${te.toFixed(2)},\nGenerated by Daily Expenses Tracker · ${new Date().toLocaleDateString('en-SG')}`;
-  dlCSV(csv,`expenses_${mn.replace(' ','_')}.csv`);
-}
-function exportAll(){
-  if(!EXP.length&&!INC.length){toast('No data to export');return;}
-  let csv='Type,Date,Category/Source,Description,Payment,Amount,Notes\n';
-  [...EXP].sort((a,b)=>b.date.localeCompare(a.date)).forEach(r=>{
-    const cat=CATS.find(x=>x.id===r.category_id)||{label:r.category_id};
-    const pay=PAYS.find(x=>x.id===r.payment_method_id)||{label:r.payment_method_id};
-    csv+=`Expense,${r.date},"${cat.label}","${r.description||''}","${pay.label}",${r.amount},"${r.notes||''}"\n`;
-  });
-  [...INC].sort((a,b)=>b.date.localeCompare(a.date)).forEach(r=>{
-    const ic=INCATS.find(x=>x.id===r.income_category_id)||{label:r.income_category_id};
-    csv+=`Income,${r.date},"${ic.label}","${r.source_description||''}","—",${r.amount},"${r.notes||''}"\n`;
-  });
-  csv+=`\nExported: ${new Date().toLocaleString('en-SG')} · Daily Expenses Tracker`;
-  dlCSV(csv,'daily_expenses_all.csv');closeSheet();
-}
-function dlCSV(csv,name){
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
-  a.download=name;a.click();toast('📥 CSV downloaded!');
-}
-
-/* ─── HELPERS ────────────────────────────────────────────────────────── */
-function td(){const d=new Date();return`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;}
-function pad(n){return String(n).padStart(2,'0');}
-function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2);}
-function fmtD(iso){
-  const d=new Date(iso+'T00:00:00'),now=new Date();now.setHours(0,0,0,0);
-  const y=new Date(now);y.setDate(now.getDate()-1);
-  if(d.getTime()===now.getTime())return'Today';
-  if(d.getTime()===y.getTime())return'Yesterday';
-  return d.toLocaleDateString('en-SG',{weekday:'short',day:'numeric',month:'short'});
-}
-function toast(msg){
-  const t=document.getElementById('toast');
-  t.textContent=msg;t.classList.add('show');
-  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2800);
-}
-</script></body></html>
+    const pay=PAYS.find(x=>x.id===r.payment_
